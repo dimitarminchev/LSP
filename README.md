@@ -2,7 +2,7 @@
 
 Настоящата книга "**Linux System Programming**" е съвместна инициатива на Бургаски Свободен Университет и IBA Group, и е част от безплатният курс "Системно програмиране под Linux", като допълнителен учебен материал в електронен вид.
 
-Тази книга се разпространява под лиценз [**CC-BY-NC-SA**](https://creativecommons.org/licenses/by-nc-sa/4.0/ "CC-BY-NC-SA") и е налична за безплатно свободно изтегляне в електронен формат \(pdf, mobi, epub\) в Интернет на адрес: [https://dimitarminchev.gitbooks.io/linux-system-programming](https://dimitarminchev.gitbooks.io/linux-system-programming), а използваните материали са достъпни в електронното хранилище GitHub в Интернет на адрес: [https://github.com/dimitarminchev/LSP/](https://github.com/dimitarminchev/LSP/).
+Тази книга се разпространява под лиценз [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/ "CC-BY-NC-SA") и е налична за безплатно свободно изтегляне в електронен формат \(pdf, mobi, epub\) в Интернет на адрес: [https://dimitarminchev.gitbooks.io/linux-system-programming](https://dimitarminchev.gitbooks.io/linux-system-programming), а използваните материали са достъпни в електронното хранилище GitHub в Интернет на адрес: [https://github.com/dimitarminchev/LSP/](https://github.com/dimitarminchev/LSP/).
 
 | FORMAT | ISBN |
 | :--- | :--- |
