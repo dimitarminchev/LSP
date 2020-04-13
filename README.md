@@ -4,7 +4,7 @@
 
 Тази книга се разпространява под лиценз [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/ "CC-BY-NC-SA") и е налична за безплатно свободно изтегляне в електронен формат \(pdf, mobi, epub\) в Интернет на адрес: [https://dimitarminchev.gitbooks.io/linux-system-programming](https://dimitarminchev.gitbooks.io/linux-system-programming), а използваните материали са достъпни в електронното хранилище GitHub в Интернет на адрес: [https://github.com/dimitarminchev/LSP/](https://github.com/dimitarminchev/LSP/).
 
-| FORMAT | ISBN |
+| Формат | ISBN |
 | :--- | :--- |
 | PDF | 978-619-7126-69-3  |
 | MOBI | 978-619-7126-70-9  |
@@ -16,7 +16,8 @@
 
 Образователно квалификационни степени "Бакалавър", "Магистър" и "Доктор" по специалност "информатика" получава съответно: през 2003 от Бургаски свободен университет, през 2007 от Шуменски университет "Епископ Константин Преславски" и през 2012 от Института по информационни и комуникационни технологии на Българската академия на науките. Области на научни интереси: Компютърни науки, архитектури и мрежи, цифрова обработка на сигнали. Членство в научни организаци: Съюз на математиците в България, Съюз по електроника, електротехника и съобщения \(СЕЕС\), Дружество по информатика и компютърни науки.
 
+| Тип | Информация за контакт |
 | :--- | :--- |
-| **Служебен** | тел. +359 56 900 477 и e-mail: [mitko@bfu.bg](http://www.minchev.eu/about/mitko@bfu.bg) |
-| **Личен** | моб. +359 899 148 872 и e-mail: [dimitar.minchev@gmail.com](mailto:dimitar.minchev@gmail.com) |
-| **Блог** | [http://www.minchev.eu](http://www.minchev.eu "Димитър Минчев") |
+| Служебен | тел. +359 56 900 477 и e-mail: [mitko@bfu.bg](http://www.minchev.eu/about/mitko@bfu.bg) |
+| Личен | моб. +359 899 148 872 и e-mail: [dimitar.minchev@gmail.com](mailto:dimitar.minchev@gmail.com) |
+| Блог | [http://www.minchev.eu](http://www.minchev.eu "Димитър Минчев") |
