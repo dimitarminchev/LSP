@@ -61,11 +61,11 @@
   * [Изпълнение на команда](04_processes/04.md)
   * [Показване на изходния код на файла](04_processes/05.md)
   * [Стартиране на дъщерен процес](04_processes/06.md)
-  * [Записване на изречения във файл](04_processes/07.md)
+  * [Отпечатване на идентификаторите на процесите](04_processes/07.md)
   * [Изчакване и прекратяване на дъщерен процес](04_processes/08.md)
   * [Изпълнение и отпечатване на състоянието](04_processes/09.md)
   * [Зомбита и проста обработка на сигнали](04_processes/10.md)
-  * [Игра със зомбита](04_processes/11.md)
+  * [Игра на зомбита](04_processes/11.md)
   * [Упражнение](04_processes/12.md)
 
 * [Част 5 – Комуникация между процеси](05_interprocess_communication/README.md)
@@ -82,7 +82,7 @@
   * [Анонимни и наименувани тръби](05_interprocess_communication/10.md)
   * [Работа с тръби](05_interprocess_communication/11.md)
   * [Използване на анонимни тръби](05_interprocess_communication/12.md)
-  * [Чат](05_interprocess_communication/13.md)
+  * [Използване на именовани тръби](05_interprocess_communication/13.md)
   * [Упражнение](05_interprocess_communication/14.md)
 
 * [Част 6 - Синхронизация на комуникацията между процесите](06_ipc_synchronization/README.md)
@@ -135,7 +135,7 @@
   * [Thread cancellability type](08_threads/thread_cancellability_type.md)
   * [Exercise](08_threads/exercise.md)
 
-* [Part 9 - Threads \(synchronization\)](09_threads_synchronization/README.md)
+* [Част 9 - Синхронизация на нишки](09_threads_synchronization/README.md)
 
   * [Exiting the Threads](09_threads_synchronization/exiting_the_threads.md)
   * [Managing thread exit with C](09_threads_synchronization/managing_thread_exit_with_c.md)
@@ -155,7 +155,7 @@
   * [Semaphore Threads](09_threads_synchronization/semaphore_threads.md)
   * [Exercise](09_threads_synchronization/exercise.md)
 
-* [Part 10 – Daemons](10_daemons/README.md)
+* [Част 10 – Демони](10_daemons/README.md)
 
   * [What are Daemons?](10_daemons/what_are_daemons.md)
   * [Our chat Daemon](10_daemons/our_chat_daemon.md)
@@ -165,6 +165,3 @@
   * [Connections handling](10_daemons/connections_handling.md)
   * [Tidy Up](10_daemons/tidy_up.md)
   * [Startup arguments](10_daemons/startup_arguments.md)
-
-
-
