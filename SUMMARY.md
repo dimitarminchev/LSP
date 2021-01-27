@@ -130,8 +130,7 @@
   * [Thread management functions - cancellations](08_threads/08.md)
   * [Thread management functions – types](08_threads/09.md)
   * [Thread cancellation](08_threads/10.md)
-  * [Thread cancellability type](08_threads/11.md)
-  * [Exercise](08_threads/12.md)
+  * [Exercise](08_threads/11.md)
 
 * [Част 9 - Синхронизация на нишки](09_threads_synchronization/README.md)
 

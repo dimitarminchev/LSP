@@ -10,5 +10,4 @@
 - [Thread management functions - cancellations](08.md)
 - [Thread management functions – types](09.md)
 - [Thread cancellation](10.md)
-- [Thread cancellability type](11.md)
-- [Exercise](12.md)
+- [Exercise](11.md)
