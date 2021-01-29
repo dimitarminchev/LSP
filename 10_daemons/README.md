@@ -1,10 +1,10 @@
 ## Част 10 – Демони
 
-- [What are Daemons?](what_are_daemons.md)
-- [Our chat Daemon](our_chat_daemon.md)
-- [Daemonize](daemonize.md)
-- [Singlas handling](singlas_handling.md)
-- [Set listening Socket](set_listening_socket.md)
-- [Connections handling](connections_handling.md)
-- [Tidy Up](tidy_up.md)
-- [Startup arguments](startup_arguments.md)
+- [What are Daemons?](01.md)
+- [Our chat Daemon](02.md)
+- [Daemonize](03.md)
+- [Singlas handling](04.md)
+- [Set listening Socket](05.md)
+- [Connections handling](06.md)
+- [Tidy Up](07.md)
+- [Startup arguments](08.md)

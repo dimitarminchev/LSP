@@ -118,7 +118,7 @@
   * [Мрежов сокет клиент](07_sockets/10.md)
   * [Упражнение](07_sockets/11.md)
 
-* [Част 8 – Нишки](08_threads/README.md)
+* [Част 8 – Нишки](08_threads/readme.md)
 
   * [Threads](08_threads/01.md)
   * [libpthreads \(POSIX threads\)](08_threads/02.md)
@@ -132,7 +132,7 @@
   * [Thread cancellation](08_threads/10.md)
   * [Exercise](08_threads/11.md)
 
-* [Част 9 - Синхронизация на нишки](09_threads_synchronization/README.md)
+* [Част 9 - Синхронизация на нишки](09_threads_synchronization/readme.md)
 
   * [Exiting the Threads](09_threads_synchronization/01.md)
   * [Managing thread exit with C](09_threads_synchronization/02.md)
@@ -152,13 +152,13 @@
   * [Semaphore Threads](09_threads_synchronization/16.md)
   * [Exercise](09_threads_synchronization/17.md)
 
-* [Част 10 – Демони](10_daemons/README.md)
+* [Част 10 – Демони](10_daemons/readme.md)
 
-  * [What are Daemons?](10_daemons/what_are_daemons.md)
-  * [Our chat Daemon](10_daemons/our_chat_daemon.md)
-  * [Daemonize](10_daemons/daemonize.md)
-  * [Singlas handling](10_daemons/singlas_handling.md)
-  * [Set listening Socket](10_daemons/set_listening_socket.md)
-  * [Connections handling](10_daemons/connections_handling.md)
-  * [Tidy Up](10_daemons/tidy_up.md)
-  * [Startup arguments](10_daemons/startup_arguments.md)
+  * [What are Daemons?](10_daemons/01.md)
+  * [Our chat Daemon](10_daemons/02.md)
+  * [Daemonize](10_daemons/03.md)
+  * [Singlas handling](10_daemons/04.md)
+  * [Set listening Socket](10_daemons/05.md)
+  * [Connections handling](10_daemons/06.md)
+  * [Tidy Up](10_daemons/07.md)
+  * [Startup arguments](10_daemons/08.md)
