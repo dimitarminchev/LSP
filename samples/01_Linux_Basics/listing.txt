@@ -1,0 +1,212 @@
+Dimitar Pavlov 
+
+total 17528
+drwxr-xr-x  2 root root     12288 Oct 12 08:34 ./
+drwxr-xr-x 24 root root      4096 Jan 16 06:23 ../
+-rwxr-xr-x  1 root root     69000 Jul 21 10:49 agetty*
+-rwxr-xr-x  1 root root   1501568 May 19  2020 apparmor_parser*
+-rwxr-xr-x  1 root root     35144 Feb 14  2020 badblocks*
+-rwxr-xr-x  1 root root     14837 Feb 13  2020 blkdeactivate*
+-rwxr-xr-x  1 root root     35048 Jul 21 10:49 blkdiscard*
+-rwxr-xr-x  1 root root    121096 Jul 21 10:49 blkid*
+-rwxr-xr-x  1 root root     71912 Jul 21 10:49 blkzone*
+-rwxr-xr-x  1 root root     67816 Jul 21 10:49 blockdev*
+-rwxr-xr-x  1 root root    104760 Feb 13  2020 bridge*
+-rwxr-xr-x  1 root root     31032 Feb 17  2020 capsh*
+-rwxr-xr-x  1 root root    105048 Jul 21 10:49 cfdisk*
+-rwxr-xr-x  1 root root    211432 Feb 20  2020 cgdisk*
+-rwxr-xr-x  1 root root     47336 Jul 21 10:49 chcpu*
+-rwxr-xr-x  1 root root     10232 Feb  5  2018 crda*
+-rwxr-xr-x  1 root root      1544 Feb  4  2020 cryptdisks_start*
+-rwxr-xr-x  1 root root       844 Feb  4  2020 cryptdisks_stop*
+-rwxr-xr-x  1 root root    138792 Sep 10 14:47 cryptsetup*
+-rwxr-xr-x  1 root root    107848 Sep 10 14:47 cryptsetup-reencrypt*
+-rwxr-xr-x  1 root root     39144 Jul 21 10:49 ctrlaltdel*
+-rwxr-xr-x  1 root root    231224 Feb 14  2020 debugfs*
+lrwxrwxrwx  1 root root         9 Mar 12  2020 depmod -> /bin/kmod*
+-rwxr-xr-x  1 root root    154080 Feb 13  2020 devlink*
+-rwxr-xr-x  1 root root    521200 Apr 10  2020 dhclient*
+-rwxr-xr-x  1 root root     16304 Apr 10  2020 dhclient-script*
+-rwxr-xr-x  1 root root     51440 Feb 13  2020 dmeventd*
+-rwxr-xr-x  1 root root    175128 Feb 13  2020 dmsetup*
+lrwxrwxrwx  1 root root         7 Feb 13  2020 dmstats -> dmsetup*
+lrwxrwxrwx  1 root root         8 May 13  2018 dosfsck -> fsck.fat*
+lrwxrwxrwx  1 root root         8 May 13  2018 dosfslabel -> fatlabel*
+-rwxr-xr-x  1 root root     31112 Feb 14  2020 dumpe2fs*
+-rwxr-xr-x  1 root root    335064 Feb 14  2020 e2fsck*
+-rwxr-xr-x  1 root root     43400 Feb 14  2020 e2image*
+lrwxrwxrwx  1 root root         7 Feb 14  2020 e2label -> tune2fs*
+lrwxrwxrwx  1 root root         8 Feb 14  2020 e2mmpstatus -> dumpe2fs*
+-rwxr-xr-x  1 root root      7296 Feb 14  2020 e2scrub*
+-rwxr-xr-x  1 root root      5395 Feb 14  2020 e2scrub_all*
+-rwxr-xr-x  1 root root     22912 Feb 14  2020 e2undo*
+-rwxr-xr-x  1 root root    384048 Jan 30  2020 ethtool*
+-rwxr-xr-x  1 root root     55376 May 13  2018 fatlabel*
+-rwxr-xr-x  1 root root    153880 Jul 21 10:49 fdisk*
+-rwxr-xr-x  1 root root     14568 Jul 21 10:49 findfs*
+-rwxr-xr-x  1 root root     76264 Feb 20  2020 fixparts*
+-rwxr-xr-x  1 root root     24108 Feb 13  2020 fsadm*
+-rwxr-xr-x  1 root root     55576 Jul 21 10:49 fsck*
+-rwxr-xr-x  1 root root      1185 Feb 15  2020 fsck.btrfs*
+-rwxr-xr-x  1 root root     39176 Jul 21 10:49 fsck.cramfs*
+lrwxrwxrwx  1 root root         6 Feb 14  2020 fsck.ext2 -> e2fsck*
+lrwxrwxrwx  1 root root         6 Feb 14  2020 fsck.ext3 -> e2fsck*
+lrwxrwxrwx  1 root root         6 Feb 14  2020 fsck.ext4 -> e2fsck*
+-rwxr-xr-x  1 root root     59472 May 13  2018 fsck.fat*
+-rwxr-xr-x  1 root root    125184 Jul 21 10:49 fsck.minix*
+lrwxrwxrwx  1 root root         8 May 13  2018 fsck.msdos -> fsck.fat*
+lrwxrwxrwx  1 root root         8 May 13  2018 fsck.vfat -> fsck.fat*
+-rwxr-xr-x  1 root root      1968 Mar  3  2020 fsck.xfs*
+-rwxr-xr-x  1 root root     14568 Jul 21 10:49 fsfreeze*
+-rwxr-xr-x  1 root root     14648 Feb 13  2020 fstab-decode*
+-rwxr-xr-x  1 root root     71912 Jul 21 10:49 fstrim*
+-rwxr-xr-x  1 root root    215528 Feb 20  2020 gdisk*
+-rwxr-xr-x  1 root root     14648 Feb 17  2020 getcap*
+-rwxr-xr-x  1 root root     14648 Feb 17  2020 getpcaps*
+lrwxrwxrwx  1 root root         6 Jul 21 10:49 getty -> agetty*
+lrwxrwxrwx  1 root root        14 Jul  7  2020 halt -> /bin/systemctl*
+-rwxr-xr-x  1 root root    143704 Aug 21  2019 hdparm*
+-rwxr-xr-x  1 root root    104808 Jul 21 10:49 hwclock*
+lrwxrwxrwx  1 root root        20 Jul  7  2020 init -> /lib/systemd/systemd*
+lrwxrwxrwx  1 root root         9 Mar 12  2020 insmod -> /bin/kmod*
+-rwxr-xr-x  1 root root      2638 Dec  7  2019 installkernel*
+-rwxr-xr-x  1 root root     61672 Sep 10 14:47 integritysetup*
+lrwxrwxrwx  1 root root         7 Feb 13  2020 ip -> /bin/ip*
+-rwxr-xr-x  1 root root    403560 May 11  2020 iscsiadm*
+-rwxr-xr-x  1 root root    420152 May 11  2020 iscsid*
+-rwxr-xr-x  1 root root      5285 Sep 29  2016 iscsi_discovery*
+-rwxr-xr-x  1 root root     18584 May 11  2020 iscsi-iname*
+-rwxr-xr-x  1 root root    375080 May 11  2020 iscsistart*
+-rwxr-xr-x  1 root root     30952 Jul 21 10:49 isosize*
+-rwxr-xr-x  1 root root    269128 Dec  8  2019 iw*
+-rwxr-xr-x  1 root root     14328 May  9  2019 kbdrate*
+-rwxr-xr-x  1 root root     27016 Feb 13  2020 killall5*
+-rwxr-xr-x  1 root root     47272 Apr  6  2020 kpartx*
+-rwxr-xr-x  1 root root       387 Aug 17 23:02 ldconfig*
+-rwxr-xr-x  1 root root   1053768 Aug 17 23:02 ldconfig.real*
+-rwxr-xr-x  1 root root     14496 Feb 14  2020 logsave*
+-rwxr-xr-x  1 root root    112992 Jul 21 10:49 losetup*
+lrwxrwxrwx  1 root root         9 Mar 12  2020 lsmod -> /bin/kmod*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvchange -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvconvert -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvcreate -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvdisplay -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvextend -> lvm*
+-rwxr-xr-x  1 root root   2862872 Feb 13  2020 lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvmconfig -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvmdiskscan -> lvm*
+-rwxr-xr-x  1 root root     10312 Feb 13  2020 lvmdump*
+-rwxr-xr-x  1 root root    237624 Feb 13  2020 lvmpolld*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvmsadc -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvmsar -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvreduce -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvremove -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvrename -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvresize -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvs -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 lvscan -> lvm*
+-rwxr-xr-x  1 root root    603800 Sep 28 19:29 mdadm*
+-rwxr-xr-x  1 root root    333304 Sep 28 19:29 mdmon*
+lrwxrwxrwx  1 root root         8 May 13  2018 mkdosfs -> mkfs.fat*
+-rwxr-xr-x  1 root root    137848 Feb 14  2020 mke2fs*
+-rwxr-xr-x  1 root root     14568 Jul 21 10:49 mkfs*
+-rwxr-xr-x  1 root root     35048 Jul 21 10:49 mkfs.bfs*
+-rwxr-xr-x  1 root root    462368 Feb 15  2020 mkfs.btrfs*
+-rwxr-xr-x  1 root root     43168 Jul 21 10:49 mkfs.cramfs*
+lrwxrwxrwx  1 root root         6 Feb 14  2020 mkfs.ext2 -> mke2fs*
+lrwxrwxrwx  1 root root         6 Feb 14  2020 mkfs.ext3 -> mke2fs*
+lrwxrwxrwx  1 root root         6 Feb 14  2020 mkfs.ext4 -> mke2fs*
+-rwxr-xr-x  1 root root     35328 May 13  2018 mkfs.fat*
+-rwxr-xr-x  1 root root    108784 Jul 21 10:49 mkfs.minix*
+lrwxrwxrwx  1 root root         8 May 13  2018 mkfs.msdos -> mkfs.fat*
+lrwxrwxrwx  1 root root         6 May  3  2019 mkfs.ntfs -> mkntfs*
+lrwxrwxrwx  1 root root         8 May 13  2018 mkfs.vfat -> mkfs.fat*
+-rwxr-xr-x  1 root root    375032 Mar  3  2020 mkfs.xfs*
+-rwxr-xr-x  1 root root     22704 Jul 22 02:30 mkhomedir_helper*
+-rwxr-xr-x  1 root root     88176 May  3  2019 mkntfs*
+-rwxr-xr-x  1 root root    108784 Jul 21 10:49 mkswap*
+lrwxrwxrwx  1 root root         9 Mar 12  2020 modinfo -> /bin/kmod*
+lrwxrwxrwx  1 root root         9 Mar 12  2020 modprobe -> /bin/kmod*
+-rwxr-xr-x  1 root root     14488 Mar  7  2020 mount.fuse*
+lrwxrwxrwx  1 root root        15 May  3  2019 mount.lowntfs-3g -> /bin/lowntfs-3g*
+lrwxrwxrwx  1 root root        13 May  3  2019 mount.ntfs -> mount.ntfs-3g*
+lrwxrwxrwx  1 root root        12 May  3  2019 mount.ntfs-3g -> /bin/ntfs-3g*
+-rwxr-xr-x  1 root root     47592 Jun 22  2020 mount.vmhgfs*
+-rwxr-xr-x  1 root root     31800 Apr  6  2020 mpathpersist*
+-rwxr-xr-x  1 root root     34968 Apr  6  2020 multipath*
+-rwxr-xr-x  1 root root    129224 Apr  6  2020 multipathd*
+-rwxr-xr-x  1 root root     59512 May  3  2019 ntfsclone*
+-rwxr-xr-x  1 root root     39016 May  3  2019 ntfscp*
+-rwxr-xr-x  1 root root     34920 May  3  2019 ntfslabel*
+-rwxr-xr-x  1 root root     75896 May  3  2019 ntfsresize*
+-rwxr-xr-x  1 root root     51304 May  3  2019 ntfsundelete*
+-rwxr-xr-x  1 root root      2228 Jul 20  2019 on_ac_power*
+-rwxr-sr-x  1 root shadow   43168 Jul 22 02:30 pam_extrausers_chkpwd*
+-rwxr-xr-x  1 root root     43168 Jul 22 02:30 pam_extrausers_update*
+-rwxr-xr-x  1 root root     14504 Jul 22 02:30 pam_tally*
+-rwxr-xr-x  1 root root     18600 Jul 22 02:30 pam_tally2*
+-rwxr-xr-x  1 root root     88320 Feb  8  2020 parted*
+-rwxr-xr-x  1 root root     14568 Feb  8  2020 partprobe*
+-rwxr-xr-x  1 root root     14568 Jul 21 10:49 pivot_root*
+-rwxr-xr-x  1 root root    149920 Apr  1  2020 plymouthd*
+lrwxrwxrwx  1 root root        14 Jul  7  2020 poweroff -> /bin/systemctl*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvchange -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvck -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvcreate -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvdisplay -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvmove -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvremove -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvresize -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvs -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 pvscan -> lvm*
+-rwxr-xr-x  1 root root     14568 Jul 21 10:49 raw*
+lrwxrwxrwx  1 root root        14 Jul  7  2020 reboot -> /bin/systemctl*
+-rwxr-xr-x  1 root root     10232 Feb  5  2018 regdbdump*
+-rwxr-xr-x  1 root root     67968 Feb 14  2020 resize2fs*
+lrwxrwxrwx  1 root root         9 Mar 12  2020 rmmod -> /bin/kmod*
+-rwxr-xr-x  1 root root     49448 Feb 13  2020 rtacct*
+-rwxr-xr-x  1 root root     80120 Feb 13  2020 rtmon*
+lrwxrwxrwx  1 root root        14 Jul  7  2020 runlevel -> /bin/systemctl*
+-rwxr-xr-x  1 root root     67816 Jul 21 10:49 runuser*
+-rwxr-xr-x  1 root root     14648 Feb 17  2020 setcap*
+-rwxr-xr-x  1 root root     14472 May  9  2019 setvtrgb*
+-rwxr-xr-x  1 root root    141544 Jul 21 10:49 sfdisk*
+-rwxr-xr-x  1 root root    195048 Feb 20  2020 sgdisk*
+-rwxr-xr-x  1 root root       885 Feb  7  2020 shadowconfig*
+lrwxrwxrwx  1 root root        14 Jul  7  2020 shutdown -> /bin/systemctl*
+-rwxr-xr-x  1 root root     48456 Mar 23  2020 start-stop-daemon*
+-rwxr-xr-x  1 root root     51432 Jul 21 10:49 sulogin*
+-rwxr-xr-x  1 root root     18664 Jul 21 10:49 swaplabel*
+-rwxr-xr-x  1 root root     22760 Jul 21 10:49 swapoff*
+-rwxr-xr-x  1 root root     51432 Jul 21 10:49 swapon*
+-rwxr-xr-x  1 root root     14568 Jul 21 10:49 switch_root*
+-rwxr-xr-x  1 root root     30960 Feb 27  2020 sysctl*
+-rwxr-xr-x  1 root root    542160 Feb 13  2020 tc*
+lrwxrwxrwx  1 root root        14 Jul  7  2020 telinit -> /bin/systemctl*
+-rwxr-xr-x  1 root root    129264 Feb 13  2020 tipc*
+-rwxr-xr-x  1 root root    109112 Feb 14  2020 tune2fs*
+-rwxr-sr-x  1 root shadow   43160 Jul 22 02:30 unix_chkpwd*
+-rwxr-xr-x  1 root root     43160 Jul 22 02:30 unix_update*
+-rwxr-xr-x  1 root root     53064 Sep 10 14:47 veritysetup*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgcfgbackup -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgcfgrestore -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgchange -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgck -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgconvert -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgcreate -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgdisplay -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgexport -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgextend -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgimport -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgimportclone -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgmerge -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgmknodes -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgreduce -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgremove -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgrename -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgs -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgscan -> lvm*
+lrwxrwxrwx  1 root root         3 Feb 13  2020 vgsplit -> lvm*
+-rwxr-xr-x  1 root root     47336 Jul 21 10:49 wipefs*
+-rwxr-xr-x  1 root root    576664 Mar  3  2020 xfs_repair*
+-rwxr-xr-x  1 root root    117088 Jul 21 10:49 zramctl*
