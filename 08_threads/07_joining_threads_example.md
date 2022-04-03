@@ -1,26 +1,21 @@
-## Joining two Threads
+## Пример за съединяване на нишки
 
-- Define the helper permutations generation functions 
-- Define the threads function
-- Allocate a vector of size **arg**
-- Initialize the vector with the first permutation and print it
-- While there is next permutation:
-- Generate it, print it and synchronize
-- Deallocate the vector and exit thread
+- Дефинираме функция за генериране на пермутации
+- Дефинираме функция при работа на нишките:
+  - Разпределяме вектор с размер **arg**
+  - Инициализираме вектора с първата пермутация и го отпечатваме
+  - Докато има следваща пермутация: генерираме, отпечатваме и синхронизираме
+  - Почистваме, като освобождаваме заетата от вектора памет и приключваме нишката
 
-![07_1.png](07_1.png) 
-
-- In the main function function:
-- Start thread function with size 4, exit on error
-- Start thread function with size 3, exit on error
-- Wait for the first thread and print a notification, exit on error
-- Wait for the second thread and print a notification, exit on error
-- Print **Job Done!** and quit
-
-![07_2.png](07_2.png) 
+- В главната функция:
+  - Стартираме функцията за нишка с размер 4, изход при грешка
+  - Стартираме функцията за нишка с размер 3, изход при грешка
+  - Изчакваме първата нишка и отпечатваме известие, изход при грешка
+  - Изчакваме втората нишка и отпечатваме известие, изход при грешка
+  - Отпечатваме **Job Done!** и приключваме
 
 ### threads-join.c
-```
+```c
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -126,7 +121,7 @@ int main(int argc, char *argv)
 }
 ```
 
-Compile with support for threads:
+Компилиране на програмата с изрична инструкция към компилатора да поддръжка нишки:
 ```
 gcc threads-join.c -o threads-join -lpthread
 ```
