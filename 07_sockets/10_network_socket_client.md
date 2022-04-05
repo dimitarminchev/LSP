@@ -10,7 +10,7 @@
 Затворете сокета.
 
 ### network-socket-client.c
-```
+```c
 #include<string.h>
 #include<unistd.h>
 #include<stdio.h>

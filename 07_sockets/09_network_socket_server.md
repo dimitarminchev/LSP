@@ -12,7 +12,7 @@
 Затворете сокета.
 
 ### network-socket-server.c
-```
+```c
 #include <string.h>
 #include <unistd.h>
 #include <stdio.h>

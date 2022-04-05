@@ -106,17 +106,17 @@
 
 * [Част 7 – Сокети](07_sockets/README.md)
 
-  * [Сокетите в Линукс](07_sockets/01.md)
-  * [Работа със сокети в C](07_sockets/02.md)
-  * [Използване на Unix сокети](07_sockets/03.md)
-  * [Файл сокет сървър](07_sockets/04.md)
-  * [Файл сокет клиент](07_sockets/05.md)
-  * [Двойка сокети](07_sockets/06.md)
-  * [Пример за двойка сокети](07_sockets/07.md)
-  * [Мрежови сокети](07_sockets/08.md)
-  * [Мрежов сокет сървър](07_sockets/09.md)
-  * [Мрежов сокет клиент](07_sockets/10.md)
-  * [Упражнение](07_sockets/11.md)
+  * [Сокетите в Линукс](07_sockets/01_linux_sockets.md)
+  * [Работа със сокети в C](07_sockets/02_sockets_in_c.md)
+  * [Използване на Unix сокети](07_sockets/03_unix_sockets.md)
+  * [Файл сокет сървър](07_sockets/04_file_socket_server.md)
+  * [Файл сокет клиент](07_sockets/05_file_socket_client.md)
+  * [Двойка сокети](07_sockets/06_socketpair.md)
+  * [Пример за двойка сокети](07_sockets/07_socketpair_example.md)
+  * [Мрежови сокети](07_sockets/08_network_sockets.md)
+  * [Мрежов сокет сървър](07_sockets/09_network_socket_server.md)
+  * [Мрежов сокет клиент](07_sockets/10_network_socket_client.md)
+  * [Упражнение върху сокети](07_sockets/11_sockets_exercise.md)
 
 * [Част 8 – Нишки](08_threads/readme.md) 
 
