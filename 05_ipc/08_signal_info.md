@@ -8,7 +8,7 @@
 - Ако възникне грешка преустановете програмата
 
 ### signal-info.c
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>

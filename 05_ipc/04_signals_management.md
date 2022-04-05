@@ -11,7 +11,7 @@
 | sigwait()     | чака сигнал.                                                                               |
 | strsignal()   | връща низ описващ сигнала.                                                                 |
 
-```
+```c
 #include <signal.h>
 
 int sigemptyset (sigget_t *set);

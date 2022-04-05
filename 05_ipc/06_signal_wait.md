@@ -1,6 +1,6 @@
 ## Изчакване на сигнали
 
-```
+```c
 #include<signal.h>
 int sigwait(const sifset_t *set, int *sig);
 ```
@@ -19,7 +19,7 @@ int sigwait(const sifset_t *set, int *sig);
 Ако възникне грешка преустановете програмата.
 
 ### signal-wait.c
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>

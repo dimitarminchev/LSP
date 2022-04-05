@@ -11,7 +11,7 @@
   - Затворете входният файлов дескриптор (**input/read**)
 
 ### pipe-pass-message.c
-```
+```c
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>

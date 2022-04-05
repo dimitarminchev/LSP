@@ -7,7 +7,7 @@
 - Влезте в безкраен цикъл
 
 ### signal-handler.c
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>

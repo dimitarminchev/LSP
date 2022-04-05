@@ -1,6 +1,6 @@
 ## Работа с тръби
 
-```
+```c
 #include <unistd.h>
 int pipe(int pipefd[2]);
 ```
@@ -10,7 +10,7 @@ int pipe(int pipefd[2]);
 - **pipefd[0]** се отнася за четене в края на тръбата
 - **pipefd[1]** се отнася за писане в края на тръбата.
 
-```
+```c
 #include <sys/types.h>
 #include <sys/stat.h>
 int mkfifo(const char *pathname, mode_t mode);

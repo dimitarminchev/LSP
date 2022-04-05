@@ -10,7 +10,7 @@
 Ако **key** е Enter използвайте **flush**. 
 Затворете и изтрийте файла. 
 
-```
+```c
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -47,7 +47,7 @@ int main(int argc, char * argv[])
 Изведете получения символ в конзолата. 
 Затворете и изтрийте файла. 
 
-```
+```c
 #include <stdio.h>
 #include <unistd.h>
 #define FIFO_NAME "./pipe-chat-fifo"

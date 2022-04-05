@@ -1,6 +1,6 @@
 ## Разглеждане на сигнали
 
-```
+```c
 #include<string.h>
 #include<signal.h>
 char *strsignal(int sig);
