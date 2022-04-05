@@ -1,15 +1,15 @@
-## Semaphore Threads
+## Пример за синхронизиране посредством използване на семафор 
 
-- Initialize a semaphore
-- Define thread function - Process the argument and release **semaphore**.
-- In main function - Set the common **id** variable to 1
-- Initialize **semaphore** with 0 (busy)
-- Start the first thread and pass **id**
-- Wait the **semaphore**, set **id** to 2 and start the second thread with the new id
-- Join both threads and destroy **semaphore**
+- Декларираме семафор (_Променлива: sem_)
+- Декларираме баланс (_Променлива: balance_) и го инициираме с 1000
+- Дефинираме процедура при работа на нишката, която oбработва аргумента и освобождава семафора
+- Инициираме семафора със стойност нула (_Означава: Зает_)
+- Стартираме първата нишка и предаваме параметър за сума на депозита (_Променлива: deposit_amount_)
+- Стартираме втората нишка и предаваме параметър за сума на депозита (_Променлива: deposit_amount_)
+- Изчакваме двете нишки да приключат своята работа и унищожаваме семафора
 
 ### thread-sync-semaphore.c
-```
+```c
 #include<stdio.h>
 #include<stdlib.h>
 #include<pthread.h>
@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-Compile with support for threads:
+Компилиране на програмата с изрична инструкция към компилатора да поддръжка нишки:
 ```
 gcc thread-sync-semaphore.c -o thread-sync-semaphore -lpthread
 ```

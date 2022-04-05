@@ -1,15 +1,15 @@
-## Mutex example
+## Пример за синхронизиране посредством използване на мютекс 
 
-- Define mutex and balance variables
-- Define thread function: Lock the mutex
-- Add the **deposit** amount to the **balance**
-- Print the **balance** and unlock the mutex
-- Create thread one with **deposit** = 200, notify if failed
-- Create thread two with **deposit** = 200, notify if failed
-- Wait for both threads and exit with success
+- Дефинираме променливи **mutex** и **balance**
+- Дефинираме на функция за нишки, където заключваме mutex
+- Добавяме сумата от депозита (_Променлива: deposit_) към баланса (_Променлива: balance_)
+- Отпечатваме на баланса и отключваме на мютекса
+- Създаваме на първа нишка с депозит от 200, извеждаме съобщение при неуспех
+- Създаваме на втора нишка с депозит от 200, извеждаме съобщение при неуспех
+- Изчакваме двете нишки да приключта своята работа
 
 ### thread-sync-mutex.c
-```
+```c
 #include<stdio.h>
 #include<pthread.h>
 #include<stdlib.h>
@@ -61,10 +61,9 @@ int main(int argc, char *argv[])
 
   return EXIT_SUCCESS; // 0
 }
-
 ```
 
-Compile with support for threads:
+Компилиране на програмата с изрична инструкция към компилатора да поддръжка нишки:
 ```
 gcc thread-sync-mutex.c -o thread-sync-mutex -lpthread
 ```
