@@ -134,14 +134,15 @@
 
 * [Част 9 - Синхронизация на нишки](09_threads_synchronization/readme.md)
 
-  * [Exiting the Threads](09_threads_synchronization/01.md)
-  * [Managing thread exit with C](09_threads_synchronization/02.md)
-  * [Clean thread exit](09_threads_synchronization/03.md)
-  * [Why is synchronization needed?](09_threads_synchronization/04.md)
-  * [Synchronization mechanisms](09_threads_synchronization/05.md)
-  * [Mutexes](09_threads_synchronization/06.md)
-  * [Mutex example](09_threads_synchronization/07.md)
-  * [Typical use of mutexes](09_threads_synchronization/08.md)
+  * [Изход от нишка](09_threads_synchronization/01_exiting_threads.md)
+  * [Управление на изход от нишка](09_threads_synchronization/02_managing_thread_exit.md)
+  * [Пример за изход от нишкa](09_threads_synchronization/03_thread_exit_example.md)
+  * [Защо е необходима синхронизация?](09_threads_synchronization/04_why_to_sync.md)
+  * [Механизми за синхронизация](09_threads_synchronization/05_sync_mechanisms.md)
+  * [Мютекси](09_threads_synchronization/06_mutexes.md)
+  * [Кога е необходимо заключване?](09_threads_synchronization/07_when_lock.md)
+  * [Типична употреба на мютекси](09_threads_synchronization/08_use_of_mutexes.md)
+
   * [Problems with threads - race conditions](09_threads_synchronization/09.md)
   * [Problems with threads - thread safe code](09_threads_synchronization/10.md)
   * [Problems with threads - mutex deadlock](09_threads_synchronization/11.md)

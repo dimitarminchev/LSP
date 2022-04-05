@@ -1,13 +1,14 @@
 ## Част 9 - Синхронизация на нишки
 
-- [Exiting the Threads](01.md)
-- [Managing thread exit with C](02.md)
-- [Clean thread exit](03.md)
-- [Why is synchronization needed?](04.md)
-- [Synchronization mechanisms](05.md)
-- [Mutexes](06.md)
-- [Mutex example](07.md)
-- [Typical use of mutexes](08.md)
+- [Изход от нишка](01_exiting_threads.md)
+- [Управление на изход от нишка](02_managing_thread_exit.md)
+- [Пример за изход от нишкa](03_thread_exit_example.md)
+- [Защо е необходима синхронизация?](04_why_to_sync.md)
+- [Механизми за синхронизация](05_sync_mechanisms.md)
+- [Мютекси](06_mutexes.md)
+- [Кога е необходимо заключване?](07_when_lock.md)
+- [Типична употреба на мютекси](08_use_of_mutexes.md)
+
 - [Problems with threads - race conditions](09.md)
 - [Problems with threads - thread safe code](10.md)
 - [Problems with threads - mutex deadlock](11.md)
