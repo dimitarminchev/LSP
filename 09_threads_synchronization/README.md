@@ -8,10 +8,10 @@
 - [Мютекси](06_mutexes.md)
 - [Кога е необходимо заключване?](07_when_lock.md)
 - [Типична употреба на мютекси](08_use_of_mutexes.md)
+- [Проблеми с нишките при състезателни условия](09_threads_race_conditions.md)
+- [Проблеми с нишките и безопасен за нишките код](10_threads_safe_code.md)
+- [Проблеми с нишките при състояние на мъртва хватка](11_mutex_deadlock.md)
 
-- [Problems with threads - race conditions](09.md)
-- [Problems with threads - thread safe code](10.md)
-- [Problems with threads - mutex deadlock](11.md)
 - [Creating and destroying mutexes](12.md)
 - [Locking and unlocking mutexes](13.md)
 - [Mutex example](14.md)
