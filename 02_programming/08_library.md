@@ -10,7 +10,7 @@
 
 На фигурата по-долу е дадена примерна структура на библиотека:
 
-![08.png](08.png)
+![08_library.png](08_library.png)
 
 ### Структура на директориите
 
@@ -29,7 +29,7 @@ mkdir libexample/bin/shared
 ### Файлове на библиотеката
 
 В папка `libexample/src/addlib/` създайте файл `add.c` със следното съдържание:
-```
+```c
 #include <stdio.h>
 int gSummand;
 void setSummand(int summand) {
@@ -46,25 +46,29 @@ void __attribute__ ((destructor)) cleanUpLibrary(void) {
 	printf("Library is exited\n"); 
 }
 ```
+
 В папка `libexample/src/addlib/` създайте файл `add.h` със следното съдържание:
-```
+```c
 void setSummand(int summand);
 int add(int summand);
 ```
+
 В папка `libexample/src/addlib/` създайте файл `answer.c` със следното съдържание:
-```
+```c
 #include "add.h"
 int answer() {
 	setSummand(20);
 	return add(22); // 42 = 20 + 22
 }
 ```
+
 В папка `libexample/src/addlib/` създайте файл `add.h` със следното съдържание:
-```
+```c
 int answer();
 ```
+
 В папка `libexample/src/` създайте файл `main.c` със следното съдържание:
-```
+```c
 #include <stdio.h>
 #include "addlib/add.h"
 #include "addlib/answer.h"

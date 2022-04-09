@@ -1,12 +1,12 @@
 ## Тестване на библиотека
 В папка `libexample/` създайте файл `test.c` със следното съдържание:
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <dlfcn.h>
 int main()
 {
-		    // Load the dinamic library:
+        // Load the dinamic library:
         void* lib_add = dlopen("bin/shared/libadd.so",  RTLD_LAZY | RTLD_GLOBAL);
 
         // Declare the function pointers:
@@ -25,11 +25,13 @@ int main()
         return 0;
 }
 ```
+
 Компилирайте и стартирайте тестовата програма използвайки командите:
 ```
 gcc test.c -ldl -o test
 ./test
 ```
+
 В резултат при успешно изпълнение трябва да видите следните три реда:
 ```
 Library is initialized
