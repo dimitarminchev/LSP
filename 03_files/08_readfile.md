@@ -9,7 +9,7 @@
 Затворете файла, отпечатайте грешка при проблем.
 
 ### readfile.c
-```
+```c
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>

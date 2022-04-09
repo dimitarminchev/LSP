@@ -9,7 +9,7 @@
 - Затворете файла
 
 ### makesparse.c
-```
+```c
 #include <stdio.h>
 #include <string.h>
 

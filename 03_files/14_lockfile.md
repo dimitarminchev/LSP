@@ -8,8 +8,7 @@
 Затворете файла. 
 
 ### lockfile.c
-
-```
+```c
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>

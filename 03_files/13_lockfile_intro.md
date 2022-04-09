@@ -6,7 +6,7 @@
 - Ако блокът вече е заключен, използвайте **F_GETLK**, за да получите информация за процеса на заключване.
 - За да отключите блок на файл, използвайте **F_SETLK**, но задайте **flock.l_type = F_UNLCK**.
 
-```
+```c
 #include<stdio.h>
 FILE *fopen(const char *pathname, const char *mode);
 size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
@@ -14,7 +14,8 @@ int fseek(FILE *stream, long offset, int whence);
 int fclose(FILE * stream);
 ```
 
-```
+Структурата flock
+```c
 struct flock {
    ...
    short l_type;   // F_RDLCK, F_WRLCK, F_UNLCK

@@ -1,7 +1,7 @@
-## Основи при работа с файлове
+## Библиотека за работа с файлове
 
 Библиотеката **unistd.h** съдържа методи за работа с файлове:
-```
+```c
 #include<unistd.h>
 int open(const char *name, int flags);
 int open(const char* name, int flags, mode_t mode);

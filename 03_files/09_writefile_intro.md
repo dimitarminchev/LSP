@@ -1,6 +1,6 @@
 ## Четене и писане на файл
 
-```
+```c
 #include<unistd.h>
 ssize_t write(int fd, const coid *buf, size_t count);
 ```

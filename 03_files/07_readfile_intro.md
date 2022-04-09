@@ -2,7 +2,7 @@
 
 Библиотеката **unistd.h** съдържа методи за работа с файлове:
 
-```
+```c
 #include<unistd.h>
 ssize_t read(int fd, void *buf, size_t len);
 ```

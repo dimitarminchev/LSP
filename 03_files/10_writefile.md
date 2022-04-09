@@ -6,7 +6,7 @@
 Затворете файла, при неуспех изведете грешка.
 
 ### writefile.c
-```
+```c
 #include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>

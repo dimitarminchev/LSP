@@ -1,6 +1,6 @@
 ## Търсене в файлове и откъслечни файлове
 
-```
+```c
 #include<stdio.h>
 FILE *fopen(const char *pathname, const char *mode);
 size_t fread(void *ptr, size_t size, size_t nmemb, FOLE *stream);
