@@ -1,6 +1,6 @@
-## Съобщенията в C
+## Библиотеки за работа със съобщения
 
-```
+```c
 #include<sys/types.h>
 #include<sys/ipc.h>
 #include<sys/msg>

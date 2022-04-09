@@ -5,8 +5,8 @@
 - Определете **msg_1_t** за клиентското съобщение.
 - Определете **msg_1_2** за отговора от страна на сървъра.
 
-### msgtypes.h
-```
+### message-types.h
+```c
 #ifndef MSG_TYPES
 #define MSG_TYPES
 

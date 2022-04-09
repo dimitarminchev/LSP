@@ -1,7 +1,7 @@
 ## Семафор клиент
 
 - Задайте 2 семафора - първият показва, че сървърът трябва да чете, вторият за клиента
-- Създайте **"./shmemserv"**, изход при грешка
+- Създайте **semaphore-server**, изход при грешка
 - Прикачете споделената памет
 - Докато текущото съобщение не е "q":
 - Поискайте семафорен ресурс на клиента и отпечатайте следващото съобщение
@@ -9,8 +9,8 @@
 - Освободете семафора на сървъра
 - Отделете споделената памет
 
-### semcli.c
-```
+### semaphore-client.c
+```c
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "semtypes.h"
+#include "semaphore-types.h"
 
 int main(int argc, char * argv[])
 {

@@ -1,0 +1,18 @@
+## Част 6 - Синхронизация на комуникацията между процесите
+
+* [Опашка за съобщения](01_message_queue.md)
+* [Библиотеки за работа със съобщения](02_message_libs.md)
+* [Определяне на общите данни](03_message_types.md)
+* [Сървър за съобщения](04_message_server.md)
+* [Клиент за съобщения](05_message_client.md)
+* [Споделена памет](06_shared_memory.md)
+* [Библиотеки за работа със споделена памет](07_shared_memory_libs.md)
+* [Определяне на общите данни](08_shared_memory_types.md)
+* [Сървър за памет](09_shared_memory_server.md)
+* [Клиент за памет](10_shared_memory_client.md)
+* [Семафори](11_semaphore.md)
+* [Библиотеки за работа със семафори](12_semaphore_libs.md)
+* [Определяне на общите данни](13_semaphore_types.md)
+* [Семафор Сървър](14_semaphore_server.md)
+* [Семафор Клиент](15_semaphore_client.md)
+* [Упражнение за синхронизация на комуникация между процеси](16_ipc_sync_exercise.md)

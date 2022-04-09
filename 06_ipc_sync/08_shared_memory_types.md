@@ -9,12 +9,12 @@
 - **readlast** е 1, когато сървър получи последно съобщение
 - **string**  държи текущото съобщение
 
-### shmemtypes.h
-```
+### shared-memory-types.h
+```c
 #ifndef SHMEM_TYPES
 #define SHMEM_TYPES
 
-#define FTOK_FILE "./shmemserv"
+#define FTOK_FILE "./shared-memory-server"
 
 #define MAXLEN 512
 #define FREE 1

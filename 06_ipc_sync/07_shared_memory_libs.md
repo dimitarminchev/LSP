@@ -1,6 +1,6 @@
-## Споделена памет в C
+## Библиотеки за работа със споделена памет
 
-```
+```c
 #include<sys/types.h>
 #include<sys/shm.h>
 #include<sys/ipc.h>
