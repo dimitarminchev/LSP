@@ -3,4 +3,4 @@
 ![01_compiling.png](01_compiling.png) 
 
 Полезна информация: 
-Видео "[Компилиране, ассемблиране и свързване](https://www.youtube.com/watch?v=N2y6csonII4)"
+[Компилиране, ассемблиране и свързване](https://www.youtube.com/watch?v=N2y6csonII4)

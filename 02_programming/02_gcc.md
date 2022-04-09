@@ -6,4 +6,5 @@
 
 ![02_gcc.png](02_gcc.png) 
 
-Повече информация: https://en.wikipedia.org/wiki/GNU_Compiler_Collection
+Повече информация: 
+[https://en.wikipedia.org/wiki/GNU_Compiler_Collection](https://en.wikipedia.org/wiki/GNU_Compiler_Collection)
