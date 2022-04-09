@@ -37,7 +37,7 @@
 
 * [Част 3 – Файлова система и файлове](03_files/README.md)
  
-  * [Файловете в Linux](03_files/01_files.md)
+  * [Файлове](03_files/01_files.md)
   * [Файлови системи и именовани пространства](03_files/02_filesystem.md)
   * [Работа с файлове](03_files/03_working_with_files.md)
   * [Буферирани срещу небуферирани потоци](03_files/04_streams.md)
@@ -45,7 +45,7 @@
   * [Отваряне и затваряне на файл](03_files/06_openclose.md)
   * [Четене на съдържанието на файл](03_files/07_readfile_intro.md)
   * [Четене и отпечатване на файл](03_files/08_readfile.md)
-  * [Четене и писане на файл](03_files/09_writefile_intro_.md)
+  * [Четене и писане на файл](03_files/09_writefile_intro.md)
   * [Запис на изречения във файл](03_files/10_writefile.md)
   * [Търсене в файлове и откъслечни файлове](03_files/11_sparse_files.md)
   * [Направете файл с дупка](03_files/12_makesparse.md)
