@@ -14,7 +14,8 @@
 | jobs         | показва статуса на задачите.                                   |
 | fg           | връща прекъснатия процес на преден план.                       |
 
-Повече информация: https://www.tecmint.com/linux-process-management/
+Повече информация: 
+[https://www.tecmint.com/linux-process-management/](https://www.tecmint.com/linux-process-management/)
 
 Пример:
 ```
