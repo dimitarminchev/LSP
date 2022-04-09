@@ -7,8 +7,8 @@
 Родителският процес отпечатва идентификатора на дъщерният процес.
 Дъщерният процес отпечатва съобщение и излиза.
 
-### zombietest.c
-```
+### zombie-test.c
+```c
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <signal.h>

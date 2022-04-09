@@ -6,8 +6,8 @@
 При успех се отпечатва състоянието на прекратяването.
 Дъщерният процес изпълнява командата в аргументите.
 
-### execstat.c
-```
+### exec-stat.c
+```c
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <stdlib.h>

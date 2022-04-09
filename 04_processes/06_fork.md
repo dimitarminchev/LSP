@@ -1,6 +1,6 @@
 ## Стартиране на дъщерен процес
 
-```
+```c
 #include<sys/types.h>
 #include<unistd.h>
 pid_t fork(void);
@@ -20,7 +20,7 @@ pid_t getppid(void);
 Програмен фрагмен за стартиране на дъщерен процес:
 
 ### fork.c
-```
+```c
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>

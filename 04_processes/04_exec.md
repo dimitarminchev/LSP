@@ -1,6 +1,6 @@
 ## Изпълнение на команда
 
-```
+```c
 #include<unistd.h>
 int execl (const char *path, const char *arg, ...);
 int execlp (const char *file, const char *arg, ...);
