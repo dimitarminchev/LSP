@@ -20,4 +20,4 @@ int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
 3. Желанието за приемане на входящи връзки и ограничение броя на входящите връзки се определят от **listen()**.
 4. Връзките се приемат с **accept()**.
 
-![sockets.png](sockets.png) 
+![sockets_stream.png](sockets_stream.png) 
