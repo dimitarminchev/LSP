@@ -1,4 +1,4 @@
-## Our chat Daemon
+## Чат демон
 
 - Check the arguments, exit on error
 - Daemonize the program, exit on error

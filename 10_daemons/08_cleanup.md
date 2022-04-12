@@ -1,4 +1,4 @@
-## Tidy Up
+## Почистване
 
 - If we have open lock file descriptor:
 - Close the file descriptor

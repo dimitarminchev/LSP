@@ -1,4 +1,4 @@
-## Startup arguments
+## Аргументи за стартиране
 
 - If arguments are passed, this first one should be '**stop**' or '**restart**' command
 - Open **lock file**, exit on error

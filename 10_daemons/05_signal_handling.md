@@ -1,4 +1,4 @@
-## Singlas handling
+## Обработка на сигнали
 
 - Define signals **handler**:
 - On **SIGUSR1** = set the **graceful** flag

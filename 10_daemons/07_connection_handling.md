@@ -1,4 +1,4 @@
-## Connections handling
+## Обработка на конекции
 
 - Define connections handler:
 - Read text line from the passed socket

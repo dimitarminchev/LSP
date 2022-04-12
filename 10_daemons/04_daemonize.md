@@ -1,4 +1,4 @@
-## Daemonize
+## Демонизиране
 
 - Fork the process, exit the parent and on error
 - Open the application log

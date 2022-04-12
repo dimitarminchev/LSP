@@ -1,4 +1,4 @@
-## Set listening Socket
+## Слушане на сокет
 
 - Initialize socket configuration for INET family, provided port and all interfaces
 - Create the socket, exit on error

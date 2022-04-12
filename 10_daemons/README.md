@@ -1,10 +1,11 @@
 ## Част 10 – Демони
-
-- [What are Daemons?](01.md)
-- [Our chat Daemon](02.md)
-- [Daemonize](03.md)
-- [Singlas handling](04.md)
-- [Set listening Socket](05.md)
-- [Connections handling](06.md)
-- [Tidy Up](07.md)
-- [Startup arguments](08.md)
+ 
+- [Какво са демоните?](01_what_are_daemons.md)
+- [Скелет на демон](02_daemon_skeleton.md)
+- [Чат демон](03_chat_daemon.md)
+- [Демонизиране](04_daemonize.md)
+- [Обработка на сигнали](05_signal_handling.md)
+- [Слушане на сокет](06_socket_listening.md)
+- [Обработка на конекции](07_connection_handling.md)
+- [Почистване](08_cleanup.md)
+- [Аргументи за стартиране](09_startup_arguments.md)
