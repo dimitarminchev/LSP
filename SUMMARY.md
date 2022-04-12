@@ -1,22 +1,23 @@
 # Съдържание 
 
 * [Въведение](README.md)
+
 * [Част 1 - Основи на Линукс](01_linux_basics/README.md)
 
-  * [Какво е системно програмиране?](01_linux_basics/01.md)
-  * [Работна среда](01_linux_basics/02.md)
-  * [Отдалечен достъп](01_linux_basics/03.md)
-  * [Как да получите помощ в Линукс?](01_linux_basics/04.md)
-  * [Файлова система](01_linux_basics/05.md)
-  * [Трансфер на файлове](01_linux_basics/06.md)
-  * [Процеси в Линукс](01_linux_basics/07.md)
-  * [Потребители и групи](01_linux_basics/08.md)
-  * [Файлови разрешения](01_linux_basics/09.md)
-  * [Управление на потребители и групи](01_linux_basics/10.md)
-  * [Стандартни потоци](01_linux_basics/11.md)
-  * [Пренасочване и тръбопроводи](01_linux_basics/12.md)
-  * [Текстовият редактор Nano](01_linux_basics/13.md)
-  * [Упражнение](01_linux_basics/14.md)
+  * [Какво е системно програмиране?](01_linux_basics/01_introduction.md)
+  * [Работна среда](01_linux_basics/02_environment.md)
+  * [Отдалечен достъп](01_linux_basics/03_remote.md)
+  * [Как да получите помощ в Линукс?](01_linux_basics/04_man.md)
+  * [Файлова система](01_linux_basics/05_files.md)
+  * [Трансфер на файлове](01_linux_basics/06_ftp.md)
+  * [Процеси в Линукс](01_linux_basics/07_processes.md)
+  * [Потребители и групи](01_linux_basics/08_users.md)
+  * [Файлови разрешения](01_linux_basics/09_permissions.md)
+  * [Управление на потребители и групи](01_linux_basics/10_mannage_users.md)
+  * [Стандартни потоци](01_linux_basics/11_streams.md)
+  * [Пренасочване и тръбопроводи](01_linux_basics/12_pipe.md)
+  * [Текстовият редактор Nano](01_linux_basics/13_nano.md)
+  * [Упражнение върху основи на Линукс](01_linux_basics/14_exercise.md)
 
 * [Част 2 – Програмиране](02_programming/README.md)
 
