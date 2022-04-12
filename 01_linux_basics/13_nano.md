@@ -1,10 +1,11 @@
-## Текстовият редактор Nano
+## Текстовият редактор nano
 
-Текстовите файлове са често използвано средство за съхранение и обмен на информация в Линукс. Поради това, почти всяка една дистрибуция предлага средства за работа с тях. В нашата работна среда ще използваме текстовия редактор **Nano**:
+Текстовите файлове са често използвано средство за съхранение и обмен на информация в Линукс. Поради това, почти всяка една дистрибуция предлага средства за работа с тях. В нашата работна среда ще използваме текстовия редактор **nano**:
 
 ![13_nano.png](13_nano.png)  
 
-Някои от основните функции на **Nano** са:
+Някои от основните функции на **nano** са:
+
 ### Файлов контрол
 
 | Клавиш          | Пояснение                            |
@@ -47,5 +48,5 @@
 | Alt-r  | Търсене и заместване       |
  
 Полезна информация:
-- [The Beginner’s Guide to Nano, the Linux Command-Line Text Editor](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
+- [The Beginner's Guide to Nano, the Linux Command-Line Text Editor](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
 - [Nano text editor command cheatsheet](http://www.codexpedia.com/text-editor/nano-text-editor-command-cheatsheet/)
