@@ -62,7 +62,7 @@ int answer() {
 }
 ```
 
-В папка `libexample/src/addlib/` създайте файл `add.h` със следното съдържание:
+В папка `libexample/src/addlib/` създайте файл `answer.h` със следното съдържание:
 ```c
 int answer();
 ```
