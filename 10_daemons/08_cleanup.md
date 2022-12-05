@@ -1,14 +1,14 @@
 ## Почистване
 
-- If we have open lock file descriptor:
-- Close the file descriptor
-- Delete the lock file
-- If we have open listening socket:
-- Close the listening socket
+- Ако има отворен дескриптор на заключващ файл:
+  - Затваряне на файловия дескриптор
+  - Изтриване на файла за заключване
+- Ако има отворен сокет за слушане:
+  - Затворете сокета за слушане
 
 ### chat-daemon.c (Tidy Up)
 
-```
+```c
 int gLockFileDesk = -1;
 int gMasterSocket = -1;
 const char *cost gLockFilePath = "/var/run/chat-daemon.pid"

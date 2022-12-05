@@ -1,15 +1,15 @@
 ## Слушане на сокет
 
-- Initialize socket configuration for INET family, provided port and all interfaces
-- Create the socket, exit on error
-- Set the socket to reuse the address
-- Bind the socket, exit on error
-- Listen on the socket, exit on error
-- Exit with success
+- Инициализиране на конфигурацията на сокета за семейството на **INET**, предоставения порт и всички интерфейси
+- Създаване на сокета, изход при грешка
+- Настройване на сокета за повторно използване на адреса
+- Свързване на сокета, изход при грешка
+- Слушане на сокета, изход при грешка
+- Изход с успех
 
 ### chat-daemon.c (BindPassiveSocket)
 
-```
+```c
 int BindPassiveSocket(const int portNum, int *consr boundSocket)
 {
   struct coskaddr_in sin;

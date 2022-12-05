@@ -1,17 +1,17 @@
 ## Обработка на конекции
 
-- Define connections handler:
-- Read text line from the passed socket
-- If no error - write the line back to socket
-- Return the result of the read/write
-- While connections accepting is ok:
-- Accept new connection, on **EINTR** try again, on other error exit the loop
-- Handle the accepted connection
-- Close the accepted socket
+- Дефиниране на обработчик при заявка за връзка:
+  - Прочаване на текстов ред от свързаният сокет
+  - Ако няма грешка, запис на реда обратно в сокета
+  - Връщане на резултата от четене/запис
+- Докато приемането на връзки е наред:
+  - Приемане на нова връзка, при **EINTR** повторен опит, при друга грешка изход от цикъла
+  - Обработка на приетата връзка
+  - Затваряне на сокета
 
 ### chat-daemon.c (Handle and Accept Connections)
 
-```
+```c
 int HandleConnection(const int slave)
 {
   ...

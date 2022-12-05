@@ -1,17 +1,17 @@
 ## Демонизиране
 
-- Fork the process, exit the parent and on error
-- Open the application log
-- Create the **lock file** and lock it, exit on error
-- Write the **pid** of the process in **lock file**
-- Take the lead in a new session, exit on error
-- Change the process directory to '/' 
-- Close all possible file descriptors, except for the **lock file** one
-- Open the standard streams (0 - 2), redirect to '/dev/null' and exit with success 
+- Разклоняване на процеса, изход от родителя и при грешка
+- Отваряне на дневника на приложението
+- Създаване на **lock file** и заключване, изход при грешка
+- Записване идентификатора на процеса **pid** във файла **lock file**
+- Поемане на водеща роля в нова сесия, изход при грешка
+- Промяна на директорията на процеса на '/'
+- Затваряне на всички възможни файлови дескриптори, с изключение на **lock file**
+- Отваряне на стандартните потоци (0 - 2), пренасочване към '/dev/null' и успешен изход 
 
 ### chat-daemon.c (BecomeDaemonProcess)
 
-```
+```c
 int BecomeDaemonProcess(void)
 {
   ...

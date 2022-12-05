@@ -1,16 +1,15 @@
 ## Обработка на сигнали
 
-- Define signals **handler**:
-- On **SIGUSR1** = set the **graceful** flag
-- On **SIGHUP** = set **graceful** and **HUp** flags
-- On **SIGTERM** = cleanup and exit process
-- Block **SIGUSR2**, **SIGALRM** ... flags (total 7)
-- Set the handler for **SIGUSR1**, **SIGHUP**, **SIGTERM** and other fatal signals (total 16)
-
+- Дефиниране на обработчици на сигнали **handler**
+- На **SIGUSR1** = задайте флага **graceful**
+- На **SIGHUP** = задайте флагове **graceful** и **HUp**
+- На **SIGTERM** = процес на почистване и изход
+- Блокиране на флагове **SIGUSR2**, **SIGALRM** ...  (общо 7)
+- Задаване манипулатора за **SIGUSR1**, **SIGHUP**, **SIGTERM** и други фатални сигнали (общо 16)
 
 ### chat-daemon.c (ConfigureSignalHandlers)
 
-```
+```c
 void Handler(int Signal) {
   switch(Signal) 
   {

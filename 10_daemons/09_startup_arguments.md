@@ -1,15 +1,15 @@
 ## Аргументи за стартиране
 
-- If arguments are passed, this first one should be '**stop**' or '**restart**' command
-- Open **lock file**, exit on error
-- Read and convert the **pid** from the **lock file**
-- If the command is **stop**, send **SIGUSR1** to the **pid** process and exit with success
-- If the command is '**restart**', send **SIGHUP** to the **pid** process and exit with success
-- If the command is not correct, print the usage and exit with error
+- Ако са подадени аргументи, то първият трябва да бъде команда '**stop**' или '**restart**'
+- Отваряне на **lock file**, изход при грешка
+- Прочитане и конвертирайте на **pid** от файла **lock file**
+- Ако командата е **stop**, изпращане на **SIGUSR1** към процеса **pid** и успешен изход
+- Ако командата е '**restart**', изпращане на **SIGHUP** към процеса **pid** и успешен изход
+- Ако командата не е правилна, отпечатване на правилната употреба и изход с грешка
 
 ### chat-daemon.c (main arguments)
 
-```
+```c
 int main(int argc, char *argv[])
 {
   ...

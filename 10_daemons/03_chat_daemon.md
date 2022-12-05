@@ -1,16 +1,16 @@
 ## Чат демон
 
-- Check the arguments, exit on error
-- Daemonize the program, exit on error
-- Prepare the listening socket
-- Do until **graceful exit** is signalled 
-- Accept and process a new connection
-- Reset the **graceful exit** and **HUp** flags
-- Clean up the resources and exit
+- Проверка на аргументите, изход при грешка
+- Демонизиране на програмата, изход при грешка
+- Подготвяне на сокета за слушане
+- Изпълнение, докато не бъде получен сигнал **graceful exit**
+- Приемане и обработка на нова връзка
+- Нулиране на флаговете **graceful exit** и **HUp**
+- Почистване на ресурсите и изход
 
 ### chat-daemon.c (main)
 
-```
+```c
 int main(int argc, char *argv[])
 {
   int result;

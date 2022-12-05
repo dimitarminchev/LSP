@@ -11,7 +11,7 @@
 7. Затвoрете всички отворени файлови дескриптори, които могат да бъдат наследени от родителския процес (_Използваме: ` close `_).
 
 ### daemonaze.c
-```
+```c
 /*
  * daemonize.c
  * This example daemonizes a process, writes a few log messages,
