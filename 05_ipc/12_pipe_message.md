@@ -12,30 +12,52 @@
 
 ### pipe-pass-message.c
 ```c
-#include <stdio.h>
-#include <string.h>
-#include <sys/types.h>
-#include <unistd.h>
-int main (int argc, char * argv[])
+#include<stdio.h>
+#include<string.h>
+#include<sys/types.h>
+#include<stdlib.h>
+#include<unistd.h>
+
+int main(int argc, char ** argv)
 {
-   int pipedes[2];
-   pipe(pipedes);
-   pid_t pid = fork();
-   if ( pid > 0 )
+   int pipefd[2];
+   int pd = pipe(pipefd);
+   if(pd == -1)
    {
-      char *str = "String passed via pipe\n";
-      close(pipedes[0]);
-      write(pipedes[1], (void *) str, strlen(str) + 1);
-      close(pipedes[1]);
-   } 
+     printf("Error pipe!\n");
+     return EXIT_FAILURE;
+   }
+
+   int pid = fork();
+   if(pid == -1)
+   {
+     printf("Error fork!\n");
+     return EXIT_FAILURE;
+   }
+
+   if(pid > 0)
+   {
+     char* str = "Hello World!";
+     printf("Parent pid %i\nSend: %s\n", getpid(), str);
+     close(pipefd[0]);
+     write(pipefd[1], (void*)str, strlen(str)+1);
+     close(pipefd[1]);
+   }
    else
    {
-      char buf[1024];
-      int len;
-      close(pipedes[1]);
-      while ((len = read(pipedes[0], buf, 1024)) != 0) write(2, buf, len);
-      close(pipedes[0]);
+     printf("Child pid %i\nReceive: ", getpid());
+     char buf[1024];
+     int len;
+     close(pipefd[1]);
+     while((len = read(pipefd[0], buf, 1024)) != 0)
+     {
+        printf("%s", buf);
+     }
+     close(pipefd[0]);
+     printf("\n");
    }
-   return 0;
+
+   return EXIT_SUCCESS;
 }
+
 ```
