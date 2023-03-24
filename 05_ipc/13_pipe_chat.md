@@ -11,31 +11,36 @@
 Затворете и изтрийте файла. 
 
 ```c
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#define FIFO_NAME "./pipe-chat-fifo"
-int main(int argc, char * argv[]) 
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<sys/stat.h>
+
+#define FIFO_FILE "./pipe-chat-fifo"
+
+int main(int argc, char ** argv)
 {
-   char ch;
-   mkfifo(FIFO_NAME, 0600);
-   FILE * f = fopen(FIFO_NAME, "w");
-   if (f == NULL)
-   {
-      printf("Failed to open FIFO!\n");
-      return -1;
-   }
-   do 
-   {
-      ch = getchar();
-      fputc(ch, f);
-      if (ch == 10) fflush(f);
-   } 
-   while (ch != 'q');
-   fclose(f);
-   unlink(FIFO_NAME);
-   return 0;
+  mkfifo(FIFO_FILE, 0600);
+  FILE* f = fopen(FIFO_FILE, "w");
+  if(f == NULL)
+  {
+    printf("Error open file!\n");
+    return EXIT_FAILURE;
+  }
+
+  char key;
+  do
+  {
+    key = getchar();
+    fputc(key, f);
+    if(key == 10) fflush(f);
+  }
+  while(key != 'q');
+
+  fclose(f);
+  unlink(FIFO_FILE);
+  return EXIT_SUCCESS;
 }
 ```
 
@@ -48,21 +53,31 @@ int main(int argc, char * argv[])
 Затворете и изтрийте файла. 
 
 ```c
-#include <stdio.h>
-#include <unistd.h>
-#define FIFO_NAME "./pipe-chat-fifo"
-int main ()
+#include<stdlib.h>
+#include<stdio.h>
+#include<unistd.h>
+
+#define FIFO_FILE "./pipe-chat-fifo"
+
+int main(int argc, char ** argv)
 {
-   char ch;
-   FILE * f = fopen(FIFO_NAME, "r");
-   do
-   {
-      ch = fgetc(f);
-      putchar(ch);
-   } 
-   while (ch != 'q');
-   fclose(f);
-   unlink(FIFO_NAME);
-   return 0;
+  FILE* f = fopen(FIFO_FILE, "r");
+  if(f == NULL)
+  {
+    printf("Error open file!\n");
+    return EXIT_FAILURE;
+  }
+
+  char key;
+  do
+  {
+    key = fgetc(f);
+    putchar(key);
+  }
+  while(key != 'q');
+
+  fclose(f);
+  unlink(FIFO_FILE);
+  return EXIT_SUCCESS;
 }
 ```
