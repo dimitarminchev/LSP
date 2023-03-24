@@ -9,24 +9,20 @@
 
 ### signal-info.c
 ```c
-// Requred headers
 #include<stdio.h>
 #include<stdlib.h>
 #include<signal.h>
 #include<string.h>
 #include<unistd.h>
 
-// Signal Handler
 void signal_handler(int sig)
 {
   printf("Signal %i: %s\n", sig, strsignal(sig));
   exit(EXIT_SUCCESS); // 0
 }
 
-// Main program method to start with
 int main(int argc, char* argv[])
 {
-  // Signal Structure Initialization
   int sig;
   struct sigaction sa;
   sigset_t sset;
@@ -36,10 +32,8 @@ int main(int argc, char* argv[])
   sa.sa_handler = signal_handler;
   sigaction(SIGTERM, &sa, 0);
 
-  // Print
   printf("My pid is %i\n", getpid());
 
-  // Waiting for signals
   while(!sigwait(&sset, &sig))
   {
     printf("Signal %i: %s\n", sig, strsignal(sig));
