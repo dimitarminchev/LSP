@@ -16,7 +16,7 @@
 
 #define FTOK_FILE "./shared-memory-server"
 
-#define MAXLEN 512
+#define MAX_LEN 512
 #define FREE 1
 #define BUSY 0
 #define SERVER 1
@@ -27,8 +27,8 @@ struct memory_block
   int server_lock;
   int client_lock;
   int turn;
-  int readlast;
-  char string[MAXLEN];
+  int read_last;
+  char string[MAX_LEN];
 };
 
 #endif
