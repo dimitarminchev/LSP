@@ -11,51 +11,57 @@
 
 ### shared-memory-server.c
 ```c
-#include <sys/types.h>
-#include <sys/ipc.h>
-#include <sys/shm.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<sys/types.h>
+#include<sys/ipc.h>
+#include<sys/shm.h>
 #include "shared-memory-types.h"
 
-int main(int argc, char * argv[])
+int main(int argc, char ** argv)
 {
-  key_t key;
-  int shmid;
-  struct memory_block * mblock;
-  key = ftok(FTOK_FILE, 1); 
-  if (key == -1)
+  key_t key = ftok(FTOK_FILE, 1);
+  if(key == -1)
   {
-     printf("Failed to generate unique key. Server compiler with a wrong name?\n");
-     return EXIT_FAILURE;
+   printf("Error ftok.\n");
+   return EXIT_FAILURE;
   }
 
-  shmid = shmget(key, sizeof(struct memory_block), 0666 | IPC_CREAT); 
+  int shmid = shmget(key, sizeof(struct memory_block), 0666 | IPC_CREAT);
+  if(shmid == -1)
+  {
+    printf("Error shmget.\n");
+    return EXIT_FAILURE;
+  }
 
-  mblock = (struct memory_block *) shmat(shmid, 0, 0); 
+  struct memory_block * mblock;
+  mblock = (struct memory_block *) shmat(shmid, 0, 0);
   mblock->turn = CLIENT;
   mblock->server_lock = FREE;
   mblock->client_lock = FREE;
-  mblock->readlast = SERVER;
-  strcpy(mblock->string, "Hello!");
-  while (strcmp("q\n", mblock->string) != 0)
+  mblock->read_last = SERVER;
+  strcpy(mblock->string, "Hello");
+
+  while(strcmp("q\n", mblock->string) != 0)
   {
-     mblock->server_lock = BUSY;
-     mblock->turn = CLIENT;
-     while ((mblock->client_lock == BUSY) && (mblock->turn == CLIENT));
-     if (mblock->readlast == CLIENT)
-     {
-       mblock->readlast = SERVER;
-       printf("String sent by the client is: %s", mblock->string);
-       if (strcmp("q\n", mblock->string) != 0)
-           strcpy(mblock->string, "Ok!");
-       mblock->server_lock = FREE;
-     }
+    mblock->server_lock = BUSY;
+    mblock->turn = CLIENT;
+    while((mblock->client_lock == BUSY) &&
+          (mblock->turn == CLIENT))
+    if(mblock->read_last == CLIENT)
+    {
+      mblock->read_last = SERVER;
+      printf("Sended: %s\n", mblock->string);
+      if(strcmp("q\n", mblock->string) != 0)
+       strcpy(mblock->string, "OK");
+      mblock->server_lock = FREE;
+    }
   }
-  printf("Server got q and exits\n");
-  shmdt((void *) mblock);  
-  shmctl(shmid, IPC_RMID, 0);     
+
+  printf("Server exit.\n");
+  shmdt((void*)mblock);
+  shmctl(shmid, IPC_RMID, 0);
   return EXIT_SUCCESS;
-} 
+}
 ```
