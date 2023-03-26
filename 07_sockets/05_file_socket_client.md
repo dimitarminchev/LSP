@@ -6,31 +6,35 @@
 
 ### file-socket-client.c
 ```c
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/socket.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+#include<errno.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+
 #define SOCK_NAME "socket.file"
 #define BUF_SIZE 256
+
 int main(int argc, char ** argv)
 {
-  char buf[BUF_SIZE];
-  int sock = socket(AF_UNIX, SOCK_DGRAM, 0); // UDP
-  if (sock < 0)
+  int sock = socket(AF_UNIX, SOCK_DGRAM, 0);
+  if(sock < 0)
   {
-    perror("socket failed");
-    return EXIT_FAILURE; // -1
+    printf("Error socket.\n");
+    return EXIT_FAILURE;
   }
-  struct sockaddr srvr_name;
-  srvr_name.sa_family = AF_UNIX;
-  strcpy(srvr_name.sa_data, SOCK_NAME);
-  strcpy(buf, "Hello, Unix file sockets!");
-  sendto(sock, buf, strlen(buf), 0, &srvr_name,
-  strlen(srvr_name.sa_data) + sizeof(srvr_name.sa_family));
+
+  struct sockaddr server;
+  server.sa_family = AF_UNIX;
+  strcpy(server.sa_data, SOCK_NAME);
+
+  char buf[BUF_SIZE];
+  strcpy(buf, "HELLO");
+  sendto(sock, buf, strlen(buf), 0, &server, strlen(server.sa_data) + sizeof(server.sa_family));
+
   close(sock);
-  return EXIT_SUCCESS; // 1
+  return EXIT_SUCCESS;
 }
 ```
