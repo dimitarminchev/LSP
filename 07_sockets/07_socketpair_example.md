@@ -8,41 +8,49 @@
 
 ### socket-pair.c
 ```c
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <errno.h>
-#define STR1 "How are you?"
-#define STR2 "I'm ok, thank you."
-#define BUF_SIZE 1024
+#include<unistd.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include<errno.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+
+#define MSG_HELLO "HELLO"
+#define MSG_OK "OK"
+#define BUF_SIZE 256
+
 int main(int argc, char ** argv)
 {
+  char buf[BUF_SIZE];
+
   int sockets[2];
-  char buf[BUF_SIZE]; 
-  if (socketpair(AF_UNIX, SOCK_STREAM, 0, sockets) < 0) 
+  if(socketpair(AF_UNIX, SOCK_STREAM, 0, sockets) < 0)
   {
-    perror("socketpair() failed");
-    return EXIT_FAILURE; // -1
+    printf("Error sockpair.\n");
+    return EXIT_FAILURE;
   }
+
   int pid = fork();
-  if (pid != 0)
+  if(pid < 0)
   {
-    close(sockets[1]);
-    write(sockets[0], STR1, sizeof(STR1));
+    printf("Error fork.\n");
+    return EXIT_FAILURE;
+  }
+  if(pid == 0)
+  {
+    write(sockets[0], MSG_HELLO, sizeof(MSG_HELLO));
     read(sockets[0], buf, sizeof(buf));
-    printf("%s\n", buf);
-    close(sockets[0]);
+    printf("Process (pid = %i) send messagge: %s\n", getpid(), buf);
   }
-  else
+  if(pid > 0)
   {
-    close(sockets[0]);
     read(sockets[1], buf, sizeof(buf));
-    printf("%s\n", buf);
-    write(sockets[1], STR2, sizeof(STR2));
-    close(sockets[1]);
+    write(sockets[1], MSG_OK, sizeof(MSG_OK));
+    printf("Process (pid = %i) send message: %s\n", getpid(), buf);
   }
-  return EXIT_SUCCESS; // 0
+
+  close(sockets[0]);
+  close(sockets[1]);
+  return EXIT_SUCCESS;
 }
 ```
