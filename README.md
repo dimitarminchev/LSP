@@ -1,6 +1,8 @@
 # Въведение
 
-[Електронна книга](https://dimitar-minchev.gitbook.io/linux-system-programming/) и [Електронно хранилище](https://github.com/dimitarminchev/LSP/) по **Линукс системно програмиране**, съвместна инициатива между Бургаски Свободен Университет и IBA Group Bulgaria. Всични материали се разпространяват под безплатен лиценз [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+[Електронна книга](https://dimitar-minchev.gitbook.io/linux-system-programming/) и [Електронно хранилище](https://github.com/dimitarminchev/LSP/) по Линукс системно програмиране, съвместна инициатива между Бургаски Свободен Университет и IBA Group Bulgaria. 
+
+Всични материали се разпространяват под безплатен лиценз [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 | Формат | ISBN |
 | :--- | :--- |
