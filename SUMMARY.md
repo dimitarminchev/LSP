@@ -119,7 +119,7 @@
   * [Мрежов сокет клиент](07_sockets/10_network_socket_client.md)
   * [Упражнение върху сокети](07_sockets/11_sockets_exercise.md)
 
-* [Част 8 – Нишки](08_threads/readme.md) 
+* [Част 8 – Нишки](08_threads/README.md) 
 
   * [Въведение в нишките](08_threads/01_threads_introduction.md)
   * [Библиотека за работа с нишки](08_threads/02_pthreads.md)
@@ -133,7 +133,7 @@
   * [Пример за прекратяване на нишки](08_threads/10_thread_cancellations_example.md)
   * [Упражнение върху нишки](08_threads/11_threads_exercise.md)
 
-* [Част 9 - Синхронизация на нишки](09_threads_sync/readme.md)
+* [Част 9 - Синхронизация на нишки](09_threads_sync/README.md)
 
   * [Изход от нишка](09_threads_sync/01_threads_exit.md)
   * [Управление на изход от нишка](09_threads_sync/02_threads_exit_managing.md)
@@ -153,7 +153,7 @@
   * [Пример за синхронизиране посредством използване на семафор](09_threads_sync/16_thread_sync_semaphore.md)
   * [Упражнение за синхронизация на нишки](09_threads_sync/17_treads_sync_exercise.md)
 
-* [Част 10 – Демони](10_daemons/readme.md)
+* [Част 10 – Демони](10_daemons/README.md)
 
   * [Какво са демоните?](10_daemons/01_what_are_daemons.md)
   * [Скелет на демон](10_daemons/02_daemon_skeleton.md)
