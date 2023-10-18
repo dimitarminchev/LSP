@@ -9,6 +9,6 @@
 
 Нишките консумират по-малко системни ресурси в сравнение с процесите.
 
-![Multithreaded Process](https://upload.wikimedia.org/wikipedia/commons/a/a5/Multithreaded_process.svg) 
+![Multithreaded Process](01_threads_introduction.png) 
 
 _Източник на изображението: [Wikipedia](https://commons.wikimedia.org/wiki/File:Multithreaded_process.svg)_
