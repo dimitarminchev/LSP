@@ -59,7 +59,7 @@ int main(int argc, char * argv[])
     printf("Server: %s\n", mb->string);
     int i = 0;
     while ((i < (MAX_LEN - 1)) && ((mb->string[i++] = getchar()) !=  '\n') );
-    mb->string[i] = 0;
+    mb->string[i] = '\0';
     buf[0].sem_op = 1;
     buf[1].sem_op = -1;
     semop(semid, (struct sembuf*) &buf, 1);
