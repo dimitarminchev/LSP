@@ -29,7 +29,7 @@ int main(int argc, char ** argv)
 
   int i = 0;
   struct msg_1_t message1;
-  while( (i < (MAX_LEN - 1)) &&
+  while( (i < (MAXLEN - 1)) &&
          ((message1.body[i++] = getchar()) != '\n') );
   message1.body[i] = '\0';
   message1.mtype = 1;
