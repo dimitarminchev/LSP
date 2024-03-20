@@ -75,7 +75,7 @@ int main(int argc, char ** argv)
   char buf[BUF_SIZE];
   memset(buf, 0, BUF_SIZE);
   read(sock_client, buf, BUF_SIZE-1);
-  buf[BUF_SIZE] = 0;
+  buf[BUF_SIZE] = '\0';
   printf("Received message: %s\n", buf);
   write(sock_client, "OK", 2);
   
