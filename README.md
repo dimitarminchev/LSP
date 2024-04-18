@@ -1,3 +1,4 @@
+# Linux System Programming
 Настоящият проект **Linux System Programming** е съвместна инициатива на Бургаски Свободен Университет и IBA Bulgaria, като допълнителен ресурс към безплатният курс **Линукс системно програмиране**.
 Учебното пособие е налично за свободно четене под формата на [електронна книга](https://dimitar-minchev.gitbook.io/linux-system-programming/). 
 Учебните ресурси са налични за свободно изтегляне от [електронно хранилище](https://github.com/dimitarminchev/LSP/).
