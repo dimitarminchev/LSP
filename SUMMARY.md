@@ -1,8 +1,8 @@
-# Съдържание 
+# Contents 
 
-* [Въведение](README.md)
+* [Introduction](README.md)
 
-* [Част 1 - Основи на Линукс](01_linux_basics/README.md)
+* [Chapter 1 - Linux Basics](01_linux_basics/README.md)
 
   * [Какво е системно програмиране?](01_linux_basics/01_introduction.md)
   * [Работна среда](01_linux_basics/02_environment.md)
@@ -19,7 +19,7 @@
   * [Текстовият редактор Nano](01_linux_basics/13_nano.md)
   * [Упражнение върху основи на Линукс](01_linux_basics/14_exercise.md)
 
-* [Част 2 – Програмиране](02_programming/README.md)
+* [Chapter 2 – Programming](02_programming/README.md)
 
   * [Kомпилиране](02_programming/01_compiling.md)
   * [Компилатор](02_programming/02_gcc.md)
@@ -36,7 +36,7 @@
   * [Дебъгване](02_programming/13_debugging.md)
   * [Упражнение върху тема програмиране](02_programming/14_programming_exercise.md)
 
-* [Част 3 – Файлова система и файлове](03_files/README.md)
+* [Chapter 3 – Files and File System](03_files/README.md)
  
   * [Файлове](03_files/01_files.md)
   * [Файлови системи и именовани пространства](03_files/02_filesystem.md)
@@ -54,7 +54,7 @@
   * [Заключи и пиши там](03_files/14_lockfile.md)
   * [Упражнение върху работа с файлове](03_files/15_files_exercise.md)
 
-* [Част 4 – Процеси](04_processes/README.md)
+* [Chapter 4 – Processes](04_processes/README.md)
 
   * [Процеси](04_processes/01_processes.md)
   * [Управление на процесите](04_processes/02_processes_management.md)
@@ -69,7 +69,7 @@
   * [Игра на зомбита](04_processes/11_zombie_test.md)
   * [Упражнение върху процеси](04_processes/12_processes_exercise.md)
 
-* [Част 5 – Комуникация между процеси](05_ipc/README.md)
+* [Chapter 5 – Inter Process Comunication](05_ipc/README.md)
 
   * [Методи за комуникация между процеси](05_ipc/01_ipc_methods.md)
   * [Сигнали](05_ipc/02_signals.md)
@@ -86,7 +86,7 @@
   * [Използване на именовани тръби](05_ipc/13_pipe_chat.md)
   * [Упражнение върху комуникация между процеси](05_ipc/14_ipc_examples.md)
 
-* [Част 6 - Синхронизация на комуникацията между процесите](06_ipc_sync/README.md)
+* [Chapter 6 - Inter Process Comunication](06_ipc_sync/README.md)
 
   * [Опашка за съобщения](06_ipc_sync/01_message_queue.md)
   * [Библиотеки за работа със съобщения](06_ipc_sync/02_message_libs.md)
@@ -105,7 +105,7 @@
   * [Семафор Клиент](06_ipc_sync/15_semaphore_client.md)
   * [Упражнение за синхронизация на комуникация между процеси](06_ipc_sync/16_ipc_sync_exercise.md)
 
-* [Част 7 – Сокети](07_sockets/README.md)
+* [Chapter 7 – Sockets](07_sockets/README.md)
 
   * [Сокетите в Линукс](07_sockets/01_linux_sockets.md)
   * [Работа със сокети в C](07_sockets/02_sockets_in_c.md)
@@ -119,7 +119,7 @@
   * [Мрежов сокет клиент](07_sockets/10_network_socket_client.md)
   * [Упражнение върху сокети](07_sockets/11_sockets_exercise.md)
 
-* [Част 8 – Нишки](08_threads/README.md) 
+* [Chapter 8 – Threads](08_threads/README.md) 
 
   * [Въведение в нишките](08_threads/01_threads_introduction.md)
   * [Библиотека за работа с нишки](08_threads/02_pthreads.md)
@@ -133,7 +133,7 @@
   * [Пример за прекратяване на нишки](08_threads/10_thread_cancellations_example.md)
   * [Упражнение върху нишки](08_threads/11_threads_exercise.md)
 
-* [Част 9 - Синхронизация на нишки](09_threads_sync/README.md)
+* [Chapter 9 - Threads Syncronization](09_threads_sync/README.md)
 
   * [Изход от нишка](09_threads_sync/01_threads_exit.md)
   * [Управление на изход от нишка](09_threads_sync/02_threads_exit_managing.md)
@@ -153,8 +153,8 @@
   * [Пример за синхронизиране посредством използване на семафор](09_threads_sync/16_thread_sync_semaphore.md)
   * [Упражнение за синхронизация на нишки](09_threads_sync/17_treads_sync_exercise.md)
 
-* [Част 10 – Демони](10_daemons/README.md)
+* [Chapter 10 – Daemons](10_daemons/README.md)
 
-  * [Какво са демоните?](10_daemons/01_what_are_daemons.md)
-  * [Скелет на демон](10_daemons/02_daemon_skeleton.md)
-  * [Чат демон](10_daemons/03_chat_daemon.md)
+  * [What are the daemons?](10_daemons/01_what_are_daemons.md)
+  * [Daemon Sceleton](10_daemons/02_daemon_skeleton.md)
+  * [Chat Daemon](10_daemons/03_chat_daemon.md)
