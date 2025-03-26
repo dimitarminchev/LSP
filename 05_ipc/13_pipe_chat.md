@@ -81,3 +81,84 @@ int main(int argc, char ** argv)
   return EXIT_SUCCESS;
 }
 ```
+
+### pipe-echo-chat.c
+Представената програма реализира чат базирано приложение което връща ехо и демонстрира използването на именовани тръби.
+
+- Създайте файл на име **pipe-echo-chat-fifo-file**. 
+- Създайте дъщерен процес (**fork**) в случай на грешка излезте от програмата.
+
+- Родителски процес: 
+  - Отворете за писане **pipe-echo-chat-fifo-file** в случай на грешка излезте. 
+  - Четете от клавиатурата и пращайте полученото във файлa
+  - Затворете файлов дескриптор 
+
+- Дъщерен процес: 
+  - Отворете за четене **pipe-echo-chat-fifo-file** в случай на грешка излезте. 
+  - Прочетете съобщение от входният файлов дескриптор 
+  - Отпечатайте полученото съобщение
+  - Затворете файловия дескриптор 
+
+```c
+#include<stdio.h>
+#include<string.h>
+#include<sys/stat.h>
+#include<sys/types.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<fcntl.h>
+
+#define FIFO_FILE "pipe-echo-chat-fifo-file"
+
+int main(int argc, char ** argv)
+{
+   mkfifo(FIFO_FILE, 0644);
+
+   int pid = fork();
+   if(pid == -1)
+   {
+      printf("Error fork!\n");
+      return EXIT_FAILURE;
+   }
+
+   if(pid > 0)
+   {
+      int fd = open(FIFO_FILE, O_WRONLY);
+      if(fd == -1)
+      {
+         printf("Error open file for writing!\n");
+         return EXIT_FAILURE;
+      }
+
+      char writeBuffer[80];
+      while (1)
+      {
+             fgets(writeBuffer, 80, stdin);
+             write(fd, writeBuffer, strlen(writeBuffer) + 1);
+      }
+      close(fd);
+   }
+   else
+   {
+      int fd = open(FIFO_FILE, O_RDONLY);
+      if(fd == -1)
+      {
+         printf("Error open file for reading!\n");
+         return EXIT_FAILURE;
+      }
+
+      char readBuffer[80];
+      while (1)
+      {
+         read(fd, readBuffer, sizeof(readBuffer));
+         printf("%s\n", readBuffer);
+
+      }
+      close(fd);
+   }
+
+   unlink(FIFO_FILE);
+
+   return EXIT_SUCCESS;
+}
+```
