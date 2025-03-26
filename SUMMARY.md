@@ -94,7 +94,7 @@
   * [Сървър за съобщения](06_ipc_sync/04_message_server.md)
   * [Клиент за съобщения](06_ipc_sync/05_message_client.md)
   * [Споделена памет](06_ipc_sync/06_shared_memory.md)
-  * [Библиотеки за работа със споделена паме](06_ipc_sync/07_shared_memory_libs.md)
+  * [Библиотеки за работа със споделена памет](06_ipc_sync/07_shared_memory_libs.md)
   * [Определяне на общите данни](06_ipc_sync/08_shared_memory_types.md)
   * [Сървър за памет](06_ipc_sync/09_shared_memory_server.md)
   * [Клиент за памет](06_ipc_sync/10_shared_memory_client.md)
