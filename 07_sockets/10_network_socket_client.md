@@ -1,13 +1,7 @@
 ## Мрежов сокет клиент
 
-Проверете входните аргументи, излезте при грешка.
-Отворете INET, STEAM сокет, излезте при грешка.
-Вземете хост името сървъра, излезте при грешка.
-Конфигурирайте и свържете сокета към адреса на сървъра и порт, излезте при грешка.
-Изведете на екрана, че очаквате вход и прочетете нов текстов ред от клавиатурата.
-Изпратете въведения текст към сокета.
-Прочетете отговор от сокета и го отпечатайте.
-Затворете сокета.
+Проверете входните аргументи, излезте при грешка. Отворете INET, STEAM сокет, излезте при грешка. Вземете хост името сървъра, излезте при грешка.
+Конфигурирайте и свържете сокета към адреса на сървъра и порт, излезте при грешка. Изведете на екрана, че очаквате вход и прочетете нов текстов ред от клавиатурата. Изпратете въведения текст към сокета. Прочетете отговор от сокета и го отпечатайте. Затворете сокета.
 
 ### network-socket-client.c
 ```c
@@ -29,7 +23,7 @@ int main(int argc, char ** argv)
   if (argc != 3)
   {
     printf("Usage: %s <ip_address> <port_number>\n", argv[0]);
-    return EXIT_FAILURE; // return -1;
+    return EXIT_FAILURE; // -1
   }
 
   // Socket Create
@@ -37,7 +31,7 @@ int main(int argc, char ** argv)
   if (sock < 0)
   {
     printf("Socket Create Error: %d\n", errno);
-    return EXIT_FAILURE; // return -1;
+    return EXIT_FAILURE; // -1
   }
   
   // Server IP Address
@@ -47,7 +41,7 @@ int main(int argc, char ** argv)
   if (server == NULL)
   {
     printf("Host Not Found Error: %d\n", errno);
-    return EXIT_FAILURE; // return -1;
+    return EXIT_FAILURE; // -1
   }
   
   // Server Address
@@ -75,6 +69,13 @@ int main(int argc, char ** argv)
   printf("Received: %s\n",buf);
 
   close(sock);
-  return EXIT_SUCCESS; // return 0;
+
+  return EXIT_SUCCESS; // 0;
 }
+```
+
+Компилирайте и стартирайте програмата:
+```
+gcc network-socket-client.c -o network-socket-client
+./network-socket-client 46.10.253.12 5000
 ```

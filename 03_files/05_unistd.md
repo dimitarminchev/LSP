@@ -1,6 +1,7 @@
 ## Библиотека за работа с файлове
 
 Библиотеката **unistd.h** съдържа методи за работа с файлове:
+
 ```c
 #include<unistd.h>
 int open(const char *name, int flags);

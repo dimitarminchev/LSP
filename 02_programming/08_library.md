@@ -23,8 +23,7 @@ mkdir libexample/bin
 mkdir libexample/bin/static
 mkdir libexample/bin/shared
 ```
-Източник:
-[Creating a shared and static library with the gnu compiler gcc]( https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/create-libraries/index)
+Източник: [Creating a shared and static library with the gnu compiler gcc]( https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/create-libraries/index)
 
 ### Файлове на библиотеката
 

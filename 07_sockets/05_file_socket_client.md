@@ -23,7 +23,7 @@ int main(int argc, char ** argv)
   if(sock < 0)
   {
     printf("Error socket.\n");
-    return EXIT_FAILURE;
+    return EXIT_FAILURE; // -1
   }
 
   struct sockaddr server;
@@ -35,6 +35,12 @@ int main(int argc, char ** argv)
   sendto(sock, buf, strlen(buf), 0, &server, strlen(server.sa_data) + sizeof(server.sa_family));
 
   close(sock);
-  return EXIT_SUCCESS;
+  return EXIT_SUCCESS; // 0
 }
+```
+
+Компилирайте и стартирайте програмата:
+```
+gcc file-socket-client.c -o file-socket-client
+./file-socket-client
 ```

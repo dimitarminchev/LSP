@@ -1,9 +1,6 @@
 ## Файл сокет сървър
 
-Отворете Unix сокет за дейтаграми, при грешка изведете съобщение и излезте от програмата. 
-Свържете сокета с файл **socket.file**, излезте при грешка. 
-Вземете съобщение от сокета, излезте при грешка. 
-Отпечатайте съобщението, затворете сокета и изтрийте сокет файла.
+Отворете Unix сокет за дейтаграми, при грешка изведете съобщение и излезте от програмата. Свържете сокета с файл **socket.file**, излезте при грешка. Вземете съобщение от сокета, излезте при грешка. Отпечатайте съобщението, затворете сокета и изтрийте сокет файла.
 
 ### file-socket-server.c
 ```c
@@ -24,7 +21,7 @@ int main(int argc, char ** argv)
   if(sock < 0)
   {
     printf("Error socket,\n");
-    return EXIT_FAILURE;
+    return EXIT_FAILURE; // -1
   }
 
   struct sockaddr server, client;
@@ -34,7 +31,7 @@ int main(int argc, char ** argv)
   if(bind(sock, &server, strlen(server.sa_data) + sizeof(server.sa_family)) < 0)
   {
     printf("Error bind.\n");
-    return EXIT_FAILURE;
+    return EXIT_FAILURE; // -1
   }
 
   char buf[BUF_SIZE];
@@ -43,7 +40,7 @@ int main(int argc, char ** argv)
   if(bytes < 0)
   {
     printf("Error recvfrom.\n");
-    return EXIT_FAILURE;
+    return EXIT_FAILURE; // -1
   }
   buf[bytes] = '\0';
   client.sa_data[len] = 0;
@@ -51,6 +48,13 @@ int main(int argc, char ** argv)
 
   close(sock);
   unlink(SOCK_NAME);
-  return EXIT_SUCCESS;
+
+  return EXIT_SUCCESS; // 0
 }
+```
+
+Компилирайте и стартирайте програмата:
+```
+gcc file-socket-server.c -o file-socket-server
+./file-socket-server
 ```

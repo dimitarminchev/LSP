@@ -1,15 +1,7 @@
 ## Мрежов сокет сървър
 
-Проверете входните аргументи, излезте при грешка.
-Отворете INET, STEAM сокет, излезте при грешка.
-Инициализирайте структурата **sockaddr_in** за сървъра.
-Свържете гнездото към порт, излезте при грешка.
-Започнете да слушате, разрешете само една връзка.
-Приемете нова връзка, излезте при грешка.
-Прочетете от сокета в буфер.
-Отпечатайте полученото съобщението от буфера.
-Изпратете "OK" в сокета.
-Затворете сокета.
+Проверете входните аргументи, излезте при грешка. Отворете INET, STEAM сокет, излезте при грешка. Инициализирайте структурата **sockaddr_in** за сървъра. Свържете гнездото към порт, излезте при грешка. Започнете да слушате, разрешете само една връзка. Приемете нова връзка, излезте при грешка.
+Прочетете от сокета в буфер. Отпечатайте полученото съобщението от буфера. Изпратете "OK" в сокета. Затворете сокета.
 
 ### network-socket-server.c
 ```c
@@ -29,7 +21,7 @@ int main(int argc, char ** argv)
   if (argc != 2)
   {
     printf("Usage: %s <port_number>\n", argv[0]);
-    return EXIT_FAILURE; // return -1;
+    return EXIT_FAILURE; // -1
   }
   
   // Socket Create
@@ -37,7 +29,7 @@ int main(int argc, char ** argv)
   if (sock_server < 0)
   {
     printf("Socket Create Error: %d\n", errno);
-    return EXIT_FAILURE; // return -1;
+    return EXIT_FAILURE; // -1
   }
   
   // Server Address
@@ -51,14 +43,14 @@ int main(int argc, char ** argv)
   if (bind(sock_server, (struct sockaddr *) &server_address, sizeof(server_address)) < 0)
   {
     printf("Socket Bind Error: %d\n", errno);
-    return EXIT_FAILURE; // return -1;
+    return EXIT_FAILURE; // -1
   }
   
   // Socket Listen
   if ((listen(sock_server, 5)) != 0) 
   {
         printf("Socket Listen Error: %d\n", errno);
-		return EXIT_FAILURE; // return -1;
+		return EXIT_FAILURE; // -1
   }
   
   // Client Address
@@ -68,7 +60,7 @@ int main(int argc, char ** argv)
   if (sock_client < 0)
   {
     printf("Accept Socket Error: %d\n", errno);
-    return EXIT_FAILURE; // return -1;
+    return EXIT_FAILURE; // -1
   }
   
   // Socket Read/Write
@@ -81,6 +73,13 @@ int main(int argc, char ** argv)
   
   close(sock_client);
   close(sock_server);
-  return EXIT_SUCCESS; // return 0;
+  
+  return EXIT_SUCCESS; // 0;
 }
+```
+
+Компилирайте и стартирайте програмата:
+```
+gcc network-socket-server.c -o network-socket-server
+./network-socket-server 5000
 ```

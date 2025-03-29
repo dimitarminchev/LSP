@@ -11,12 +11,8 @@ int sigwait(const sifset_t *set, int *sig);
 
 ### Пример за изчакване на сигнал
 
-Дефинирайте функцията за обработка на сигнали **SIGTERM**.
-Иницирайте сигнал, като само **SIGHUP** е включен и блокирайте обработката на сигнали.
-Задайте обработчик на събития за **SIGTERM**.
-Отпечатайте идентификатора на процеса (**pid**).
-Изчакайте входящ сигнал **SIGHUP** и изведете подходящо съобщение.
-Ако възникне грешка преустановете програмата.
+Дефинирайте функцията за обработка на сигнали **SIGTERM**. Иницирайте сигнал, като само **SIGHUP** е включен и блокирайте обработката на сигнали.
+Задайте обработчик на събития за **SIGTERM**. Отпечатайте идентификатора на процеса (**pid**). Изчакайте входящ сигнал **SIGHUP** и изведете подходящо съобщение. Ако възникне грешка преустановете програмата.
 
 ### signal-wait.c
 ```c
@@ -25,10 +21,8 @@ int sigwait(const sifset_t *set, int *sig);
 #include <signal.h>
 #include <unistd.h>
 
-// Main program
 int main(int argc, char ** argv)
 {
-   // Signal Structure Initialization
    int sig;
    struct sigaction sa;
    sigset_t newset;
@@ -37,11 +31,9 @@ int main(int argc, char ** argv)
    sigprocmask(SIG_BLOCK, &newset, 0);
    sigaction(SIGTERM, &sa, 0);
 
-   // Print
    printf("My pid is %i\n", getpid());
    printf("Waiting...\n");
 
-   // Forever
    while(!sigwait(&newset, &sig))
    {
      printf("SIGINT recieved\n");
@@ -50,4 +42,10 @@ int main(int argc, char ** argv)
 
    return EXIT_FAILURE; // -1
 }
+```
+
+Компилирайте и стартирайте програмата:
+```
+gcc signal-wait.c -o signal-wait
+./signal-wait
 ```

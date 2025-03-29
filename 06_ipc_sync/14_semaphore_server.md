@@ -1,13 +1,6 @@
 ## Семафорен сървър
 
-- Задайте 2 семафора - първият показва, че сървърът трябва да чете, вторият за клиента
-- Създайте **semaphore-server**, изход при грешка
-- Разпределете и прикрепете споделената памет и напишете "Hello!"
-- Освободете семафора на клиента
-- Докато текущото съобщение не е "q":
-- Поискайте сървърния семафорен ресурс
-- Ако текущото съобщение не е "q", напишете "Ok!" в паметта и освободете клиента.
-- Извадете и премахнете споделената памет и семафорите
+Задайте 2 семафора - първият показва, че сървърът трябва да чете, вторият за клиента. Създайте **semaphore-server**, изход при грешка. Разпределете и прикрепете споделената памет и напишете "Hello!". Освободете семафора на клиента. Докато текущото съобщение не е "q". Поискайте сървърния семафорен ресурс. Ако текущото съобщение не е "q", напишете "Ok!" в паметта и освободете клиента. Извадете и премахнете споделената памет и семафорите.
 
 ### semaphore-server.c
 ```c
@@ -26,21 +19,21 @@ int main(int argc, char ** argv)
   if (key == -1)
   {
      printf("Error ftok.\n");
-     return EXIT_FAILURE;
+     return EXIT_FAILURE; // -1
   }
 
   int shmid = shmget(key, sizeof(struct memory_block), 0666 | IPC_CREAT);
   if(shmid == -1)
   {
     printf("Error shmget.\n");
-    return EXIT_FAILURE;
+    return EXIT_FAILURE; // -1
   }
 
   int semid = semget(key, 3, 0666|IPC_CREAT);
   if(semid == -1)
   {
     printf("Error semget.\n");
-    return EXIT_FAILURE;
+    return EXIT_FAILURE; // -1
   }
 
   struct sembuf buf[2];
@@ -72,6 +65,13 @@ int main(int argc, char ** argv)
   shmdt((void *) mb);
   shmctl(shmid, IPC_RMID, 0);
   semctl(semid, 2, IPC_RMID);
-  return EXIT_SUCCESS;
+
+  return EXIT_SUCCESS; // 0
 }
+```
+
+Компилирайте и стартирайте програмата:
+```
+gcc semaphore-server.c -o semaphore-server
+./semaphore-server
 ```

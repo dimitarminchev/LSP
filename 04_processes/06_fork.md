@@ -31,7 +31,7 @@ int main(int argc, char * argv[])
    if(pid == -1)
    {
       printf("Error forking a process!\n");
-      return EXIT_FAILURE; // -1
+      return EXIT_FAILURE; // return -1
    }
    else if(pid == 0)
    {
@@ -41,9 +41,14 @@ int main(int argc, char * argv[])
    {
       printf("Parent process!\n");
    }
-   return EXIT_SUCCESS; // 0
+   return EXIT_SUCCESS; // return 0
 }
 ```
 
-Повече информация:
-[Linux Programming](https://www.slideshare.net/EmertxeSlides/linux-programming-36666547)
+Компилирайте и стартирайте програмата:
+```
+gcc fork.c -o fork
+./fork
+```
+
+Повече информация: [Linux Programming](https://www.slideshare.net/EmertxeSlides/linux-programming-36666547)
