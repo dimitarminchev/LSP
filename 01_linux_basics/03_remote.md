@@ -1,5 +1,5 @@
-## Oтдалечен достъп
+## Remote Access
 
-За осъществяване на отдалечен достъп до сървъра се изполва програмата **PuTTY**, която се разпространява като софтуер с отворен код и може да бъде изтеглена безплатно от Интернет на адрес: https://putty.org/ 
+To establish remote access to the server, the program **PuTTY** is used, which is distributed as open-source software and can be downloaded for free from the Internet at the following address: https://putty.org/ 
   
 ![03_remote.png](03_remote.png) 

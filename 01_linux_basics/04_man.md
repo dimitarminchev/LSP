@@ -1,13 +1,13 @@
-## Как да получите помощ в Линукс?
+## How to get help in Linux?
 
-Повечето системни приложения и команди, работещи в конзолен режим на операционната система Линукс, имат съпътстваща документация във формата на страници от ръководства **manual pages**. За достъп до тях можете да използвате програмата **man**, със следния формат:
+Most system applications and commands that run in console mode in the Linux operating system have accompanying documentation in the form of **manual pages**. To access them, you can use the **man** program, with the following format:
 
 ```
-man <команда>
+man <command>
 ```
 
-където *<команда>* е името на приложението, за което искате да получите информация.
-Ако съществува ръководство за избраната команда, man ще отпечата първата страница на екрана и ще предостави на потребителя средства за навигация в останалата част. Подробно описание на функциите, съответно можете да видите със следната команда:
+where *<command>* is the name of the application for which you want to get information. 
+If a manual exists for the selected command, man will print the first page on the screen and provide the user with means to navigate the rest. You can see a detailed description of the functions with the following command:
 
 ```
 man man
@@ -15,7 +15,4 @@ man man
 
 ![04_man.png](04_man.png)  
 
-По-важните клавиши, които можете да изполвате при работа в програмата са **PgUp** за прелистване на страница нагоре, **PgDn** за прелистване на страница надолу и клавиша **q** за изход.
- 
-
- 
+The important keys that you can use while working in the program are **PgUp** for scrolling up a page, **PgDn** for scrolling down a page, and the **q** key for exit.

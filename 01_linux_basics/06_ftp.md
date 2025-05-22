@@ -1,18 +1,17 @@
-## Трансфер на файлове
+## File Transfer Protocol
 
-Операционната система предоставя различни средства за прехвърляне на информация между компютри. 
-Обикновено се използва моделът "клиент-сървър", при който клиентите инициират връзки и заявки към сървър, който им отговаря.
+The operating system provides various tools for transferring information between computers. 
+Typically, the 'client-server' model is used, where clients initiate connections and requests to a server, which responds to them.
 
-Използваме протоколът за трансфер на файлове [File Transfer Protocol](https://bg.wikipedia.org/wiki/FTP). 
-Стандартен мрежов протокол за прехвърляне на файлове между клиент и сървър в компютърна мрежа. 
-Можете да копирате файлове локално във Вашата папка: 
+We use the [File Transfer Protocol](https://en.wikipedia.org/wiki/FTP). 
+It is a standard network protocol for transferring files between a client and a server in a computer network. 
+You can copy files locally to your folder:
 
 ![06_ftp_fig1.png](06_ftp_fig1.png)  
 
-Достъп до тези файлове можете да получите с всеки Интернет браузър, 
-като се посетите адреса на работният сървър и се идентифицирате с потребителско име и парола за достъп:
+You can access these files with any Internet browser by visiting the address of the work server and identifying yourself with a username and access password:
 
 ![06_ftp_fig2.png](06_ftp_fig2.png)   
 
-Можете да управлявате файловете от Вашата папка с всеки един клиент поддържащ протокола FTP 
-(Например: [FileZilla](https://filezilla-project.org/download.php)).
+You can manage the files from your folder with any client that supports the FTP protocol.
+(For example: [FileZilla](https://filezilla-project.org/download.php)).

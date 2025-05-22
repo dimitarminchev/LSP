@@ -1,14 +1,13 @@
-## Какво е системно програмиране?
+## What is system programming?
 
-**Системното програмиране** (_Термин на Английски език: System Programming_) е дисциплина, която се занимава с разработката на **системен софтуер** (_Термин на Английски език: System Software_). 
-Характерно за системния софтуер е, че обикновено той взаимодейства пряко с хардуера и системните библиотеки на **ядрото** (_Термин на Английски език: Kernel_) на операционната система и служи за платформа на други приложения, които в повечето случаи се използват от крайния потребител или така наречен **приложен софтуер** (_Термин на Английски език: Applied Software_). 
+**System programming** is a discipline that deals with the development of **system software**. The characteristic of system software is that it usually interacts directly with the hardware and system libraries of the **kernel** of the operating system and serves as a platform for other applications, which in most cases are used by the end user or so-called **applied software**.
 
 ![01_introduction.png](01_introduction.png) 
- 
-Операционните системи могат също да се разглеждат като системен софтуер, тъй като на практика те управляват всички други програми и ресурси. Други примери са **системни драйвери** (_Термин на Английски език: System Drivers_), **шелл** (_Термин на Английски език: Shell_), **текстов редактор** (_Термин на Английски език: Text editor_), **компилатор** (_Термин на Английски език: Compiler_) и **дебъгер** (_Термин на Английски език: Debugger_), **инструменти** (_Термин на Английски език: Tools_) и **демони** (_Термин на Английски език: Daemons_). 
 
-Понякога един програмен продукт може да се разглежда като приложен и системен софтуер. Системите за бази данни изпълняват системни функции за други програми, но предлагат и инструменти, използвани в ежедневната работа на системни оператори и анализатори на данни. 
+Operating systems can also be regarded as system software, as they essentially manage all other programs and resources. Other examples include **system drivers**, **shell**, **text editor**, **compiler**, **debugger**, **tools** and **daemons**.
 
-В Линукс, **системните инструменти** (_Термин на Английски език: System Tools_) обикновено се намират в директориите **/sbin** и **/usr/sbin**. 
+Sometimes a software product can be viewed as both application and system software. Database systems perform system functions for other programs but also offer tools used in the daily work of system operators and data analysts.
 
-От **системните програмисти**  (_Термин на Английски език: System Programmers_) се изисква да имат добра представа за хардуера и ОС, за да използват правилно и оптимално ресурсите на системата.
+In Linux, **system tools** are typically located in the directories **/sbin** and **/usr/sbin**.
+
+**System programmers** are required to have a good understanding of hardware and operating systems in order to use the system's resources correctly and optimally.

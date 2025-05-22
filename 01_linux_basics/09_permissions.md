@@ -1,33 +1,26 @@
-## Файлови права
+## File Permissions
 
-Традиционните файлови системи поддържат три **режима** за използване на файловете: 
-**четене** (_Термин на Английски език: Read_), 
-**запис** (_Термин на Английски език: Write_) и
-**изпълнение** (_Термин на Английски език: Execute_). 
+Traditional file systems support three **modes** for file usage: **read**, **write** and **execute**. 
 
-От друга страна, всеки файл в Линукс принадлежи на **потребител** и **група**, 
-като по подразбиране, това са създателя на файла и първичната му група. 
-На базата на това са дефинирани три **нива** на правата за достъп до файлови операции: 
-**собственик** (_Термин на Английски език: Owner_), 
-**група** (_Термин на Английски език: Group_) и 
-**публика** (_Термин на Английски език: Public_). 
+On the other hand, every file in Linux belongs to a **user** and a **group**, which by default, are the creator of the file and their primary group. 
+Based on this, three **levels** of access rights for file operations are defined: **owner**, **group** and **public**. 
 
-Чрез комбинирането на трите нива и трите режима се получават 9 възможни характеристики на файловете, 
-които могат да се представят със следната битова маска (първият флаг показва дали полето описва директория или файл):
+By combining the three levels and the three modes, 9 possible characteristics of files are obtained, which can be presented with the following bitmask (_the first flag indicates whether the field describes a directory or a file_):
 
 ![09_permissions_fig1.png](09_permissions_fig1.png)
 
-На горния пример, притежателят на файла има пълни права над файла, членовете на групата на файла имат права за четене и изпълнение, а всички останали потребители имат само право за четене.
+In the above example, the file owner has full rights over the file, the members of the file's group have read and execute rights, and all other users have only read rights.
 
-В конзолен режим на Линукс може да разгледаме правата на елементите в текущата директория с помощта на командата:
+In the console mode of Linux, we can view the rights of the elements in the current directory using the command:
+
 ```
 ls -la
 ```
 
 ![09_permissions_fig2.png](09_permissions_fig2.png)  
 
-В Линукс има дефинирани допълнителни специални режими за файловете и директориите. Един от тези режими е **SUID** (_Съкратено от: Set-User IDentification_) и в маската за правата се идентифицира със `(s)` вместо `(x)` на ниво собственик. Когато файл с изпълним код е в този режим и бъде изпълнен, то създадените процеси и ресурси ще принадлежат на собственика на файла, а не на потребителя, стартирал приложението.
+In Linux, there are defined additional special modes for files and directories. One of these modes is **SUID** (short for: Set-User IDentification), which is identified in the permissions mask with `(s)` instead of `(x)` at the owner level. When a file with executable code is in this mode and is executed, the created processes and resources will belong to the owner of the file, not to the user who started the application.
 
-Друг специален режим е **SGID** (_Съкратено от: Set-Group IDentification_) и се идентифицира със `(s)` вместо `(x)` на ниво група. Когато файл с изпълним код е в този режим и бъде изпълнен, то създадените процеси и ресурси ще принадлежат на групата на собственика на файла, а не на потребителя, стартирал приложението. Когато директория е в режим **SGID**, то създадените в нея файлове по подразбиране ще принадлежат на групата на горната директория.
+Another special mode is **SGID** (short for: Set-Group IDentification), identified with `(s)` instead of `(x)` at the group level. When a file with executable code is in this mode and is executed, the created processes and resources will belong to the group of the file owner, not to the user who initiated the application. When a directory is in **SGID** mode, files created within it will default to belonging to the group of the parent directory.The **Sticky bit** mode, identified with `(s)` instead of `(x)` at the general level, is often used for shared directories. 
 
-Режимът **Sticky bit**, който се идентифицира със `(s)` вместо `(x)` на общо ниво, често се използва за споделени директории. Когато директория е в този режим, потребителите имат право да четат и изпълняват файлове на други потребители, но не могат да ги изтриват или преименуват.
+The **Sticky bit** mode, which is identified with `(s)` instead of `(x)` at the general level, is often used for shared directories. When a directory is in this mode, users have the right to read and execute files of other users, but they cannot delete or rename them.

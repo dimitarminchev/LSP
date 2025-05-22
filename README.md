@@ -1,9 +1,6 @@
 # Linux System Programming
 
-The current project **Linux System Programming** is a joint initiative of Burgas Free University and IBA Bulgaria, as an additional resource to the free course **Linux System Programming**.
-The textbook is available for free reading in the form of [electronic book](https://dimitar-minchev.gitbook.io/linux-system-programming/).
-Learning resources are available for free download from [electronic repository](https://github.com/dimitarminchev/LSP/).
-All materials are distributed under license [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+The current project **Linux System Programming** is a joint initiative of Burgas Free University and IBA Bulgaria, as an additional resource to the free course **Linux System Programming**. The textbook is available for free reading in the form of [electronic book](https://dimitar-minchev.gitbook.io/linux-system-programming/). Learning resources are available for free download from [electronic repository](https://github.com/dimitarminchev/LSP/). All materials are distributed under license [CC-BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 | Format | ISBN |
 | :--- | :--- |
@@ -13,12 +10,7 @@ All materials are distributed under license [CC-BY-NC-SA](https://creativecommon
 
 ## Author
 
-**Dimitar Minchev** is a associated professor at the Faculty for Informatics and Technical Sciences at Burgas Free University.
-Prepares students for the [Republican Student Olympiad in Programming](http://www.bcpc.eu/) in the [Competitive Programming Club](https://dev.bfu.bg/).
-Organizes a competition for the development of desktop and mobile applications [HACKATHON @ BFU](https://dev.bfu.bg/hackathon/).
-He created the unique [Academy for Talents in Programming](http://atp.bfu.bg/) and [School of Robotics](http://robots.bfu.bg/) for students from Burgas.
-Initiates the student programming competition [CODE@BURGAS](https://spoj.bfu.bg/).
-Participates in the national program [IT Skills and Career Training](https://github.com/dimitarminchev/ITCareer) of the Bulgarian Ministry of Education and Science.
+**Dimitar Minchev** is a associated professor at the Faculty for Informatics and Technical Sciences at Burgas Free University. Prepares students for the [Republican Student Olympiad in Programming](http://www.bcpc.eu/) in the [Competitive Programming Club](https://dev.bfu.bg/). Organizes a competition for the development of desktop and mobile applications [HACKATHON @ BFU](https://dev.bfu.bg/hackathon/). He created the unique [Academy for Talents in Programming](http://atp.bfu.bg/) and [School of Robotics](http://robots.bfu.bg/) for students from Burgas. Initiates the student programming competition [CODE@BURGAS](https://spoj.bfu.bg/). Participates in the national program [IT Skills and Career Training](https://github.com/dimitarminchev/ITCareer) of the Bulgarian Ministry of Education and Science.
 
 | Contact |
 | :--- |

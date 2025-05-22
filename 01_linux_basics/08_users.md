@@ -1,11 +1,7 @@
-## Потребители и групи
+## Users and Groups
 
-За да получи достъп до функциите на Линукс, всеки потребител трябва да премине през процес на идентификация наречен **login**, 
-където се въвежда потребителско име и парола. След въвеждане на правилна комбинация, потребителят се регистрира в операционната система и се асоциира с уникален идентификатор наречен **uid**, който представлява цяло положително число. 
-Тъй като имената също трябва да са уникални, в практиката те се използват по-често от **uid** за идентифициране на потребителите.
+To access the features of Linux, every user must go through an identification process called **login**, where a username and password are entered. After entering the correct combination, the user registers in the operating system and is associated with a unique identifier called **uid**, which represents a positive integer. Since names must also be unique, they are more commonly used in practice than **uid** for user identification.
 
-От своя страна, всеки потребител принадлежи към една или повече потребителски групи. 
-По този начин едни и същи атрибути или права могат да се задават едновременно на множество потребители, в зависимост от тяхната роля в системата.
+Each user belongs to one or more user **groups**. This way, the same attributes or permissions can be assigned to multiple users at once, depending on their role in the system.
 
-Авторизацията за достъп до ресурсите в Линукс се осигурява, чрез тази концепция за потребители и групи. 
-Например, операциите, които може да извършвате с файловете в ОС, зависят от правата, които притежава Вашият потребител и групата, към която принадлежи.
+Authorization for access to resources in Linux is provided through this concept of users and groups. For example, the operations you can perform with files in the OS depend on the permissions that your user account and the group it belongs to possess.

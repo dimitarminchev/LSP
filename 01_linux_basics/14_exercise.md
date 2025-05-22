@@ -1,28 +1,28 @@
-## Упражнение върху основи на Линукс
-Упражнете материалите от темата, като реализирате представените по-долу задачи.
+## Linux Basics Exercise
+Practice the materials from the topic by completing the tasks presented below. 
 
-### 1. FTP
-Посредством програмата **FileZilla** установете отдалечена връзка към работният сървър с адрес **46.10.253.12**. 
-В домашната папка на потребителя качете файл **LSPp1.pdf**, който можете да изтеглите от Интернет на адрес **[https://github.com/dimitarminchev/LSP/presentations/01_Linux_Basics.pdf](https://github.com/dimitarminchev/LSP/blob/master/presentations/01_Linux_Basics.pdf)**.
+### 1. FTP 
+Using the program **FileZilla**, establish a remote connection to the working server at address **46.10.253.12**. 
+Upload the file **LSPp1.pdf** to the user's home folder, which you can download from the Internet at the address **[https://github.com/dimitarminchev/LSP/presentations/01_Linux_Basics.pdf](https://github.com/dimitarminchev/LSP/blob/master/presentations/01_Linux_Basics.pdf)**. 
 
-За потребителско име и парола за достъп използвайте тези предоставени от преподавателя. 
-Алтернативно можете да влезете с потребител **students** и парола **password123**.
+For the username and password, use those provided by the instructor. 
+Alternatively, you can log in with the username **students** and password **password123**. 
 
 ### 2. SSH 
-Посредством програмата **putty** установете отдалечена връзка към работният сървър с адрес **46.10.253.12**. 
+Using the program **putty**, establish a remote connection to the working server at address **46.10.253.12**. 
 
-За потребителско име и парола за достъп използвайте тези предоставени от преподавателя. 
-Алтернативно можете да влезете с потребител **students** и парола **password123**.
+For the username and password, use those provided by the instructor. 
+Alternatively, you can log in with the username **students** and password **password123**.
 
 ## 3. Terminal
-1. Проверете дали файлът **LSPp1.pdf** присъства в домашната папка на потребителя. 
-2. Променете паролата си.
-3. Във вашата домашна папка **~**, създайте нова папка **exercises** за упражненията и поддиректория в нея **day01** за тази лекция.
-4. Отидете до последната папка **day01** и създайте файл **listing.txt** там, който съдържа списък на файловете от папката **/sbin**.
-5. Отворете последния файл с текстовия редактор **nano** и добавете имената си в началото.
-6. В домашната си директория създайте връзка към директорията **/home/students/**.
+1. Check if the file **LSPp1.pdf** is present in the user's home folder.
+2. Change your password.
+3. In your home folder **~**, create a new folder **exercises** for the exercises and a subdirectory **day01** in it for this lecture.
+4. Go to the last folder **day01** and create a file **listing.txt** there, which contains a list of files from the folder **/sbin**.
+5. Open the last file with the text editor **nano** and add your names at the beginning.
+6. In your home directory, create a link to the directory **/home/students/**.
 
-Пример
+Example:
 ```
 ls /home/students/LSPp1.pdf 
 passwd

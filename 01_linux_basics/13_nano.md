@@ -1,52 +1,51 @@
-## Текстовият редактор nano
+## Nano Text Editor
 
-Текстовите файлове са често използвано средство за съхранение и обмен на информация в Линукс. Поради това, почти всяка една дистрибуция предлага средства за работа с тях. В нашата работна среда ще използваме текстовия редактор **nano**:
+Text files are a commonly used means for storing and exchanging information in Linux. Because of this, almost every distribution offers tools to work with them. In our working environment, we will use the text editor **nano**:
 
-![13_nano.png](13_nano.png)  
+![13_nano.png](13_nano.png)
 
-Някои от основните функции на **nano** са:
+Some of the main features of **nano** are:
 
-### Файлов контрол
+### File Control
 
-| Клавиш          | Пояснение                            |
-| --------------- | ------------------------------------ |
-| nano readme.txt | Отваря или съдава файл readme.txt    |
-| Ctrl-o Y Enter  | Запазва промените                    |
-| Ctrl-r Alt-f    | Отваря нов файл                      |
-| Alt->           | Превключва към следващ отворен файл  |
-| Alt-<           | Превключва към предишен отворен файл |
-| Ctrl-x          | Изход от редактора                   |
+| Key             | Explanation                        |
+| --------------- | ---------------------------------- |
+| nano readme.txt | Opens or creates a file readme.txt |
+| Ctrl-o Y Enter  | Saves the changes                  |
+| Ctrl-r Alt-f    | Opens a new file                   |
+| Alt->           | Switches to the next open file     |
+| Alt-<           | Switches to the previous open file |
+| Ctrl-x          | Exits the editor                   |
 
-### Навигация в съдържанието
+### Navigation in the Content
 
-| Клавиш | Пояснение                             |
-| ------ | ------------------------------------- |
-| Ctrl-a | Преместване в началото на текущия ред |
-| Ctrl-e | Преместване в края на текущия ред     |
-| Ctrl-v | Прелистване страница надолу           |
-| Ctrl-y | Прелистване страница нагоре           |
-| Alt-\  | Позициониране в началото на файла     |
-| Alt-/  | Позициониране в края на файла         |
-| Alt-g  | Позиционира към желан ред от файла    |
+| Key    | Explanation                               |
+| ------ | ----------------------------------------- |
+| Ctrl-a | Move to the beginning of the current line |
+| Ctrl-e | Move to the end of the current line       |
+| Ctrl-v | Scroll down a page                        |
+| Ctrl-y | Scroll up a page                          |
+| Alt-   | Move to the beginning of the file         |
+| Alt-/  | Move to the end of the file               |
+| Alt-g  | Position to the desired line in the file  |
 
-### Копиране и вмъкване
+### Copying and Pasting
 
-| Клавиш       | Пояснение                                                      |
-| ------------ | -------------------------------------------------------------- |
-| Alt-a	       | Избор на блок за копиране или вмъзкване                        |
-| Alt-a Alt-^  | Копиране (Copy) на избрания блок в клипборда                   |
-| Alt-a Ctrl-k | Изрязване(Cut) на избрания блок в клипборда                    |
-| Ctrl-k       | Изрязване(Cut) от позицията на курсора до края на реда         |
-| Ctrl-u       | Вмъкване (Paste) съдържанието от клипборда на текущата позиция |
+| Key          | Explanation                                                          |
+| ------------ | -------------------------------------------------------------------- |
+| Alt-a        | Select a block for copying or pasting                                |
+| Alt-a Alt-^  | Copy (Copy) the selected block to the clipboard                      |
+| Alt-a Ctrl-k | Cut (Cut) the selected block to the clipboard                        |
+| Ctrl-k       | Cut (Cut) from the cursor position to the end of the line            |
+| Ctrl-u       | Paste (Paste) the content from the clipboard at the current position |
 
-### Търсене и заместване
+### Search and Replace
+| Key    | Description        |
+| ------ | ------------------ |
+| Ctrl-w | Search for text    |
+| Alt-w  | Repeat last search |
+| Alt-r  | Search and replace |
 
-| Клавиш | Пояснение                  |
-| ------ | -------------------------- |
-| Ctrl-w | Търсене на текст           |
-| Alt-w  | Повтаря последното търсене |
-| Alt-r  | Търсене и заместване       |
- 
-Полезна информация:
+References:
 - [The Beginner's Guide to Nano, the Linux Command-Line Text Editor](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
 - [Nano text editor command cheatsheet](http://www.codexpedia.com/text-editor/nano-text-editor-command-cheatsheet/)

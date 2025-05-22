@@ -1,12 +1,12 @@
-## Управление на потребители и групи
+## Manage Users and Groups
 
-В таблицата по-долу са дадени команди от операционната система, които се използват за управление на потребители и групи:
+The table below shows commands from the operating system used for managing **users** and **groups**:
 
-| Команда | Пояснение                                                           |
-| ------- | ------------------------------------------------------------------- |
-| id      | отпечатва реални и ефективни потребителски и групови идентификатори |
-| chmod   | промяна на бита на файловия режим                                   |
-| umask	  | задаване на маска за създаване на файлов режим                      |
-| chown	  | промяна на собственика на файла и групата                           |
-| chgrp   | промяна на собствеността на групата                                 |
-| passwd  | промяна на потребителската парола                                   |
+| Command | Explanation                                  |
+| ------- | -------------------------------------------- |
+| id      | Prints real and effective user and group IDs |
+| chmod   | Changes the file mode bit                    |
+| umask   | Sets the mask for creating file mode         |
+| chown   | Changes the owner of the file and the group  |
+| chgrp   | Changes the group ownership                  |
+| passwd  | Changes the user password                    |

@@ -1,11 +1,11 @@
-## Работна среда
+## Working Environment
 
-Работната среда се състои от един Линукс сървър с реален Интернет протокол адрес **46.10.253.12** и множество Windows клиенти. Достъпа на клиентите до сървъра се осъществява посредством [Telnet](https://en.wikipedia.org/wiki/Telnet)  използвайки [SSH](https://bg.wikipedia.org/wiki/SSH ).
- 
+The work environment consists of a Linux server with a real Internet Protocol address **46.10.253.12** and multiple Windows clients. Client access to the server is realized via [Telnet](https://en.wikipedia.org/wiki/Telnet) using [SSH](https://bg.wikipedia.org/wiki/SSH).
+
 ![02_environment.png](02_environment.png)  
  
-Telnet е разработен през 1969 г., като се започне с [RFC 15](https://tools.ietf.org/html/rfc15), разширен в [RFC 854](https://tools.ietf.org/html/rfc854) и стандартизиран като интернет стандарт [STD 8](https://en.wikipedia.org/wiki/STD_8)  на  [Internet Engineering Task Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force), един от първите интернет стандарти. Telnet осигурява достъп до интерфейс на командния ред на отдалечен хост до мрежови устройства и/или операционни системи. Поради сериозните опасения за сигурността при използването на Telnet през отворена мрежа като Интернет, използването му за тази цел значително намаля в полза на SSH.
+Telnet was developed in 1969, starting with [RFC 15](https://tools.ietf.org/html/rfc15), expanded in [RFC 854](https://tools.ietf.org/html/rfc854), and standardized as an internet standard [STD 8](https://en.wikipedia.org/wiki/STD_8) by the [Internet Engineering Task Force](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force), one of the first internet standards. Telnet provides access to a command-line interface on a remote host to networking devices and/or operating systems. Due to serious security concerns when using Telnet over an open network like the Internet, its use for this purpose has significantly decreased in favor of SSH.
 
-SSH използва криптография с публичен ключ, за да удостовери отдалечения компютър и да му позволи да удостовери потребителя, ако е необходимо. Протоколът обикновено се използва за влизане в отдалечена машина и изпълнение на команди. Той може да прехвърля файлове, като използва свързаните протоколи за прехвърляне на файлове (SFTP) или защитени копия (SCP).
- 
-Системният софтуер включва **шелл** (_Термин на Английски език: Shell_), **текстов редактор** (_Термин на Английски език: Text editor_), **компилатор** (_Термин на Английски език: Compiler_) и **дебъгер** (_Термин на Английски език: Debugger_), **инструменти** (_Термин на Английски език: Tools_) и **демони** (_Термин на Английски език: Daemons_) на операционната система. 
+SSH uses public key cryptography to authenticate the remote computer and to allow it to authenticate the user if necessary. The protocol is commonly used to log into a remote machine and execute commands. It can transfer files using related file transfer protocols (SFTP) or secure copies (SCP).
+
+The system software of the operating system includes: **shell**, **text editor**, **compiler**,  **debugger**, **tools** and **daemons**.

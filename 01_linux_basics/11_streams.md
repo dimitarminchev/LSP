@@ -1,17 +1,17 @@
-## Стандартни потоци
+## Standart Streams
 
-В общия случай, компютърните програми получават входна информация (_клавиатура, файл и т.н._), обработва я и извежда резултат, под формата на изходната информация (_файлове, текст, изображение и т.н._). За стандартните конзолни приложения, входните данни се въвеждат от клавиатурата на компютъра, а изходните данни се извеждат на текстов екран.
+In general, computer programs receive input data (_keyboard, file, etc._), process it, and produce output results in the form of output data (_files, text, image, etc._). For standard console applications, the input data is entered via the computer's keyboard, and the output data is displayed on a text screen.
 
-В този модел на вход и изход на данните, не е известно предварително колко и какви данни ще бъдат получени от потребителите и съответно изведени като резултат. Такъв тип вход и изход се наричат текстови **потоци** (_Термин на Английски език: streams_).
+In this model of input and output of data, it is not known in advance how much and what type of data will be received from users and correspondingly output as a result. This type of input and output is called text **streams**.
 
-Всяка програма, която изпълняваме на командния ред в Линукс, е свързана автоматично към три потока от данни: 
+Every program that we run in the command line in Linux is automatically connected to three streams of data:
 
-| поток      | информация                                                                                 |
-|------------|--------------------------------------------------------------------------------------------|
-| STDIN (0)  | Стандартен вход (данни, подадени в програмата, по подразбиране от клавиатурата)            |
-| STDOUT (1) | Стандартен изход (данни, отпечатани от програмата, по подразбиране към текстовия терминал) |
-| STDERR (2) | Стандартна грешка (за съобщения за грешки, по подразбиране към текстовия терминал)         |
- 
+| stream     | information                                                                    |
+|------------|--------------------------------------------------------------------------------|
+| STDIN (0)  | Standard input (data provided to the program, by default from the keyboard)    |
+| STDOUT (1) | Standard output (data printed by the program, by default to the text terminal) |
+| STDERR (2) | Standard error (for error messages, by default to the text terminal)           |
+
 ![11_streams.png](11_streams.png)   
 
  

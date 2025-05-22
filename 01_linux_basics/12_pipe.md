@@ -1,15 +1,15 @@
-## Пренасочване на потоци
+## Redirecting and Pipelines
 
-Линукс поддържа различни средства за работа с входно-изходните потоци, например:
+Linux supports various tools for working with input-output streams, for example:
 
-- Операторът **по-голямо** ` > ` пренасочва изхода на програмите към файл, вместо да бъдат отпечатани на екрана. Ако файлът вече съществува, съдържанието му ще бъде изтрито и версия с новото съдържание ще бъде запазена.
-- Операторът **двойно по-голямо** ` >> ` пренасочва изхода и го добавя към файл, ако вече съществува.
-- Операторът **конвейер** ` | ` пренасочва изхода на програмата отляво като вход на програмата отдясно.
- 
+- The operator **greater than** ` > ` redirects the output of programs to a file instead of printing it on the screen. If the file already exists, its content will be deleted and a version with the new content will be saved.
+- The operator **double greater than** ` >> ` redirects the output and appends it to a file if it already exists.
+- The operator **pipe** ` | ` redirects the output of the program on the left as input to the program on the right.
+
 ![12_pipe.png](12_pipe.png) 
  
-В горния пример създаваме текстов файл **` file1.txt `**, който съдържа списък с файловете в текущата директория. Забележете, че файлът, който създадохме, също е в списъка. Първо се създава файлa, след това се изпълнява командата и изходът се запазва в него.
+In the above example, we create a text file **`file1.txt`**, which contains a list of the files in the current directory. Note that the file we created is also in the list. First, the file is created, then the command is executed and the output is saved in it.
 
-След това в същия файл отново добавяме листинга на текущата директория. 
+Next, we add the listing of the current directory again to the same file.
 
-В третия пример извеждаме списъка с файлове в текущата директория, пренасочваме го към командата **` head `**, която взима първите три реда, които се пренасочват към командата **` tail `**, която оставя само последния ред.
+In the third example, we output the list of files in the current directory, redirect it to the command **`head`**, which takes the first three lines, which are then redirected to the command **`tail`**, which keeps only the last line.

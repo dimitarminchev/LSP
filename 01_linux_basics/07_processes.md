@@ -1,17 +1,9 @@
-## Процеси в Линукс
+## Processes in Linux
 
-Основната задача на операционните системи е да изпълняват компютърни програми. 
-При стартирането на всяка програма се създават един или повече **процеси** (_Термин на Английски език: Processes_), 
-които на практика представляват програмен код в изпълнение. 
-Но освен статичен код, те също така се състоят от данни, ресурси, състояние и виртуализиран компютър.
+The main task of operating systems is to execute computer programs. When each program is started, one or more **processes** are created, which effectively represent program code in execution. But in addition to static code, they also consist of data, resources, state, and a virtualized computer. 
 
-В Линукс всеки процес се представя с уникален идентификатор, наречен **pid**. 
-Когато няма активни процеси, операционната система фиктивно изпълнява специален **бездействащ процес** (_Термин на Английски език: Idle Process_), 
-който има уникален идентификатор **pid = 0**.
+In Linux, each process is represented by a unique identifier called **pid**. When there are no active processes, the operating system idlely runs a special **idle process** (Term in English: Idle Process), which has the unique identifier **pid = 0**. 
 
-Процесите могат да създават други процеси, като оригиналният процес се нарича **родител** (_Термин на Английски език: Parent_), 
-а новосъздадения се нарича **дете** (_Термин на Английски език: Child_). 
-По този начин се създават йерархични групи от процеси, които могат да комуникират и споделят ресурси помежду си. 
+Processes can create other processes, with the original process referred to as the **parent** and the newly created one called the **child**. In this way, hierarchical groups of processes are created, which can communicate and share resources with each other.
 
-Всеки процес е собственост на потребител и група, регистрирани в операционната система. 
-В повечето случаи, това е потребителят, който е стартирал приложението и съответно групата, към която той принадлежи.
+Every process is owned by a user and a group registered in the operating system. In most cases, it is the user who launched the application and the corresponding group to which they belong.
