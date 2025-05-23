@@ -1,14 +1,15 @@
-## Упражнение върху тема програмиране
-Упражнете материалите от темата, като реализирате представените по-долу проекти.
+## Programmnig Exercise
+
+Practice the materials from the topic by implementing the projects presented below.
 
 ### Multi Add
-Напишете програма **multi-add.c**, която взима едно или повече числа като входни аргументи, след това изчислява общата сума и отпечатва отговора на стандартния изход. Компилирайте програмата и я изпълнете. Компилирайте. Опитайте отстраняване на грешки посредством дебъгера.
+Write a program **multi-add.c** that takes one or more numbers as input arguments, then calculates the total sum and prints the answer to standard output. Compile the program and run it. Compile. Try debugging using a debugger.
 
 ### Reverse Test
-Напишете програма **reverse-test.c**, която чете низ от клавиатурата и го отпечатва наобратно. За да обърнете входния низ, трябва да използвате библиотеката **reverse**, която е предоставена в директорията **/day02/reverse/**. Функцията, която трябва да използвате, е:
+Write a program **reverse-test.c** that reads a string from the keyboard and prints it in reverse. To reverse the input string, you need to use the **reverse** library, which is provided in the directory **/day02/reverse/**. The function you need to use is:
 
 ```c
 void inplace_reverse(char * str)
 ```
 
-Имате всички източници, за да можете да компилирате и свързвате библиотеката статично или можете да използвате споделената библиотека **reverse** от **/usr/lib/libreverse.so**. Най-добре е да опитате и двата подхода.
+You have all the resources to compile and link the library statically or you can use the shared library **reverse** from **/usr/lib/libreverse.so**. It is best to try both approaches.

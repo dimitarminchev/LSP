@@ -1,20 +1,20 @@
-## Библиотеки
+## Libraries
 
-Библиотеките представляват множество компилирани обекти в един файл. 
+Libraries represent a collection of compiled objects in a single file.
 
-Техните преимущества са: **повторно използване на компоненти** (използване на една споделена библиотека заема по-малко място на диска), **управление на версиите** (стари и нови версии съжителстват едновременно на една Linux система), **компонентна специализация** (разработчиците могат да  фокусират основната си компетентност в една библиотека).
+Their advantages are: **reusability of components** (_using one shared library takes up less disk space_), **version management** (old and new versions coexist simultaneously on one Linux system), **component specialization** (_developers can focus their core competency in one library_).
 
-Видовете библиотеки са: **статични** (обектен код в свързана библиотека, който става част от приложението) и **динамични** (споделени обекти, динамично свързвани по време на изпълнението).
+The types of libraries are: **static** (_object code in a linked library, which becomes part of the application_) and **dynamic** (_shared objects, dynamically linked at runtime_).
 
-### Структура на библиотека
+### Structure of a library
 
-На фигурата по-долу е дадена примерна структура на библиотека:
+The figure below shows a sample structure of a library:
 
 ![08_library.png](08_library.png)
 
-### Структура на директориите
+### Directory Structure
 
-Използвайте следните команди да създадете структурата на директориите:
+Use the following commands to create the directory structure:
 ```
 mkdir libexample
 mkdir libexample/src
@@ -23,12 +23,12 @@ mkdir libexample/bin
 mkdir libexample/bin/static
 mkdir libexample/bin/shared
 ```
-Източник:
+Reference:
 [Creating a shared and static library with the gnu compiler gcc]( https://renenyffenegger.ch/notes/development/languages/C-C-plus-plus/GCC/create-libraries/index)
 
-### Файлове на библиотеката
+### Library files
 
-В папка `libexample/src/addlib/` създайте файл `add.c` със следното съдържание:
+In the folder `libexample/src/addlib/`, create a file `add.c` with the following content:
 ```c
 #include <stdio.h>
 int gSummand;
@@ -47,13 +47,13 @@ void __attribute__ ((destructor)) cleanUpLibrary(void) {
 }
 ```
 
-В папка `libexample/src/addlib/` създайте файл `add.h` със следното съдържание:
+In the folder `libexample/src/addlib/`, create a file `add.h` with the following content:
 ```c
 void setSummand(int summand);
 int add(int summand);
 ```
 
-В папка `libexample/src/addlib/` създайте файл `answer.c` със следното съдържание:
+In the folder `libexample/src/addlib/`, create a file `answer.c` with the following content:
 ```c
 #include "add.h"
 int answer() {
@@ -62,12 +62,12 @@ int answer() {
 }
 ```
 
-В папка `libexample/src/addlib/` създайте файл `answer.h` със следното съдържание:
+In the folder `libexample/src/addlib/`, create a file `answer.h` with the following content:
 ```c
 int answer();
 ```
 
-В папка `libexample/src/` създайте файл `main.c` със следното съдържание:
+In the folder `libexample/src/`, create a file `main.c` with the following content:
 ```c
 #include <stdio.h>
 #include "addlib/add.h"

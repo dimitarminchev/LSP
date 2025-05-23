@@ -1,5 +1,6 @@
-## Тестване на библиотека
-В папка `libexample/` създайте файл `test.c` със следното съдържание:
+## Library Example
+
+In the `libexample/` folder, create a file `test.c` with the following content:
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -26,13 +27,13 @@ int main()
 }
 ```
 
-Компилирайте и стартирайте тестовата програма използвайки командите:
+Compile and run the test program using the commands:
 ```
 gcc test.c -ldl -o test
 ./test
 ```
 
-В резултат при успешно изпълнение трябва да видите следните три реда:
+As a result, if executed successfully, you should see the following three lines:
 ```
 Library is initialized
 Result: 49

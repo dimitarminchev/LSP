@@ -1,13 +1,9 @@
-## Дебъгване
-Преди да се запознаем съв възможностите за дебъгване да напишем кратка програма за намиране на сума на числа: **suma.c**
+## Debugging
 
-### Сумиране на числа
-Инициализираме променливa **sum=0**. 
-Отпечатваме стойността на **argc**. 
-Отпечатваме стойностите в **argv**. 
-Броят на числата **num_count** е втората стойност в **argv**. 
-**num_count** на брой пъти четем число от клавиатурата и го добавяме към сумата. 
-Отпечатваме стойността на получената сума.
+Before we get acquainted with the debugging possibilities, let's write a short program to find the sum of numbers: **suma.c**
+
+### Summing Numbers
+Initialize a variable **sum=0**. Print the value of **argc**. Print the values in **argv**. The numbers counter **num_count** is the second value in **argv**. Read a number from the keyboard **num_count** times and add it to the sum. Print the value of the obtained sum.
 
 ```c
 #include <stdio.h>
@@ -32,38 +28,37 @@ int main(int argc, char* argv[])
 ```
 ![12_suma.png](12_suma.png) 
 
-### Отстраняване на грешки
-За да компилирате изходния код на програмата с включена възможност за дебъгване:
+### Debugging 
+To compile the source code of the program with debugging enabled:
 ```
 gcc suma.c -о suma
 ```
 
-За да стартирате дебъгера:
+To start the debugger:
 ```
 gdb suma
 ```
 
-За да поставите точка на прекъсване, където програмата ще спре изпълнението:
+To set a breakpoint where the program will stop execution:
 ```
 b [function name, line number]
 ```
 
-За да стартирате програмата:
+To start the program:
 ```
 r [command line arguments]
 ```
 
-В таблицата са дадени съкратените клавишни комбинации полезни при работа с дебъгера:
+The table provides the shortcut key combinations useful when working with the debugger:
 
-| Клавиш       | Информация                                                                    |
-| ------------ | ----------------------------------------------------------------------------- |
-| h            | Помощ                                                                         |
-| n            | Стъпка напред един блок код                                                   |
-| s            | Стъпка напред един ред код                                                    |
-| p [variable] | Отпечатва стойността на променливата variable                                 |
-| info locals  | Отпечатва стойностите на всички локални променливи                            |
-| bt           | Показва последователността на функциите, наречени до тази точка на изпълнение |
-| q            | Изход                                                                         |
+| Key          | Information                                                       |
+| ------------ | ----------------------------------------------------------------- |
+| h            | Help                                                              |
+| n            | Step forward one block of code                                    |
+| s            | Step forward one line of code                                     |
+| p [variable] | Prints the value of the variable variable                         |
+| info locals  | Prints the values of all local variables                          |
+| bt           | Shows the sequence of functions called up to this execution point |
+| q            | Exit                                                              |
 
-Повече информация: 
-[Introduction to GDB](https://www.youtube.com/watch?v=sCtY--xRUyI) и [Harvard University CS50](https://www.youtube.com/watch?v=y5JmQItfFck)
+Reference: [Introduction to GDB](https://www.youtube.com/watch?v=sCtY--xRUyI) и [Harvard University CS50](https://www.youtube.com/watch?v=y5JmQItfFck)

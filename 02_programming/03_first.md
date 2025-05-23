@@ -1,6 +1,6 @@
-## Изходен програмен код
+## Source Code
 
-Използвайки текстовия редактор **nano** напишете изходния програмен код във файл **first.c**
+Using the text editor **nano**, write the source program code in the file **first.c**.
 
 ```c
 #include<stdio.h>
@@ -13,6 +13,6 @@ int main()
 }
 ```
 
-Изглед на изходния програмен код в текстовият редактор **nano**:
+View of the source code in the text editor **nano**:
 
 ![03_first.png](03_first.png) 

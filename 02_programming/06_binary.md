@@ -1,11 +1,11 @@
-## Компилирайте до изпълнима програма
+## Binary
 
-Използвайки компилатора **gcc** компилирайте до изпълнима програма **binary**, посредством изпълнението на следната командa:
+Using the compiler **gcc**, compile to the executable program **binary** by executing the following command:
 
 ```
 gcc first.c -o first
 ```
 
-Резултатът се записва във файл **first**, който трябва да изглежда по следния начин:
+The result is recorded in a file **first**, which should look as follows:
 
 ![06_binary.png](06_binary.png) 

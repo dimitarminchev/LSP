@@ -1,11 +1,11 @@
-## Компилирайте в асемблер
+## Assembly
 
-Използвайки компилатора **gcc** компилирайте в асемблер **assembly**, посредством изпълнението на следната команда:
+Using the **gcc** compiler, compile to **assembly** by executing the following command:
 
 ```
 gcc -S first.c -o first.s
 ```
 
-Резултатът се записва във файл **first.s**, който трябва да изглежда по следния начин:
+The result is saved in a file **first.s**, which should look like this:
 
 ![04_assembly.png](04_assembly.png) 

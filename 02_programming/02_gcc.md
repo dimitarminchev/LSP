@@ -1,10 +1,10 @@
-## Компилатор 
+## Compiler 
 
-- Компилаторът GCC е разработен по проекта GNU и поддържа различни програмни езици.
-- Първоначално е наречен GNU C Compiler, когато е работил само с програмния език C.
-- Ще го използваме, за да направим нашите програми изпълними.
+- The GCC compiler was developed under the GNU project and supports various programming languages.
+- It was originally called GNU C Compiler when it only worked with the C programming language.
+- We will use it to make our programs executable.
 
 ![02_gcc.png](02_gcc.png) 
 
-Повече информация: 
+Reference: 
 [https://en.wikipedia.org/wiki/GNU_Compiler_Collection](https://en.wikipedia.org/wiki/GNU_Compiler_Collection)
