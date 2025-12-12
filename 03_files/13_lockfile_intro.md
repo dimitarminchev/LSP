@@ -1,10 +1,10 @@
-## Заключване на файлове
+## File Locking
 
-Използвайте методът **fcntl()**, който осигурява указател към структурата **flock**. Това извикване манипулира файловия дескриптор **fd**, в зависимост от командата **cmd**:
+Use the **fcntl()** method, which provides a pointer to the **flock** structure. This call manipulates the file descriptor **fd**, depending on the command **cmd**:
 
-- За да заключите блок на файл, използвайте **F_SETLK**.
-- Ако блокът вече е заключен, използвайте **F_GETLK**, за да получите информация за процеса на заключване.
-- За да отключите блок на файл, използвайте **F_SETLK**, но задайте **flock.l_type = F_UNLCK**.
+- To lock a block of a file, use **F_SETLK**.
+- If the block is already locked, use **F_GETLK** to get information about the locking process.
+- To unlock a block of a file, use **F_SETLK**, but set **flock.l_type = F_UNLCK**.
 
 ```c
 #include<stdio.h>
@@ -14,7 +14,7 @@ int fseek(FILE *stream, long offset, int whence);
 int fclose(FILE * stream);
 ```
 
-Структурата flock
+The flock structure
 ```c
 struct flock {
    ...

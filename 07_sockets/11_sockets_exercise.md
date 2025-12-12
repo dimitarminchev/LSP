@@ -1,8 +1,8 @@
-## Упражнение
-Упражнете материалите от темата, като реализирате представения по-долу проект.
+## Exercise
+Practice the materials from this topic by implementing the project presented below.
 
 ### Better Chat
 
-Усъвършенствайте двойката програми за мрежов сокет сървър **network-socket-server.c** и клиент **network-socket-client.c**, като добавите следните подобрения:
-- Сървърът трябва да поддържа няколко паралелни клиентски връзки.
-- Разрешаване по няколко съобщения на разговор, докато клиентът не изпрати съобщение **!quit** на сървъра.
+Improve the pair of programs for network socket server **network-socket-server.c** and client **network-socket-client.c** by adding the following enhancements:
+- The server should support multiple parallel client connections.
+- Allow multiple messages per conversation until the client sends a **!quit** message to the server.

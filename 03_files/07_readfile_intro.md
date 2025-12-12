@@ -1,21 +1,21 @@
-## Четене на съдържанието на файл
+## Reading File Contents
 
-Библиотеката **unistd.h** съдържа методи за работа с файлове:
+The **unistd.h** library contains methods for working with files:
 
 ```c
 #include<unistd.h>
 ssize_t read(int fd, void *buf, size_t len);
 ```
 
-- Всяко извикване чете **len** на брой байтове в **buf** от текущата позиция на файла, посочен в файловия дескриптор **fd**.
-- При успех се връща броят байтове записание в **buf**.
-- При грешка в резултат се връща -1, а информация за грешката се записва във **errno**.
+- Each call reads **len** number of bytes into **buf** from the current position of the file specified in the file descriptor **fd**.
+- On success, it returns the number of bytes written to **buf**.
+- On error, it returns -1, and error information is written to **errno**.
 
-Всъщност метода за четене може да доведе до много възможности:
-- Връща стойност, равна на **len** и всички прочетени байтове са запазени в **buf**. Резултатите са както е предвидено.
-- Връща стойност по-малка от len, но по-голяма от нула. Четените байтове се съхраняват в **buf**. Това може да се случи, защото сигналът прекъсва четенето в средата, в средата на четенето е възникнала грешка, повече от нула, но е налице по-малко от стойността на байтовете с леки байтове или EOF е достигнато, преди да бъдат прочетени байтове. Преиздаването на прочетеното (с съответно актуализираните стойности **buf** и **len**) ще прочете останалите байтове в останалата част от буфера или ще посочи причината за проблема.
-- Връща стойност 0. Това показва **EOF**. Няма какво да чете.
-- Извикването на метода блокира, тъй като няма налични данни. Това няма да се случи в режим на блокиране.
-- Връща стойност -1 и грешката е зададена на **EINTR**. Това показва, че е получен сигнал преди четенето на байтове.
-- Връща стойност -1, а грешката е зададена на **EAGAIN**. Това показва, че четенето би блокирало, защото понастоящем няма налични данни. Това се случва само в режим на блокиране.
-- Връща стойност -1, а грешката е зададена на стойност, различна от **EINTR** или **EAGAIN**. Това показва по-сериозна грешка.
+Actually, the read method can lead to many possibilities:
+- Returns a value equal to **len** and all read bytes are stored in **buf**. The results are as expected.
+- Returns a value less than len but greater than zero. The read bytes are stored in **buf**. This can happen because a signal interrupted the read in the middle, an error occurred in the middle of reading, more than zero but less than the value of len bytes are available, or EOF is reached before len bytes are read. Reissuing the read (with correspondingly updated **buf** and **len** values) will read the remaining bytes into the rest of the buffer or indicate the cause of the problem.
+- Returns a value of 0. This indicates **EOF**. There is nothing to read.
+- The method call blocks because no data is available. This will not happen in non-blocking mode.
+- Returns a value of -1 and the error is set to **EINTR**. This indicates that a signal was received before any bytes were read.
+- Returns a value of -1 and the error is set to **EAGAIN**. This indicates that the read would block because no data is currently available. This only happens in non-blocking mode.
+- Returns a value of -1 and the error is set to a value other than **EINTR** or **EAGAIN**. This indicates a more serious error.

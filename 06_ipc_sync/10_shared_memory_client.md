@@ -1,12 +1,12 @@
-## Клиент за памет
+## Memory Client
 
-Създайте **./shared-memory-server**, излезте при грешка. 
-Разпределете споделената памет. 
-Докато текущото съобщение не е "q". 
-Заключете паметта за клиента, задавайте ред на сървъра. 
-Изчакайте, ако сървърът използва паметта. 
-Ако сървърът е обработил последното съобщение - посочете, че клиентът е обработил текущото съобщение, отпечатайте съобщението от сървъра, прочетете ред от клавиатурата и премахнете заключването на клиента. 
-Премахнете споделената памет.
+Create **./shared-memory-server**, exit on error. 
+Allocate the shared memory. 
+While the current message is not "q". 
+Lock the memory for the client, set the server's turn. 
+Wait if the server is using the memory. 
+If the server has processed the last message - indicate that the client has processed the current message, print the message from the server, read a line from the keyboard and remove the client lock. 
+Remove the shared memory.
 
 ### shared-memory-client.c
 ```c

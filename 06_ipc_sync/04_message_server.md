@@ -1,11 +1,11 @@
-## Сървър за съобщения
+## Message Server
 
-- Създайте опашка за съобщения с даден ключ **KEY**. 
-- Изчакайте съобщение от тип **msg_1_t** от опашката. 
-- Отпечатайте данните за получените съобщения. 
-- Подгответе и изпратете отговор от тип **msg_2_t**. 
-- Изчакайте потвърждение **msg_1_t**. 
-- Премахнете опашката за съобщения.
+- Create a message queue with the given **KEY**. 
+- Wait for a message of type **msg_1_t** from the queue. 
+- Print the data for the received messages. 
+- Prepare and send a response of type **msg_2_t**. 
+- Wait for **msg_1_t** confirmation. 
+- Remove the message queue.
 
 ### message-server.c
 ```c

@@ -1,13 +1,13 @@
-## Определяне на общи данни
+## Defining Common Data
 
-Определете идентификационен номер на опашката **FTOK_FILE**. Дефинирайте структурата на споделената памет **memory_block**:
-- **server_lock** е 1, когато сървърът използва паметта
-- **client_lock** е 1, когато клиентът използва паметта
-- **turn** е 0, когато чакате клиентско съобщение
-- **turn** е 1, когато чакате съобщение от сървъра
-- **readlast** е 0, когато клиентът получи последно съобщение
-- **readlast** е 1, когато сървър получи последно съобщение
-- **string**  държи текущото съобщение
+Define the queue identification number **FTOK_FILE**. Define the shared memory structure **memory_block**:
+- **server_lock** is 1 when the server is using the memory
+- **client_lock** is 1 when the client is using the memory
+- **turn** is 0 when waiting for a client message
+- **turn** is 1 when waiting for a message from the server
+- **read_last** is 0 when the client received the last message
+- **read_last** is 1 when the server received the last message
+- **string** holds the current message
 
 ### shared-memory-types.h
 ```c

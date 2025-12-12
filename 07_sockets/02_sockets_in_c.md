@@ -1,14 +1,14 @@
-## Работа със сокети в C
+## Working with Sockets in C
 
-| метод                            | описание                                                |
-|----------------------------------|---------------------------------------------------------|
-| socket ()                        | създава крайна точка за комуникация                     |
-| bind ()                          | свързва име към сокет                                   |
-| recv (), recvfrom (), recvmsg () | получава съобщение от сокет                             |
-| send (), sendto (), sendmsg ()   | изпраща съобщение към сокет                             |
-| socketpair ()                    | създава двойка свързани сокета                          |
-| listen ()                        | слуша за връзки към сокет                               |
-| accept ()                        | приема връзка към сокет                                 |
-| connect ()                       | инициира връзка към сокет                               |
-| htons ()                         | преобразува unsigned short integer в network byte order |
-| gethostbyname ()                 | връща структура от тип hostent за даденото име на хост  |
+| method                           | description                                                      |
+|----------------------------------|------------------------------------------------------------------|
+| socket ()                        | creates an endpoint for communication                            |
+| bind ()                          | binds a name to a socket                                         |
+| recv (), recvfrom (), recvmsg () | receives a message from a socket                                 |
+| send (), sendto (), sendmsg ()   | sends a message to a socket                                      |
+| socketpair ()                    | creates a pair of connected sockets                              |
+| listen ()                        | listens for connections on a socket                              |
+| accept ()                        | accepts a connection on a socket                                 |
+| connect ()                       | initiates a connection on a socket                               |
+| htons ()                         | converts unsigned short integer to network byte order            |
+| gethostbyname ()                 | returns a structure of type hostent for the given host name      |

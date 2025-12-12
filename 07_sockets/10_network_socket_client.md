@@ -1,13 +1,13 @@
-## Мрежов сокет клиент
+## Network Socket Client
 
-Проверете входните аргументи, излезте при грешка.
-Отворете INET, STEAM сокет, излезте при грешка.
-Вземете хост името сървъра, излезте при грешка.
-Конфигурирайте и свържете сокета към адреса на сървъра и порт, излезте при грешка.
-Изведете на екрана, че очаквате вход и прочетете нов текстов ред от клавиатурата.
-Изпратете въведения текст към сокета.
-Прочетете отговор от сокета и го отпечатайте.
-Затворете сокета.
+Check input arguments, exit on error.
+Open an INET, STREAM socket, exit on error.
+Get the server host name, exit on error.
+Configure and connect the socket to the server address and port, exit on error.
+Display on screen that you are waiting for input and read a new text line from the keyboard.
+Send the entered text to the socket.
+Read a response from the socket and print it.
+Close the socket.
 
 ### network-socket-client.c
 ```c

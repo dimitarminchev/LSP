@@ -1,8 +1,8 @@
-## Пример за прекратяване на нишки
+## Thread Cancellation Example
 
-- Създаваме нишка
-- Опитваме да я прекратим
-- Изчакваме я да приключи
+- Create a thread
+- Try to cancel it
+- Wait for it to finish
 
 ```c
 pthread_create(&thread, NULL, thread_func, NULL);
@@ -10,10 +10,10 @@ pthread_cancel(thread);
 pthread_join(thread, NULL);
 ```
 
-- Маркираме нишката като неотменима
-  - ... докато работи
-  - ... и докато не разрешим прекратяване
-  - ... и достигнем точка за прекратяване
+- Mark the thread as non-cancellable
+  - ... while it works
+  - ... and until we allow cancellation
+  - ... and reach a cancellation point
 
 ```c
 pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, NULL);
@@ -22,11 +22,11 @@ pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
 pthread_testcancel();
 ```
 
-- Правим нишката отменима по всяко време
-- Но засега я маркираме в неотменяемо състояние
-  - ... докато работи
-  - ... и докато не разрешим прекратяване
-- Нишката се прекратяване автоматично, няма нужда да достигаме до точка за прекратяване
+- Make the thread cancellable at any time
+- But for now mark it in a non-cancellable state
+  - ... while it works
+  - ... and until we allow cancellation
+- The thread is cancelled automatically, no need to reach a cancellation point
 
 ```c
 pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
@@ -68,7 +68,7 @@ int main(int argc, char * argv[])
 }
 ```
 
-Компилиране на програмата с изрична инструкция към компилатора да поддръжка нишки:
+Compiling the program with explicit instruction to the compiler to support threads:
 ```
 gcc threads-cancel.c -o threads-cancel -lpthread
 ```

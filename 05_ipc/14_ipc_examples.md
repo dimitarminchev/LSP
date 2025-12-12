@@ -1,14 +1,14 @@
-## Упражнение върху комуникация между процеси
-Упражнете материалите от темата, като реализирате представените по-долу проекти.
+## Inter-Process Communication Exercise
+Practice the materials from this topic by implementing the projects presented below.
 
 ### Reverse Encryptor Decryptor
 
-Нека дефинираме "Reverse Encryption" (**RE**) като техника за защита на текстови съобщения, при която текста на съобщенията се обръща наобратно, преди те да бъдат изпратени по-нататък. Напишете програма **reverse-encryptor-decryptor.c**, която има два процеса, комуникиращи посредством анонимна тръба (**anonymous pipe**). 
+Let's define "Reverse Encryption" (**RE**) as a technique for protecting text messages in which the text of the messages is reversed before they are sent further. Write a program **reverse-encryptor-decryptor.c** that has two processes communicating via an anonymous pipe (**anonymous pipe**). 
 
-За двата процеса да валидни следните правила:
-- **Родителски процес** трябва да чете текст от клавиатурата, след това да приложи техниката RE и да изпрати кодираното съобщение на **Дъщерен процес**.
-- **Дъщерен процес** трябва да изчака входящите съобщения, да отпечата кодираните съобщения на екрана, след това да ги декодира и да ги съхрани във файл **reverse-encryptor-decryptor.log**.
+The following rules must be valid for both processes:
+- **Parent process** must read text from the keyboard, then apply the RE technique and send the encoded message to the **Child process**.
+- **Child process** must wait for incoming messages, print the encoded messages to the screen, then decode them and store them in the file **reverse-encryptor-decryptor.log**.
 
 ### Encrypted Chat
 
-Напишете двойка програми за сървър (**encrypted-chat-server.c**) и клиент (**encrypted-chat-client.c**). Сървърът трябва да имитира поведението на **Родителски процес** от предишната задача, а клиента съответно на **Дъщерен процес**. Програмите трябва да използват наименувана тръба (**named pipe**) като метод за комуникация.
+Write a pair of programs for server (**encrypted-chat-server.c**) and client (**encrypted-chat-client.c**). The server should mimic the behavior of the **Parent process** from the previous task, and the client should mimic the **Child process** respectively. The programs should use a named pipe (**named pipe**) as a communication method.

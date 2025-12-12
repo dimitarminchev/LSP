@@ -1,11 +1,11 @@
-## Игра на зомбита
+## Zombie Game
 
-Дефинирайте обработчик на сигнал за прекратяване на изпълнението.
-Инициализирайте променливи за използване на обработчик на сигнал.
-Задайте действие при **SIGCHLD**, изход при грешка.
-Направете 10 пъти следното: създайте дъщерен процес и запазете неговия идентификатор (**pid**).
-Родителският процес отпечатва идентификатора на дъщерният процес.
-Дъщерният процес отпечатва съобщение и излиза.
+Define a signal handler for terminating execution.
+Initialize variables for using the signal handler.
+Set action for **SIGCHLD**, exit on error.
+Do the following 10 times: create a child process and save its identifier (**pid**).
+The parent process prints the identifier of the child process.
+The child process prints a message and exits.
 
 ### zombie-test.c
 ```c

@@ -1,13 +1,13 @@
-## Процеси 
+## Processes 
 
-- Процесите са обектен код в изпълнение: активни, живи, изпълняващи се програми.
-- Процесите се състоят от данни (**data**), ресурси (**resources**), състояние (**state**) и виртуализиран компютър (**virtualized computer**).
-- Всеки процес е представен от уникален идентификатор на процеса (**pid**).
-- Процесът който ядрото стартира, когато няма други изпълними процеси е процесът на празен ход (**idle process**), неговия идентификатор **pid = 0**.
-- Процесът, който създава нов процес, е известен като родителски (**parent**), а новият процес е известен като дъщерен (**child**).
-- Всеки процес е собственост на потребител (**user**) и група (**group**).
+- Processes are object code in execution: active, alive, running programs.
+- Processes consist of data (**data**), resources (**resources**), state (**state**), and a virtualized computer (**virtualized computer**).
+- Each process is represented by a unique process identifier (**pid**).
+- The process that the kernel starts when there are no other executable processes is the idle process (**idle process**), its identifier is **pid = 0**.
+- The process that creates a new process is known as the parent (**parent**), and the new process is known as the child (**child**).
+- Each process is owned by a user (**user**) and a group (**group**).
 
-Възможните състояния не един процес са представени на фигурата по-долу:
+The possible states of a process are shown in the figure below:
 
 ![01_processes.png](01_processes.png)
 

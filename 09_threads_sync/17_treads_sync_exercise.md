@@ -1,10 +1,10 @@
-## Упражнение за синхронизация на нишки
-Упражнете материалите от темата, като реализирате представения по-долу проект.
+## Thread synchronization exercise
+Practice the chapter material by implementing the project described below.
 
 ### AdvancedChat
 
-Модифицирайте двойката програми мрежов сървър/клиент от предишната тема със следните промени:
+Modify the pair of network server/client programs from the previous chapter with the following changes:
 
-- Сървърът трябва да поддържа допълнителен незадължителен аргумент **-p**, който, ако е наличен, определя, че комуникацията ще се осъществява в така наречения **любезен режим** (_Термин на Английски език: polite mode_). В този режим сървърът трябва да приема съобщенията на клиентите на кръгове: когато един клиент изпрати съобщение, следващото съобщение от същия клиент няма да бъде обработено, докато всички други свързани клиенти не изпратят своите съобщения. Ако е необходимо, можете да промените протокола за комуникация между клиентите и сървъра.
+- The server should accept an optional `-p` argument which, if present, enables a "polite mode". In polite mode the server should process client messages in rounds: when one client sends a message, that client's next message is not processed until all other connected clients have sent their messages. You may change the communication protocol between clients and server if needed to implement this behavior.
 
-- Сървърът трябва да съхранява историята на чата във файл **chat.log**.
+- The server should persist chat history to a file named `chat.log`.

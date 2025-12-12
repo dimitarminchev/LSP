@@ -1,8 +1,8 @@
-## Упражнение върху нишки 
-Упражнете материалите от темата, като реализирате представения по-долу проект.
+## Threads Exercise 
+Practice the materials from this topic by implementing the project presented below.
 
 ### ThreadedChat
-Рефакторирайте двойката програми мрежов сървър/клиент от предишната тема със следните промени:
+Refactor the network server/client program pair from the previous topic with the following changes:
 
-- Многопотребителската обработка в сървъра трябва да се извършва с помощта на нишки **threads**.
-- Сървърът спира работа, когато някой от клиентите изпрати съобщение **!quitserver** към сървъра.
+- Multi-user processing on the server should be done using **threads**.
+- The server stops working when one of the clients sends a **!quitserver** message to the server.

@@ -1,4 +1,4 @@
-## Стартиране на дъщерен процес
+## Starting a Child Process
 
 ```c
 #include<sys/types.h>
@@ -8,16 +8,16 @@ pid_t getpid(void);
 pid_t getppid(void);
 ```
 
-- Успешно извикване на **fork()** създава нов процес, идентичен почти във всички аспекти с извикващия го процес.
-- Родителският процес получава идентификатора (**pid**) на дъщерния процес, а дъщерния процес получава нула.
-- При грешка и дъщерния процес не е създаден, **fork()** връща -1 и грешката (**errno**) може да бъде:
+- A successful call to **fork()** creates a new process, identical in almost all aspects to the calling process.
+- The parent process receives the identifier (**pid**) of the child process, and the child process receives zero.
+- On error and the child process is not created, **fork()** returns -1 and the error (**errno**) can be:
 
-| Грешка | Пояснение                                                                                         |
-| ------ | ------------------------------------------------------------------------------------------------- |
-| EAGAIN | Ядрото не успя да разпредели определени ресурси, като например нов идентификатор (pid) на процес. |
-| ENOMEM | Няма достатъчно памет на ядрото за изпълнение на заявката.                                        |
+| Error  | Description                                                                               |
+| ------ | ----------------------------------------------------------------------------------------- |
+| EAGAIN | The kernel failed to allocate certain resources, such as a new process identifier (pid). |
+| ENOMEM | There is insufficient kernel memory to execute the request.                               |
 
-Програмен фрагмен за стартиране на дъщерен процес:
+Program fragment for starting a child process:
 
 ### fork.c
 ```c
@@ -45,5 +45,5 @@ int main(int argc, char * argv[])
 }
 ```
 
-Повече информация:
+More information:
 [Linux Programming](https://www.slideshare.net/EmertxeSlides/linux-programming-36666547)

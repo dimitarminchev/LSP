@@ -1,9 +1,9 @@
-## Типове при прекратяване на нишки
+## Thread Cancellation Types
 
-Функцията **pthread_cancel()** изпраща заявка за прекратяване на нишка.
+The **pthread_cancel()** function sends a cancellation request to a thread.
 
-Дали и кога целевата нишка реагира на заявката за прекратяване зависи от два атрибута, които са под контрола на тази нишка: нейното състояние на отмяна (разрешено/деактивирано) и тип:
+Whether and when the target thread reacts to the cancellation request depends on two attributes that are under the control of that thread: its cancelability state (enabled/disabled) and type:
 
-- **Deferred** (поведение по подразбиране) означава, че прекратяванеto ще бъде забавено, докато нишката не извика функция **pthread_testcancel()**.
+- **Deferred** (default behavior) means that cancellation will be delayed until the thread calls a function **pthread_testcancel()**.
 
-- **Asynchronous** означава, че нишката може да бъде отменена по всяко време (обикновено незабавно, но системата не гарантира това).
+- **Asynchronous** means that the thread can be cancelled at any time (usually immediately, but the system does not guarantee this).

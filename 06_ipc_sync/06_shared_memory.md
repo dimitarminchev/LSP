@@ -1,7 +1,7 @@
-## Споделена памет
+## Shared Memory
 
-Споделената памет може да се опише като картографиране на област (сегмент) от паметта, която ще бъде картирана и споделена чрез повече от един процес. Това е най-бързата форма на между-процесна комуникация (**IPC**), тъй като няма посредничество - информацията се пренася директно от сегмент от паметта в адресното пространство на процеса на повикване. Сегментът може да бъде създаден от един процес и след това да бъде записван и четен от произволен брой процеси.
+Shared memory can be described as mapping a region (segment) of memory that will be mapped and shared by more than one process. This is the fastest form of inter-process communication (**IPC**) because there is no intermediation - information is transferred directly from a memory segment into the address space of the calling process. The segment can be created by one process and then written to and read by any number of processes.
  
 ![06_shared_memory.png](06_shared_memory.png)
 
-Повече информация: [Shared Memory](https://www.tldp.org/LDP/lpg/node65.html)
+More information: [Shared Memory](https://www.tldp.org/LDP/lpg/node65.html)

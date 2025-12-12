@@ -1,4 +1,4 @@
-## Мрежови сокети
+## Network Sockets
 
 ```c
 #include <sys/types.h>
@@ -13,11 +13,11 @@ int accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
 int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
 ```
 
-За да приемете връзките, се изпълняват следните стъпки:
+To accept connections, the following steps are performed:
 
-1. Създава се сокет чрез **socket()**.
-2. Сокета се свързва с локален адрес с помощта на **bind()**, така че другите сокети да могат да се свързват **connect()** с него.
-3. Желанието за приемане на входящи връзки и ограничение броя на входящите връзки се определят от **listen()**.
-4. Връзките се приемат с **accept()**.
+1. A socket is created with **socket()**.
+2. The socket is bound to a local address using **bind()**, so that other sockets can **connect()** to it.
+3. The willingness to accept incoming connections and a queue limit for incoming connections are specified with **listen()**.
+4. Connections are accepted with **accept()**.
 
 ![sockets_stream.png](sockets_stream.png) 

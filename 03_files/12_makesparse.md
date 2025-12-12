@@ -1,12 +1,12 @@
-## Направете файл с дупка
+## Create a File with a Hole
 
-- Инициализирайте променливите
-- Създайте файл, като използвате за името му първият аргумент, предаден на програмата
-- Ако не се отвори, изведете грешка и излезте
-- Запишете името на файла във файла
-- Прескочете 16777216 байта напред във файла
-- Запишете отново името на файла във файла
-- Затворете файла
+- Initialize the variables
+- Create a file using the first argument passed to the program as its name
+- If it doesn't open, output an error and exit
+- Write the file name to the file
+- Skip 16777216 bytes forward in the file
+- Write the file name to the file again
+- Close the file
 
 ### makesparse.c
 ```c

@@ -1,9 +1,9 @@
-## Файл сокет сървър
+## File Socket Server
 
-Отворете Unix сокет за дейтаграми, при грешка изведете съобщение и излезте от програмата. 
-Свържете сокета с файл **socket.file**, излезте при грешка. 
-Вземете съобщение от сокета, излезте при грешка. 
-Отпечатайте съобщението, затворете сокета и изтрийте сокет файла.
+Open a Unix datagram socket, on error print a message and exit the program. 
+Bind the socket to file **socket.file**, exit on error. 
+Receive a message from the socket, exit on error. 
+Print the message, close the socket and delete the socket file.
 
 ### file-socket-server.c
 ```c

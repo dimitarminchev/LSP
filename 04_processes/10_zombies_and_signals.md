@@ -1,14 +1,14 @@
-## Зомбита и проста обработка на сигнали
+## Zombies and Simple Signal Handling
 
-Когато дъщерен процес умре преди родителският процес, ядрото го поставя в специално състояние наречено зомби (**zombie**). Процесът в това състояние чака родителски процес да се допита до неговия статус и едва след това дъщерният процес престава да съществува като зомби. Ако родителският процес никога не запита за състоянието на дъщерният процес, тогава зомбито се превръща в призрак (**ghost**), което е много лоша практика. Ако родителският процес завърши преди дъщерните му процеси, то техен родител става началният процес. Началният процес, от своя страна, периодично изчаква всички свои дъщерни процеси, като по този начин гарантира, че никое от тях няма да остане зомби.
+When a child process dies before the parent process, the kernel places it in a special state called zombie (**zombie**). The process in this state waits for the parent process to query its status, and only then does the child process cease to exist as a zombie. If the parent process never queries the child process's status, then the zombie becomes a ghost (**ghost**), which is very bad practice. If the parent process terminates before its child processes, then their parent becomes the init process. The init process, in turn, periodically waits for all its child processes, thus ensuring that none of them remain zombies.
 
-Изчакване на процес:
+Waiting for a process:
 ```c
 #include<sys/wait.h>
 pid_t waitpid(pid_t pid, int *wstatus, int options);
 ```
 
-Обработка на сигнали:
+Signal handling:
 ```c
 #include<signal.h>
 int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);
@@ -21,4 +21,4 @@ struct sigaction {
 };
 ```
 
-Какво се случва обаче, ако родителският процес умре преди дъщерният процес или ако той умре, преди да има възможност да изчака своите зомбита? Всеки път, когато даден процес се прекратява, ядрото на Линукс преглежда списъка на дъщерните процеси и ги възпроизвежда на началният процес (идентификатор на процеса pid = 1). Това гарантира, че никой процес няма да остане без родител. Началният процес, от своя страна, периодично изчаква всички свои дъщерни процеси, като по този начин гарантира, че никое от тях няма да остане зомби за твърде дълго време. Въпреки че това все още се счита за добра практика, тази предпазна мярка означава, че краткотрайните процеси не трябва да се притесняват прекомерно да чакат всичките си деца.
+But what happens if the parent process dies before the child process, or if it dies before it has a chance to wait for its zombies? Every time a process terminates, the Linux kernel reviews the list of child processes and reparents them to the init process (process identifier pid = 1). This ensures that no process will be left without a parent. The init process, in turn, periodically waits for all its child processes, thus ensuring that none of them remain zombies for too long. Although this is still considered good practice, this safeguard means that short-lived processes should not worry excessively about waiting for all their children.

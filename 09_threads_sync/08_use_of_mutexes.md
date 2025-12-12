@@ -1,15 +1,15 @@
-## Типична употреба на мютекси
+## Typical use of mutexes
 
-Типична последователност при използването на мютекс е както следва:
+A typical sequence when using a mutex is:
 
-- Създайте и инициализирайте мютекс променлива
-- Няколко нишки се опитват да заключат мьютекса
-- Само една успява и тази нишка е собственик на мютекса
-- Нишката собственик на мютекса изпълнява някакъв набор от действия
-- Собственикът отключва мютекса
-- Друга нишка придобива мьютекса и повтаря процеса
-- Накрая мютексът се унищожава
+- Create and initialize a mutex variable
+- Multiple threads attempt to lock the mutex
+- Only one succeeds and that thread owns the mutex
+- The owning thread performs some set of actions
+- The owner unlocks the mutex
+- Another thread acquires the mutex and the process repeats
+- Finally the mutex is destroyed
 
-Когато няколко нишки се състезават за мютекс, губещите блокират при това повикване, но е възможно да се използва метод **trylock()**, при който губещите нишки няма да бъдат блокирани.
+When multiple threads race for a mutex, the losing threads block on the call, but it is possible to use a `trylock()` variant where losing threads are not blocked.
 
-Когато защитава споделените данни, всяка нишка, която трябва да използва мютекс, трябва да го направи. Например, ако 4 нишки актуализират едни и същи данни, но само една използва мютекс, данните все още могат да бъдат повредени.
+When protecting shared data, every thread that needs to access the data must use the mutex. For example, if four threads update the same data but only one uses a mutex, the data can still become corrupted.

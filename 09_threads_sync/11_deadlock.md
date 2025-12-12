@@ -1,13 +1,9 @@
-## Състояние на мъртва хватка
+## Deadlock
 
-**Състояние на мъртва хватка** (_Термин на Английски език: Deadlock_) това състояние възниква, 
-когато се използва мутекс и той не се освободи члез отключване и остане заключен. 
+**Deadlock** occurs when a mutex is not released (unlocked) and remains held, preventing progress.
 
-Това води до спиране на изпълнението на програмата за неопределено време. 
-То може да бъде причинено и от недобре написано **application** или **joins**. 
+This leads to the program stalling for an indefinite time. Deadlocks can be caused by poorly written application logic or incorrect use of joins.
 
-Бъдете внимателни, когато прилагате два или повече мутекса в една част от кода. 
-Ако първият **pthread_mutex_lock** е приложен и вторият **pthread_mutex_lock** не успее поради прилагането на друга нишка на мутекс, първият мутекс може в крайна сметка да блокира всички други нишки от достъп до данни, включително нишката, която държи втория мутекс.
+Be careful when acquiring two or more mutexes in the same section of code. If the first `pthread_mutex_lock` succeeds but the second `pthread_mutex_lock` is blocked because another thread holds that mutex, the first mutex may end up preventing other threads from accessing data — including the thread that holds the second mutex.
 
-Нишките могат да чакат неограничено време ресурсът да се освободи, което води до задънена улица. 
-Най-добре е да се тества и ако се появи неуспех, да се освободят ресурсите и да се спре, преди да се опита отново.
+Threads may wait indefinitely for a resource to be released, leading to a dead end. It is best to detect failures, release resources, and retry or abort before retrying.

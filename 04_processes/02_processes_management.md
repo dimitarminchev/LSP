@@ -1,23 +1,23 @@
-## Управление на процесите
+## Process Management
 
-В таблицата по-долу са представени команди за управление на процесите в операционна система Linux:
+The table below shows commands for managing processes in a Linux operating system:
 
-| Команда      | Информация                                                     |
+| Command      | Information                                                    |
 | ------------ | -------------------------------------------------------------- |
-| ps           | моментна снимка на текущите процеси.                           |
-| top          | показва процесите на Linux.                                    |
-| kill         | изпраща сигнал към процес.                                     |
-| pgrep, pkill | търсене или сигнал процеси въз основа на име и други атрибути. |
-| killall      | убива процесите по име.                                        |
-| Ctrl-C       | убива процеса на преден план.                                  |
-| Ctrl-Z       | прекъсва процеса на преден план.                               |
-| jobs         | показва статуса на задачите.                                   |
-| fg           | връща прекъснатия процес на преден план.                       |
+| ps           | snapshot of current processes.                                 |
+| top          | displays Linux processes.                                      |
+| kill         | sends a signal to a process.                                   |
+| pgrep, pkill | search or signal processes based on name and other attributes. |
+| killall      | kills processes by name.                                       |
+| Ctrl-C       | kills the foreground process.                                  |
+| Ctrl-Z       | suspends the foreground process.                               |
+| jobs         | shows the status of jobs.                                      |
+| fg           | brings the suspended process to the foreground.                |
 
-Повече информация: 
+More information: 
 [https://www.tecmint.com/linux-process-management/](https://www.tecmint.com/linux-process-management/)
 
-Пример:
+Example:
 ```
 $ pgrep -u tecmint top
 $ kill 2308

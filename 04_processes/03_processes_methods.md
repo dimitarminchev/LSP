@@ -1,12 +1,12 @@
-## Методи за работа с процеси
+## Methods for Working with Processes
 
-В таблицата по-долу са представени методи на C, които се използват при програмиране на процеси в операционна система Linux:
+The table below shows C methods used in process programming in a Linux operating system:
 
-| Команда                                                   | Информация                                                     |
+| Command                                                   | Information                                                    |
 | --------------------------------------------------------- | -------------------------------------------------------------- |
-| getpid()                                                  | връща идентификатора **pid** на извикващия процес.             |
-| getppid()                                                 | връща идентификатора **pid** на родителския процес.            |
-| execl(), execlp(), execle(), execv(), execvp(), execvpe() | изпълнение на команда.                                           |
-| fork()                                                    | създава дъщерен процес.                                   |
-| exit()                                                    | причинява нормално прекратяване на процеса.                    |
-| wait(), waitpid(), waitid()                               | изчаква процеса да си промени статуса.                         |
+| getpid()                                                  | returns the **pid** identifier of the calling process.         |
+| getppid()                                                 | returns the **pid** identifier of the parent process.          |
+| execl(), execlp(), execle(), execv(), execvp(), execvpe() | execute a command.                                             |
+| fork()                                                    | creates a child process.                                       |
+| exit()                                                    | causes normal process termination.                             |
+| wait(), waitpid(), waitid()                               | waits for the process to change status.                        |

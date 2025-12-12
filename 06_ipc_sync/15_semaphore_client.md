@@ -1,13 +1,13 @@
-## Семафор клиент
+## Semaphore Client
 
-- Задайте 2 семафора - първият показва, че сървърът трябва да чете, вторият за клиента
-- Създайте **semaphore-server**, изход при грешка
-- Прикачете споделената памет
-- Докато текущото съобщение не е "q":
-- Поискайте семафорен ресурс на клиента и отпечатайте следващото съобщение
-- Прочетете нов ред от клавиатурата в споделената памет
-- Освободете семафора на сървъра
-- Отделете споделената памет
+- Set up 2 semaphores - the first indicates that the server should read, the second for the client
+- Create **semaphore-server**, exit on error
+- Attach the shared memory
+- While the current message is not "q":
+- Request the client semaphore resource and print the next message
+- Read a new line from the keyboard into the shared memory
+- Release the server's semaphore
+- Detach the shared memory
 
 ### semaphore-client.c
 ```c

@@ -1,23 +1,23 @@
-## Сокетите в Линукс
+## Sockets in Linux
 
-Повечето комуникации между процесите използват модела клиент-сървър. Един от двата процеса, наречен **клиент** (_Термин на Английски език: client_), се свързва с другия процес наречен **сървър** (_Термин на Английски език: server_), обикновено с искане за информация. Всяка страна на тази вдупосочна комуникация може да бъде представена чрез **сокет** (_Термин на Английски език: socket_). Процесите клиент и сървър създават техен собствен сокет.
+Most inter-process communications use the client-server model. One of the two processes, called the **client**, connects to the other process called the **server**, typically with a request for information. Each side of this bidirectional communication can be represented by a **socket**. The client and server processes create their own socket.
 
-### Видове сокети
+### Socket Types
 
-**Unix domain socket** е крайна точка за обмен на данни между процеси, изпълняващи една и съща хостова операционна система.
+**Unix domain socket** is an endpoint for exchanging data between processes executing on the same host operating system.
 
-**Network socket** е крайна точка за изпращане или получаване на данни в рамките на хост от компютърната мрежа.
+**Network socket** is an endpoint for sending or receiving data within a host from a computer network.
 
-### Типове мрежови сокети
-Сокетите поддържат предаването на надежден **поток** (_Термин на Английски език: stream_) от байтове, 
-както и подредено и ненадеждно предаване на **дейтаграми** (_Термин на Английски език: datagrams_).
-Поточните сокети разглеждат комуникациите като непрекъснат поток от символи, 
-докато Дейтаграм сокетите трябва да четат целите съобщения наведнъж.
+### Network Socket Types
+Sockets support the transmission of reliable **streams** of bytes, 
+as well as ordered and unreliable transmission of **datagrams**.
+Stream sockets view communications as a continuous stream of characters, 
+while Datagram sockets must read entire messages at once.
 
-### Kомуникация посредством Дейтаграм сокет
+### Communication via Datagram Socket
 
 ![sockets_dgram.png](sockets_dgram.png) 
 
-### Kомуникация посредством Поточен сокет
+### Communication via Stream Socket
 
 ![sockets_stream.png](sockets_stream.png) 

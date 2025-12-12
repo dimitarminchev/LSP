@@ -1,14 +1,14 @@
-## Работа с тръби
+## Working with Pipes
 
 ```c
 #include <unistd.h>
 int pipe(int pipefd[2]);
 ```
 
-**pipe()** - създава анонимна тръба.  
-- Масивът **pipefd** се използва за да върне два файлови дескриптора, сочещи към краищата на тръбата.
-- **pipefd[0]** се отнася за четене в края на тръбата
-- **pipefd[1]** се отнася за писане в края на тръбата.
+**pipe()** - creates an anonymous pipe.  
+- The **pipefd** array is used to return two file descriptors pointing to the ends of the pipe.
+- **pipefd[0]** refers to the read end of the pipe
+- **pipefd[1]** refers to the write end of the pipe.
 
 ```c
 #include <sys/types.h>
@@ -16,5 +16,5 @@ int pipe(int pipefd[2]);
 int mkfifo(const char *pathname, mode_t mode);
 ```
 
-**mkfifo**() - създава наименувана тръба (**FIFO**).
-- **mode** указва правата за **FIFO** структурата. Той се модифицира от метода **umask** по обичайния начин: разрешенията на създадения файл са (**mode & ~umask**).
+**mkfifo**() - creates a named pipe (**FIFO**).
+- **mode** specifies the permissions for the **FIFO** structure. It is modified by the **umask** method in the usual way: the permissions of the created file are (**mode & ~umask**).

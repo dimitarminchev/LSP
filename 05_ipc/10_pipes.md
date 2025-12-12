@@ -1,9 +1,9 @@
-## Анонимни и наименувани тръби
+## Anonymous and Named Pipes
 
-### Анонимни тръби
+### Anonymous Pipes
 
-Анонимната тръба (_Термин на английски език: Anonymous pipe_) е обикновен **FIFO** комуникационен канал, който може да се използва за еднопосочна междупроцесна комуникация (IPC). Обикновено родителската програма отваря анонимни тръби и създава нов процес, който наследява другите краища на тръбите. Анонимната тръба трае само докато трае процесът.
+An anonymous pipe (_English term: Anonymous pipe_) is a simple **FIFO** communication channel that can be used for unidirectional inter-process communication (IPC). Typically, the parent program opens anonymous pipes and creates a new process that inherits the other ends of the pipes. The anonymous pipe lasts only as long as the process lasts.
 
-### Наименувани тръби
+### Named Pipes
 
-Наименуваната тръба (_Термин на английски език: Named pipe_) е продължение на концепцията за традиционните анонимни тръби. Наименуваната тръба може да бъде идентифицирана с име и да се покаже като файл в системата. Наименуваната тръба може да продължи да съществува толкова дълго, колкото компютърната система е включена, а не само по време живота на процеса. Наименуваната тръба може да бъде изтрита, ако вече не се използва.
+A named pipe (_English term: Named pipe_) is an extension of the concept of traditional anonymous pipes. A named pipe can be identified by name and shown as a file in the system. A named pipe can continue to exist as long as the computer system is on, not just during the lifetime of the process. A named pipe can be deleted if it is no longer being used.

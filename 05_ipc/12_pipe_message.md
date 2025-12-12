@@ -1,14 +1,14 @@
-## Използване на анонимни тръби
+## Using Anonymous Pipes
 
-- Отворете тръба (**pipe**) и запазете входно/изходните файлови дескриптори (**I/O FD**)
-- Създайте дъщерен процес (**fork**) 
-- Родителски процес: затворете входният файлов дескриптор (**input/read**)
-  - Запишете съобщение на изходният файлов дескриптор (**output/write**) 
-  - Затворете изходният файлов дескриптор (**output/write**)
-- Дъщерен процес: затворете изходният файлов дескриптор (**output/write**)
-  - Прочетете съобщение от входният файлов дескриптор (**input/read**)
-  - Отпечатайте полученото съобщение
-  - Затворете входният файлов дескриптор (**input/read**)
+- Open a pipe (**pipe**) and save the input/output file descriptors (**I/O FD**)
+- Create a child process (**fork**) 
+- Parent process: close the input file descriptor (**input/read**)
+  - Write a message to the output file descriptor (**output/write**) 
+  - Close the output file descriptor (**output/write**)
+- Child process: close the output file descriptor (**output/write**)
+  - Read a message from the input file descriptor (**input/read**)
+  - Print the received message
+  - Close the input file descriptor (**input/read**)
 
 ### pipe-pass-message.c
 ```c

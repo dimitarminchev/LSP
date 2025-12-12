@@ -1,10 +1,10 @@
-## Обработка на сигнал
+## Signal Handling
 
-- Дефинирайте функцията за обработка на сигнали **SIGTERM**
-- Иницирайте сигнал, като само **SIGHUP** е включен и блокирайте обработката на сигнали
-- Задайте обработчик на събития за **SIGTERM**
-- Отпечатайте идентификатора на процеса (**pid**)
-- Влезте в безкраен цикъл
+- Define the signal handler function for **SIGTERM**
+- Initialize a signal with only **SIGHUP** included and block signal handling
+- Set an event handler for **SIGTERM**
+- Print the process identifier (**pid**)
+- Enter an infinite loop
 
 ### signal-handler.c
 ```c

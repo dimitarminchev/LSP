@@ -1,15 +1,15 @@
-## Мрежов сокет сървър
+## Network Socket Server
 
-Проверете входните аргументи, излезте при грешка.
-Отворете INET, STEAM сокет, излезте при грешка.
-Инициализирайте структурата **sockaddr_in** за сървъра.
-Свържете гнездото към порт, излезте при грешка.
-Започнете да слушате, разрешете само една връзка.
-Приемете нова връзка, излезте при грешка.
-Прочетете от сокета в буфер.
-Отпечатайте полученото съобщението от буфера.
-Изпратете "OK" в сокета.
-Затворете сокета.
+Check input arguments, exit on error.
+Open an INET, STREAM socket, exit on error.
+Initialize the **sockaddr_in** structure for the server.
+Bind the socket to a port, exit on error.
+Start listening, allow only one connection.
+Accept a new connection, exit on error.
+Read from the socket into a buffer.
+Print the received message from the buffer.
+Send "OK" to the socket.
+Close the socket.
 
 ### network-socket-server.c
 ```c

@@ -1,12 +1,12 @@
-## Пример за изход от нишкa
+## Thread exit example
 
-- Дефинираме функция за изход, която освобождава заетата памет
-- Дефинираме функция на нишката: Заключване на отмяната на нишката
-- Заемаме 1K памет и извеждаме съобщение
-- Добавяме манипулатор за почистване при изход от нишката, предаващ заетата памет като параметър
-- Отключваме отмяната на нишката
-- Отпечатваме 5 съобщения за 5 секунди
-- Извикваме и изпълняваме, манипулатора за почистване при изход от нишката
+- Define an exit function that frees the allocated memory
+- Define the thread function: disable thread cancellation
+- Allocate 1K of memory and print a message
+- Add a thread cleanup handler, passing the allocated memory as a parameter
+- Re-enable thread cancellation
+- Print 5 messages over 5 seconds
+- Call and execute the thread cleanup handler
 
 ### thread-clean-exit.c
 
@@ -61,7 +61,8 @@ int main(int argc, char *argv[])
 }
 ```
 
-Компилиране на програмата с изрична инструкция към компилатора да поддръжка нишки:
+Compile the program with an explicit instruction to link the pthreads library:
+
 ```
 gcc thread-clean-exit.c -o thread-clean-exit -lpthread
 ```

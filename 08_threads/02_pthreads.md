@@ -1,15 +1,15 @@
-## Библиотека за работа с нишки
+## Thread Library
 
-Библиотеката **pthreads** дефинира набор от типове, функции и константи на езика за програмиране C, 
-които поддържат приложения с изисквания за множество потоци на контрол, наречени нишки, в рамките на един процес. 
+The **pthreads** library defines a set of C programming language types, functions and constants, 
+which support applications with requirements for multiple flows of control, called threads, within a single process. 
 
-Има около 100 процедури за нишки, всички с префикс **pthread_** и те могат да бъдат категоризирани в четири групи:
+There are about 100 thread procedures, all with the prefix **pthread_** and they can be categorized into four groups:
 
-| Група                   | Описание                                                          |
-| ----------------------- | ----------------------------------------------------------------- |
-| **Thread management**   | Управление на нишки, създаване и присъединяване на нишки          |
-| **Mutexes**             | Мютекси                                                           |
-| **Condition variables** | Условни променливи                                                |
-| **Synchronization**     | Синхронизация между нишки с помощта на заключване на четене/запис |
+| Group                   | Description                                                           |
+| ----------------------- | --------------------------------------------------------------------- |
+| **Thread management**   | Thread management, creating and joining threads                       |
+| **Mutexes**             | Mutexes                                                               |
+| **Condition variables** | Condition variables                                                   |
+| **Synchronization**     | Synchronization between threads using read/write locking             |
 
-_Бележка: В тази тема ще се фокусираме само върху "Управление на нишки"._
+_Note: In this topic we will focus only on "Thread management"._

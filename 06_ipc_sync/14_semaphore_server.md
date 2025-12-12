@@ -1,13 +1,13 @@
-## Семафорен сървър
+## Semaphore Server
 
-- Задайте 2 семафора - първият показва, че сървърът трябва да чете, вторият за клиента
-- Създайте **semaphore-server**, изход при грешка
-- Разпределете и прикрепете споделената памет и напишете "Hello!"
-- Освободете семафора на клиента
-- Докато текущото съобщение не е "q":
-- Поискайте сървърния семафорен ресурс
-- Ако текущото съобщение не е "q", напишете "Ok!" в паметта и освободете клиента.
-- Извадете и премахнете споделената памет и семафорите
+- Set up 2 semaphores - the first indicates that the server should read, the second for the client
+- Create **semaphore-server**, exit on error
+- Allocate and attach the shared memory and write "Hello!"
+- Release the client's semaphore
+- While the current message is not "q":
+- Request the server semaphore resource
+- If the current message is not "q", write "Ok!" to memory and release the client.
+- Detach and remove the shared memory and semaphores
 
 ### semaphore-server.c
 ```c

@@ -1,10 +1,9 @@
-## Какво са демоните?
+## What are daemons?
 
-**Демон** (_Термин на Английски език: Daemon_) е процес, който работи във фонов режим, без да се свързва с управляващ терминал.
+A **daemon** is a process that runs in the background and is not attached to a controlling terminal.
 
-Обикновено **демоните** се стартират по време на зареждане на операционната система, изпълняват се като ` root ` или друг специален потребител (_например ` apache ` или ` postfix `_) и изпълняват задачи на системно ниво. 
-По традиция името на демона често завършва на **` d `** (_като ` crond ` и ` sshd `_), но това не е задължително или дори универсално.
+Typically, daemons are started at system boot, run as `root` or another dedicated user (for example `apache` or `postfix`), and perform system-level tasks. Traditionally many daemon program names end with the letter `d` (for example `crond` and `sshd`), but this is a convention rather than a requirement.
 
-Демонът има две общи изисквания: 
-- трябва да се изпълнява като дете на **init**;
-- не трябва да е свързан с терминал.
+Daemons commonly have two requirements:
+- they should run as a child of `init` (or the system's init replacement),
+- they must not be attached to a terminal.

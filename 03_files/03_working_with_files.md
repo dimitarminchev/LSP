@@ -1,16 +1,16 @@
-## Работа с файлове в C
+## Working with Files in C
 
-Преди да може да се чете или пише файл, той трябва да бъде отворен. Ядрото поддържа списък на отворените файлове, наречен файлова таблица. Тази таблица се индексира чрез неотрицателни цели числа, известни като дескриптори на файловете (често съкратени fds). Всеки запис в списъка съдържа информация за отворен файл, включващ указател към копие в паметта на файла за поддръжка на inode и свързаните с него метаданни, като например позицията на файла и режимите за достъп. Както потребителското пространство, така и пространството на ядрото използват файловите дескриптори като уникални "бисквитки" по време на работа. Отварянето на файл връща дескриптор на файла, а последващите операции (четене, писане и т.н.) приемат описанието на файла като основен аргумент.
+Before a file can be read or written, it must be opened. The kernel maintains a list of open files called the file table. This table is indexed by non-negative integers known as file descriptors (often abbreviated as fds). Each entry in the list contains information about an open file, including a pointer to an in-memory copy of the file's backing inode and associated metadata, such as file position and access modes. Both user space and kernel space use file descriptors as unique "cookies" during operation. Opening a file returns a file descriptor, and subsequent operations (read, write, etc.) accept the file descriptor as a primary argument.
 
-Основни методи за работа с файлове са представени в таблицатаа по-доли:
+Basic methods for working with files are presented in the table below:
 
-| Метод    | Пояснение                                                  |
-| -------- | ---------------------------------------------------------- |
-| fopen()  | Отваря файл и връща файлов дескриптор                      |
-| fread()  | Чете данни от файл                                         |
-| fwrite() | Записва данни във файл                                     |
-| fflush() | Изчиства потока                                            |
-| close()  | Затваря файловия дескриптор                                |
-| fseek()  | Задава позицията на файловия дескриптор до дадена стойност |
-| fcntl()  | Манипулира файловия дескриптор (Например за заключване)    |
-| errno    | Номер на последната грешка                                 |
+| Method   | Description                                                 |
+| -------- | ----------------------------------------------------------- |
+| fopen()  | Opens a file and returns a file descriptor                  |
+| fread()  | Reads data from a file                                      |
+| fwrite() | Writes data to a file                                       |
+| fflush() | Flushes the stream                                          |
+| close()  | Closes the file descriptor                                  |
+| fseek()  | Sets the file descriptor position to a given value          |
+| fcntl()  | Manipulates the file descriptor (e.g., for locking)         |
+| errno    | Number of the last error                                    |

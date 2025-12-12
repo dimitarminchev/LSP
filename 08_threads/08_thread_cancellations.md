@@ -1,16 +1,16 @@
-## Функции за прекратяване на нишки
+## Thread Cancellation Functions
 
 ```c
 int pthread_cancel(pthread_t thread);
 ```
-изпраща заявка за прекратяване на нишка **thread**.  
+sends a cancellation request to the thread **thread**.  
 
 ```c
 int pthread_setcancelstate(int state, int *oldstate);
 ```
-задава състояние за прекратяване на нишката посредством **state** на **PTHREAD_CANCEL_ENABLE** или **PTHREAD_CANCEL_DISABLE**
+sets the cancellation state of the thread via **state** to **PTHREAD_CANCEL_ENABLE** or **PTHREAD_CANCEL_DISABLE**
 
 ```c
 int pthread_setcanceltype(int type, int *oldtype);
 ```
-задава тип за прекратяване на нишката посредством **type** на **PTHREAD_CANCEL_DEFERRED** или **PTHREAD_CANCEL_ASYNCHRONOUS**
+sets the cancellation type of the thread via **type** to **PTHREAD_CANCEL_DEFERRED** or **PTHREAD_CANCEL_ASYNCHRONOUS**

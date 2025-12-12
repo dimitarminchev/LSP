@@ -1,11 +1,11 @@
-## Управление на изход от нишка 
+## Managing thread exit
 
 ```c
-#include<pthread.h>
+#include <pthread.h>
 void pthread_cleanup_push(void (*routine)(void *), void *arg);
 void pthread_cleanup_pop(int execute);
 ```
 
-- Функцията **pthread_cleanup_push()** добавя в горната част на стека съдържащ манипулатори за почистване на нишки. Когато манипулатора бъде извикан за изпълнение по-късно, arg променливата ще бъде подадена като аргумент.
+- The function `pthread_cleanup_push()` pushes a cleanup handler onto the calling thread's stack of cleanup handlers. When the handler is later invoked, the `arg` value will be passed to it.
 
-- Функцията **pthread_cleanup_pop()** изважда от горната част на стека съдържащ манипулатори за почистване и по избор я изпълнява, ако изпълнението е различно от нула.
+- The function `pthread_cleanup_pop()` pops the handler at the top of the cleanup stack and optionally executes it if the `execute` argument is nonzero.

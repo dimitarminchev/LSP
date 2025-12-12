@@ -1,4 +1,4 @@
-## Библиотеки за работа със семафори
+## Libraries for Working with Semaphores
 
 ```c
 #include<sys/types.h>
@@ -10,7 +10,7 @@ int semctl(int semid, int semnum, int cmd, ...);
 int semop(int semid, struct sembuf *sops, size_t nsops);
 ```
 
-- **semget()** - връща System V идентификатор на семафорно множество, свързано с аргументa **key**.
-- **semctl()** с **cmd = SETVAL** - Задава стойността на **semval** да стане **arg.val** за **semnum**-тия семафор в множеството.
-- **semctl()** с **cmd = IPC_RMID** - премахва семафора.
-- **semop()** - изпълнява операции на избрани семафори от множеството, обозначени с **semid**.
+- **semget()** - returns the System V semaphore set identifier associated with the **key** argument.
+- **semctl()** with **cmd = SETVAL** - Sets the value of **semval** to become **arg.val** for the **semnum**-th semaphore in the set.
+- **semctl()** with **cmd = IPC_RMID** - removes the semaphore.
+- **semop()** - performs operations on selected semaphores from the set designated by **semid**.

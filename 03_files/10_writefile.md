@@ -1,9 +1,9 @@
-## Запис на изречения във файл
+## Writing Sentences to a File
 
-Създайте празен файл **sentences.txt**, в случай на неуспех отпечатайте грешка и излезте.
-Направете 100 пъти следното: извикайте **getSentence()**, за да получите нов текст в буфера и неговата дължина, запишете буфера във файла и запишете броя на байтове.
-Ако броят на записаните байтове е -1, отпечатайте грешка и излезте.
-Затворете файла, при неуспех изведете грешка.
+Create an empty file **sentences.txt**, in case of failure print an error and exit.
+Do the following 100 times: call **getSentence()** to get new text in the buffer and its length, write the buffer to the file and record the number of bytes.
+If the number of written bytes is -1, print an error and exit.
+Close the file, output an error in case of failure.
 
 ### writefile.c
 ```c

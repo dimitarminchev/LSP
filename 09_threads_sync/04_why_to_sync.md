@@ -1,7 +1,7 @@
-## Защо е необходима синхронизация?
+## Why synchronization is necessary
 
-**Синхронизирането на нишки** (_Термин на Английски език: Thread synchronization_) е едновременното изпълнение на две или повече нишки, които споделят критични ресурси.
+**Thread synchronization** is the coordination of concurrent execution between two or more threads that share critical resources.
 
-Нишките трябва да бъдат синхронизирани, за да се избегнат конфликти при използване на критични ресурси.
+Threads must be synchronized to avoid conflicts when accessing shared resources.
 
-В противен случай могат да възникнат конфликти, когато паралелно работещи нишки се опитват да модифицират обща променлива по едно и също време.
+Otherwise, conflicts can arise when parallel threads attempt to modify a shared variable at the same time.

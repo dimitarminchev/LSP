@@ -1,13 +1,13 @@
-## Сървър за памет
+## Memory Server
 
-Създайте **./shared-memory-server**, излезте при грешка. 
-Разпределете споделена памет. 
-Конфигурирайте паметта на клиента и запишете съобщение **"Hello!"** в него. 
-Докато текущото съобщение не е "q". 
-Заключете паметта за сървъра, задайте ред на клиента. 
-Изчакайте, ако клиентът използва паметта. 
-Ако клиентът е обработил последното съобщение - посочете, че сървърът е обработил текущото съобщение, отпечатайте съобщението от клиента и върнете **"Ok!"** премахнете заключването на сървъра. 
-Премахнете споделената памет.
+Create **./shared-memory-server**, exit on error. 
+Allocate shared memory. 
+Configure the client's memory and write the message **"Hello!"** to it. 
+While the current message is not "q". 
+Lock the memory for the server, set the client's turn. 
+Wait if the client is using the memory. 
+If the client has processed the last message - indicate that the server has processed the current message, print the message from the client and return **"Ok!"** remove the server lock. 
+Remove the shared memory.
 
 ### shared-memory-server.c
 ```c

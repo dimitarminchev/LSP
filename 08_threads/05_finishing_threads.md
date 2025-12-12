@@ -1,9 +1,9 @@
-## Финализиране на нишки
+## Finishing Threads
 
-Има няколко начина, по които една нишка може да бъде финализирана:
+There are several ways in which a thread may be terminated:
 
-- Нишката приключва нормално и нейната работа е свършена.
-- Нишката извиква **pthread_exit** независимо дали работата й е свършена или не.
-- Нишката е анулирана от друга нишка посредством **pthread_cancel**.
-- Целият процес се прекратява поради извикване на **exec()** или **exit()**
-- Ако main() завърши първи, без изрично да извика **pthread_exit**
+- The thread returns normally and its work is done.
+- The thread calls **pthread_exit** regardless of whether its work is done or not.
+- The thread is cancelled by another thread via **pthread_cancel**.
+- The entire process is terminated due to calling **exec()** or **exit()**
+- If main() finishes first, without explicitly calling **pthread_exit**

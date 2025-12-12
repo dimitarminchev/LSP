@@ -1,13 +1,13 @@
-## Сигнали
+## Signals
 
-Сигналите са механизъм за еднопосочни асинхронни известия. Сигналът може да бъде изпратен от ядрото до процес, от процес до друг процес или от процес до себе си. Сигналите обикновено предупреждават за процес за някое събитие, като например неизправност при сегментиране или потребител, който натиска клавишна комбинация **Ctrl-C**.
+Signals are a mechanism for unidirectional asynchronous notifications. A signal can be sent from the kernel to a process, from a process to another process, or from a process to itself. Signals typically alert a process to some event, such as a segmentation fault or a user pressing the **Ctrl-C** key combination.
 
-Линукс ядрото изпълнява около 30 сигнала (точният брой зависи от архитектурата).
+The Linux kernel implements around 30 signals (the exact number depends on the architecture).
 
-Всеки сигнал е представен чрез цифрова константа и текстово име. Например **SIGHUP**, използвано за сигнализиране, че е настъпило прекъсване на терминала, има стойност 1 на архитектурата i386.
+Each signal is represented by a numeric constant and a text name. For example, **SIGHUP**, used to signal that a terminal hangup has occurred, has a value of 1 on the i386 architecture.
 
-С изключение на **SIGKILL** (което винаги прекратява процеса) и **SIGSTOP** (което винаги спира процеса) процесите могат да контролират какво се случва, когато получат сигнал.
+With the exception of **SIGKILL** (which always terminates the process) and **SIGSTOP** (which always stops the process), processes can control what happens when they receive a signal.
 
-Те могат да приемат действието по подразбиране, което може да бъде прекратяване на процеса, прекратяване на процеса и разтоварване на ядрото, спиране на процеса или нищо в зависимост от сигнала. Алтернативно, процесите могат да избират изрично да игнорират или да обработват сигнали. Игнорираните сигнали мълчат.
+They can accept the default action, which can be terminating the process, terminating the process and dumping core, stopping the process, or nothing depending on the signal. Alternatively, processes can explicitly choose to ignore or handle signals. Ignored signals are silent.
 
-Обработените сигнали причиняват изпълнението на функцията за обработка на сигнал от потребителя. Програмата преминава към тази функция веднага щом сигналът бъде приет и (когато обработващият сигнал се върне), управлението на програмата се възобновява при предишната прекъсната инструкция.
+Handled signals cause execution of a user signal handler function. The program jumps to this function as soon as the signal is received and (when the signal handler returns), program control resumes at the previously interrupted instruction.

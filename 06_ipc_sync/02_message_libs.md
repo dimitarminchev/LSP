@@ -1,4 +1,4 @@
-## Библиотеки за работа със съобщения
+## Libraries for Working with Messages
 
 ```c
 #include<sys/types.h>
@@ -11,8 +11,8 @@ ssize_t msgrcv(int msqid, void *msgp, size_t msgsz, long msgtyp, int msgflg);
 int msgctl(int msqid, int cmd, struct msqid_ds *buf);
 ```
 
-Системното извикване **msgget()** връща System V идентификатор на опашката за съобщения свързана със стойността на аргумента **key**.
+The **msgget()** system call returns the System V message queue identifier associated with the value of the **key** argument.
 
-Системните извиквания **msgsnd()** и **msgrcv()** се използват, съответно, за изпращане и получаване на съобщения от System V опашка за съобщения. Извикващият процес трябва да има разрешение за запис в опашката на съобщенията, за да изпрати съобщение и да има разрешение за четене, за да получи съобщение.
+The **msgsnd()** and **msgrcv()** system calls are used, respectively, to send and receive messages from a System V message queue. The calling process must have write permission on the message queue to send a message and read permission to receive a message.
 
-**msgctl()** и **cmd** = **IPC_RMID** премахва опашка на съобщенията.
+**msgctl()** with **cmd** = **IPC_RMID** removes the message queue.

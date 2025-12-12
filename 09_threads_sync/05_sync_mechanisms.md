@@ -1,7 +1,7 @@
-## Механизми за синхронизация
+## Synchronization mechanisms
 
-Библиотеката с нишки предоставя три механизма за синхронизация:
+The threads library provides three primary synchronization mechanisms:
 
-- **Мютекси** (_Термин на Английски език: Mutexes_). Взаимно заключване, блокиране на достъпа до променливи от други нишки. Това налага изключителен достъп от нишка до променлива или набор от променливи.
-- **Съединения** (_Термин на Английски език: Joins_). Нишката изчаква, докато другите нишки приключат.
-- **Условни променливи** (_Термин на Английски език: Condition Variables_). Докато мютексите прилагат синхронизация, като контролират достъпа на нишка до данни, условните променливи позволяват на нишките да се синхронизират въз основа на действителната стойност на данните.
+- **Mutexes**. Mutual exclusion primitives that block access to variables from other threads. They enforce exclusive access by a single thread to a variable or a set of variables.
+- **Joins**. A thread waits for other threads to finish.
+- **Condition variables**. While mutexes provide synchronization by controlling thread access to data, condition variables allow threads to synchronize based on the actual value/state of the data.

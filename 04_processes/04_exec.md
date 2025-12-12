@@ -1,4 +1,4 @@
-## Изпълнение на команда
+## Executing a Command
 
 ```c
 #include<unistd.h>
@@ -10,14 +10,14 @@ int execvp (const char *file, char *const argv[]);
 int execve (const char *filename, char * const argv[], char *const envp[]);
 ```
 
-Полезни бележки:
-- **l** и **v** очертават дали аргументите се предоставят чрез списък или масив (вектор).
-- **p** означава, че пътеката на потребителя е търсена за даден файл. Командите, използващи вариантите p, могат да определят само име на файл, стига да са разположени в пътя на потребителя.
-- **e** отбелязва, че за новия процес се предоставя и нова среда.
+Useful notes:
+- **l** and **v** indicate whether arguments are provided via a list or an array (vector).
+- **p** means that the user's path is searched for the given file. Commands using the p variants can specify only a filename, as long as it is located in the user's path.
+- **e** indicates that a new environment is also provided for the new process.
 
-### Стойности на грешките
-При успех на системните извиквания резултат не се връща. 
-При неуспех системните извиквания връщат -1 и задават грешка една от следните стойности:
+### Error Values
+On success, the system calls do not return. 
+On failure, the system calls return -1 and set the error to one of the following values:
 
 | Стойност | Информация                                                                                                                                                                                                          |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

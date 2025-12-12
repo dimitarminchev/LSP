@@ -1,9 +1,9 @@
-## Безопасен за нишките код
+## Thread-safe code
 
-**Безопасен за нишките код** (_Термин на Англиски език: Threads safe code_) означава, че нишките трябва да извикват само функции, които съдържат безопасен за изпълнение код. 
+`Thread-safe code` means that functions may be called by multiple threads safely.
 
-Това означава, че няма статични или глобални променливи, които други нишки могат да забият или прочетат, ако се използва една нишка. Ако се използват статични или глобални променливи, трябва да се приложат мутекси или функциите да се пренапишат, за да се избегне използването на тези променливи. 
+This implies there are no static or global variables that other threads can corrupt or read concurrently. If static or global variables are used, either protect them with mutexes or rewrite the functions to avoid using shared state.
 
-В езика C локалните променливи се разпределят динамично върху стека. Следователно всяка функция, която не използва статични данни или други споделени ресурси, е безопасна за нишки. 
+In C, local variables are allocated on the stack. Therefore any function that does not use static data or other shared resources is thread-safe.
 
-Функциите, които не са безопасни за нишки, могат да се използват само от една нишка в даден момент в програмата и трябва да се гарантира уникалността на нишката. 
+Functions that are not thread-safe should only be used by one thread at a time in the program, and the program must ensure exclusive access.

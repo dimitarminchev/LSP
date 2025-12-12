@@ -1,9 +1,9 @@
-## Кога е необходимо заключване?
+## When to lock?
 
-![07_1.png](07_1.png) 
+![07_1.png](07_1.png)
 
-В горния пример трябва да се използва мютекс за заключване на баланса (_Променлива: balance_), докато нишката използва този споделен ресурс от данни.
+In the example above a mutex should be used to protect the `balance` variable while a thread uses this shared data resource.
 
-![07_2.png](07_2.png) 
+![07_2.png](07_2.png)
 
-В горния пример нишка 1 заключва ресурса за баланс (_Променлива: balance_) и нишка 2 е блокирана, докато мютексът не бъде освободен.
+In the example above thread 1 locks the `balance` resource and thread 2 is blocked until the mutex is released.

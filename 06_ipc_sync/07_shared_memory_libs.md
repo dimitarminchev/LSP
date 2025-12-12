@@ -1,4 +1,4 @@
-## Библиотеки за работа със споделена памет
+## Libraries for Working with Shared Memory
 
 ```c
 #include<sys/types.h>
@@ -12,8 +12,8 @@ int shmdt(const void *shmaddr);
 int shmctl(int shmid, int cmd, struct shmid_ds *buf);
 ```
 
-- **ftok()** = преобразува име на път и идентификатор на проект към ключ на System V IPC.
-- **shmget()** = разпределя сегмент на System V споделена памет .
-- **shmat()** = придава сегмента на System V споделена памет, идентифициран от **shmid*, в адресното пространство на извикващия процес.
-- **shmdt()** = отделя сегмента на споделената памет, разположен на адреса, определен от **shmaddr** от адресното пространство на извикващия процес.
-- **shmctl()** с cmd = IPC_RMID - маркира сегмента, който ще бъде унищожен.
+- **ftok()** = converts a pathname and a project identifier to a System V IPC key.
+- **shmget()** = allocates a System V shared memory segment.
+- **shmat()** = attaches the System V shared memory segment identified by **shmid** to the address space of the calling process.
+- **shmdt()** = detaches the shared memory segment located at the address specified by **shmaddr** from the address space of the calling process.
+- **shmctl()** with cmd = IPC_RMID - marks the segment to be destroyed.

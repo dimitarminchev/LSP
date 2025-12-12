@@ -1,13 +1,13 @@
-## Изчакване и прекратяване на дъщерен процес
+## Waiting for and Terminating a Child Process
 
 ```c
 #include<stdlib.h>
 void exit(int status);
 ```
 
-- Извикване на **exit()** изпълнява някои основни стъпки за изключване и след това инструктира ядрото да прекрати процеса.
-- Параметърът на състоянието (**status**) се използва за обозначаване на изходното състояние на процеса.
-- Когато процес завърши, ядрото изпраща сигнал **SIGCHLD** към родителят.
+- Calling **exit()** performs some basic shutdown steps and then instructs the kernel to terminate the process.
+- The status parameter (**status**) is used to indicate the exit status of the process.
+- When a process finishes, the kernel sends a **SIGCHLD** signal to the parent.
 
 ```c
 pid_t pid = fork();
@@ -25,22 +25,22 @@ else if (pid == -1) {
 }
 ```
 
-Преди да прекрати процеса, библиотеката C изпълнява следните стъпки:
-- Извиква всички функции, регистрирани с **atexit()** или **on_exit()**, в обратен ред
-на тяхната регистрация.
-- Изчиства всички стандартни отворени вхдни-изходни потоци.
-- Премахва всички временни файлове, създадени с функцията **tmpfile()**.
+Before terminating the process, the C library performs the following steps:
+- Calls all functions registered with **atexit()** or **on_exit()**, in reverse order
+of their registration.
+- Flushes all standard open input-output streams.
+- Removes all temporary files created with the **tmpfile()** function.
 
-Тези стъпки завършват цялата работа, която процесът трябва да направи в потребителското пространство, така че **exit()** извиква системното повикване **_exit()**, за да позволи на ядрото да се справи с останалата част от процеса на прекратяване:
+These steps complete all the work that the process must do in user space, so **exit()** calls the system call **_exit()** to allow the kernel to handle the rest of the termination process:
 
 ```c
 #include <unistd.h>
 void _exit (int status);
 ```
 
-Процесът може да бъде прекратен, ако се изпрати сигнал, чието действие по подразбиране е да прекрати процеса. Такива сигнали са **SIGTERM** и **SIGKILL**.
+The process can be terminated if a signal is sent whose default action is to terminate the process. Such signals are **SIGTERM** and **SIGKILL**.
 
-Когато процес завърши, ядрото изпраща сигнал **SIGCHLD** към родителският процес. По подразбиране този сигнал се игнорира и родителят не предприема никакви действия. Процесите могат да изберат да обработват този сигнал, чрез системните извиквания **signal()** или **sigaction()**.
+When a process finishes, the kernel sends a **SIGCHLD** signal to the parent process. By default, this signal is ignored and the parent takes no action. Processes can choose to handle this signal through the **signal()** or **sigaction()** system calls.
 
 ```c
 #include<sys/types.h>
@@ -56,19 +56,19 @@ int WSTOPSIG(status);
 int WCOREDUMP(status);
 ```
 
-- **wait()** връща стойността на идентификатора (**pid**) на дъшерен процес или -1 при грешка.
-- Ако никакъв дъщерен процес не е прекратен, извикването блокира, докато дъщерен процес приключи.
-- **WIFEXITED** връща вярно (true), ако процесът завърши нормално.
-- При нормално прекратяване **WEXITSTATUS** осигурява осем бита, които се предават на **_exit**.
-- WIFSIGNALED връща вярно (true), ако сигнал е причинил прекратяването на процеса.
-- В случай на прекратяване от сигнал **WTERMSIG** връща номера на този сигнал.
-- В случай на прекратяване от сигнал, **WCOREDUMP** връща вярно (true), ако процесът натоварва ядро в отговор на получаването на сигнала.
-- **WIFSTOPPED** и **WIFCONTINUED** връщат вярно (true), ако процесът е бил спрян или продължен.
-- Ако **WIFSTOPPED** е вярно (true), **WSTOPSIG** предоставя номера на сигнала, който е спрял процеса.
+- **wait()** returns the value of the identifier (**pid**) of a child process or -1 on error.
+- If no child process has terminated, the call blocks until a child process finishes.
+- **WIFEXITED** returns true if the process terminated normally.
+- On normal termination, **WEXITSTATUS** provides the eight bits that are passed to **_exit**.
+- WIFSIGNALED returns true if a signal caused the process termination.
+- In case of termination by signal, **WTERMSIG** returns the number of that signal.
+- In case of termination by signal, **WCOREDUMP** returns true if the process dumped core in response to receiving the signal.
+- **WIFSTOPPED** and **WIFCONTINUED** return true if the process was stopped or continued.
+- If **WIFSTOPPED** is true, **WSTOPSIG** provides the number of the signal that stopped the process.
 
-При възникване на грешка има две възможни стойности:
+When an error occurs, there are two possible values:
 
-| Грешка | Информация                                          |
-| ------ | --------------------------------------------------- |
-| ECHILD | Извикващият процес няма дъщерни процеси.            |
-| EINTR  | Извикването проключи по-рано поради получен сигнал. |
+| Error  | Information                                             |
+| ------ | ------------------------------------------------------- |
+| ECHILD | The calling process has no child processes.             |
+| EINTR  | The call terminated early due to a received signal.     |

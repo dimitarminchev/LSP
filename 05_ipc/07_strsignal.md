@@ -1,4 +1,4 @@
-## Разглеждане на сигнали
+## Examining Signals
 
 ```c
 #include<string.h>
@@ -9,6 +9,6 @@ int sigfillset(sigset_t *set);
 int sigdelset(sigset_t *set, int signum);
 ```
 
-Извикване на **strsignal()** връща указател към описание на сигнала, даден от **signo**.
+Calling **strsignal()** returns a pointer to a description of the signal given by **signo**.
 
-**sys_siglist** е масив от низове, съдържащи имената на сигналите, поддържани от системата, индексирани с номер на сигнала. 
+**sys_siglist** is an array of strings containing the names of the signals supported by the system, indexed by signal number. 

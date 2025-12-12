@@ -1,6 +1,6 @@
-## Библиотека за работа с файлове
+## Library for Working with Files
 
-Библиотеката **unistd.h** съдържа методи за работа с файлове:
+The **unistd.h** library contains methods for working with files:
 ```c
 #include<unistd.h>
 int open(const char *name, int flags);
@@ -8,24 +8,24 @@ int open(const char* name, int flags, mode_t mode);
 int close();
 ```
 
-Параметъра флаг (**flag**) е бит маска определяща следното:
+The flag parameter (**flag**) is a bitmask defining the following:
 
-| флаг         |  Информация                                                  |
-| ----------- | ------------------------------------------------------------ |
-| O_APPEND    | Файлът ще бъде отворен в режим на добавяне.                  |
-| O_ASYNC     | SIGIO се генерира, когато може да се чете или да се записва. |
-| O_CREAT     | Ако файлът не съществува го създава.                         |
-| O_DIRECT    | Отваря файла за директен вход/изход.                         |
-| O_DIRECTORY | Ако името не е директория, то дава грешка                    |
-| O_EXCL      | Ако O_CREAT и файлът съществува, то дава грешка.             |
-| O_LARGEFILE | Отваря файл по-голям от 2 ГБ                                 |
-| O_NOCTTY    | Този флаг не се използва                                     |
-| O_NOFOLLOW  | Ако name е символна връзка, то дава грешка                   |
-| O_NONBLOCK  | Ако е възможно, отваря файла в неблокиращ режим.             |
-| O_SYNC      | Файлът ще бъде отворен за синхронен Вход/Изход               |
-| O_TRUNC     | Ако файлът съществува, той се съкращава до нулева дължина    |
+| flag        | Information                                                   |
+| ----------- | ------------------------------------------------------------- |
+| O_APPEND    | The file will be opened in append mode.                       |
+| O_ASYNC     | SIGIO is generated when it can be read or written.            |
+| O_CREAT     | If the file does not exist, it creates it.                    |
+| O_DIRECT    | Opens the file for direct input/output.                       |
+| O_DIRECTORY | If the name is not a directory, it gives an error             |
+| O_EXCL      | If O_CREAT and the file exists, it gives an error.            |
+| O_LARGEFILE | Opens a file larger than 2 GB                                 |
+| O_NOCTTY    | This flag is not used                                         |
+| O_NOFOLLOW  | If name is a symbolic link, it gives an error                 |
+| O_NONBLOCK  | If possible, opens the file in non-blocking mode.             |
+| O_SYNC      | The file will be opened for synchronous Input/Output          |
+| O_TRUNC     | If the file exists, it is truncated to zero length            |
 
-В случай че е зададен флаг **O_CREAT**, то режима на работа е бит маска, както следва:
+In case the **O_CREAT** flag is set, the mode is a bitmask as follows:
 
 |         |         |         |         |
 | ------- | ------- | ------- | ------- |

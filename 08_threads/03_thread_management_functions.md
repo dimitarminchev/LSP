@@ -1,16 +1,16 @@
-## Функции за управление на нишки
+## Thread Management Functions
 
 ```c
 int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine) (void *), void *arg);
 ```
-стартира нова нишка в извикващия процес
+starts a new thread in the calling process
 
 ```c
 int pthread_join(pthread_t thread, void **retval);
 ```
-изчаква приключване на определена нишка
+waits for the specified thread to terminate
 
 ```c
 void pthread_exit(void *retval);
 ```
-прекратява извикващата нишка и връща стойност чрез retval, която (ако нишката може да се присъедини) е достъпна за друга нишка в същия процес, който извиква **pthread_join**.
+terminates the calling thread and returns a value via retval, which (if the thread is joinable) is available to another thread in the same process that calls **pthread_join**.

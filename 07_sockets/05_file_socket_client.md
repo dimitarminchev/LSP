@@ -1,8 +1,8 @@
-## Файл сокет клиент
+## File Socket Client
 
-Отворете Unix сокет за дейтаграми, при грешка изведете съобщение и излезте от програмата. 
-Настройте структурата за името на сървъра на сокета към **socket.file**. 
-Изпратете съобщение до сървъра и затворете сокета. 
+Open a Unix datagram socket, on error print a message and exit the program. 
+Set the server socket name structure to **socket.file**. 
+Send a message to the server and close the socket. 
 
 ### file-socket-client.c
 ```c

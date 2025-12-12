@@ -1,10 +1,10 @@
-## Упражнение за синхронизация на комуникация между процеси
-Упражнете материалите от темата, като реализирате представените по-долу проекти.
+## Inter-Process Communication Synchronization Exercise
+Practice the materials from this topic by implementing the projects presented below.
 
 ### Double Shared Memory
-Напишете двойка програми сървър и клиент (**double-memory-server.c** и **double-memory-client.c**), които споделят блокове памет помежду си. Сървърът да поддържа до 2 клиента едновременно, които не трябва да са в комфликт по време на работа. Сървърът инициализира споделената памет с поздравителни съобщения за клиентите си и ги чака те да променят със съобщенията си. Когато клиента напише ново съобщение, сървърът отговаря със същото съобщение, но с израз **Confirmed!** накрая.
+Write a pair of server and client programs (**double-memory-server.c** and **double-memory-client.c**) that share memory blocks between them. The server should support up to 2 clients simultaneously, which should not conflict during operation. The server initializes the shared memory with greeting messages for its clients and waits for them to change with their messages. When the client writes a new message, the server responds with the same message but with the expression **Confirmed!** at the end.
  
-Клиентът се стартира с един аргумент: **client_number**, който идентифицира клиента (1 или 2) за сървъра. Клиентът трябва непрекъснато да отпечатва съобщението от споделената памет, да чете ред от клавиатурата и да го записва в споделената памет. Програмата трябва да излезе, когато се въведе съобщение "q".
+The client is started with one argument: **client_number**, which identifies the client (1 or 2) to the server. The client should continuously print the message from the shared memory, read a line from the keyboard, and write it to the shared memory. The program should exit when the message "q" is entered.
 
 ### Double Dumper
-Напишете програма **double-dumprer.c**, която в реално време показва промените в споделената памет от проекта **Double Shared Memory**. Може да се наложи да промените сървърните или клиентските програми, така че да поддържат тази функционалност.
+Write a program **double-dumper.c** that shows the changes in the shared memory from the **Double Shared Memory** project in real time. You may need to modify the server or client programs to support this functionality.

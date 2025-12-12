@@ -1,8 +1,8 @@
-## Определяне на общи данни
+## Defining Common Data
 
-Определяме заключващ файл **semaphore-server**. 
-Дефинираме структурата за споделената памет **memory_block**. 
-Променливата **string** съдържа текущото съобщение.
+Define the lock file **semaphore-server**. 
+Define the structure for the shared memory **memory_block**. 
+The variable **string** contains the current message.
 
 ### semaphore-types.h
 ```c

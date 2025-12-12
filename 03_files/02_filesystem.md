@@ -1,13 +1,13 @@
-## Файлови системи и именовани пространства
+## File Systems and Namespaces
 
-Linux осигурява глобално и единно пространство от имена на файлове и директории с корен /. 
-Файлова система е колекция от файлове и директории в официална и валидна йерархия. 
-Файловите системи могат да бъдат добавени (монтирани) поотделно и премахнати (демонтирани) от глобалното пространство на имената на файлове и директории. 
-Някои директории са специални, например **/dev** и **/proc**.
+Linux provides a global and unified namespace of files and directories with root /. 
+A file system is a collection of files and directories in a formal and valid hierarchy. 
+File systems can be added (mounted) separately and removed (unmounted) from the global namespace of files and directories. 
+Some directories are special, for example **/dev** and **/proc**.
 
 ![02_filesystem_fig1.png](02_filesystem_fig1.png) 
 
 ![02_filesystem_fig2.png](02_filesystem_fig2.png) 
  
-Структурата на директориите в Линукс е дефинирана със стандарт, който може да бъде намерен на 
+The directory structure in Linux is defined by a standard that can be found at 
 [http://www.pathname.com/fhs/](http://www.pathname.com/fhs/).

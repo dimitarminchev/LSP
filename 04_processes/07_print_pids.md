@@ -1,10 +1,10 @@
-## Записване на изречения във файл
+## Print Process IDs
 
-- Инициализирайте функциите и променливите.
-- Създайте дъщерен процес и запазете неговия идентификатор (**pid**).
-- Ако стойността на **pid** е положителна, то работи родителски процес. Отпечатайте идентификатора на родителският процес и **ppid**.
-- Ако стойността на **pid** е нула, то работи дъщерен процес. Отпечатайте идентификатора на дъщерния процес и **ppid**.
-- Ако стойността на **pid** е -1, то е възникнала грешка. Изведете подходящо съобщение и излезте.
+- Initialize the functions and variables.
+- Create a child process and save its identifier (**pid**).
+- If the value of **pid** is positive, then the parent process is running. Print the identifier of the parent process and **ppid**.
+- If the value of **pid** is zero, then the child process is running. Print the identifier of the child process and **ppid**.
+- If the value of **pid** is -1, then an error has occurred. Output an appropriate message and exit.
 
 ### print-pids.c
 ```c

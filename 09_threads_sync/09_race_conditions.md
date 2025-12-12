@@ -1,7 +1,7 @@
-## Проблеми при състезателни условия
+## Race condition problems
 
-**Състезателни условия** (_Английски език: Race conditions_) въпреки че кодът може да се появи на екрана в реда, в който желаете да бъде изпълнен, нишките се планират от операционната система и се изпълняват на случаен принцип. Не може да се приеме, че нишките се изпълняват в реда, в който са създадени. 
+**Race conditions** occur because, although the code may appear in the source in the order you expect it to run, threads are scheduled by the operating system and execute in an unpredictable order. It cannot be assumed that threads will run in the order they were created.
 
-Възможно е също така те да се изпълняват с различна скорост. Когато нишките се изпълняват (надпреварват се да завършат), те могат да дадат неочаквани резултати. 
+Threads may also run at different speeds. When threads execute concurrently (racing to finish), they can produce unexpected results.
 
-Трябва да се използват **Мютекси** (_Термин на Английски език: Mutexes_) и **Съединения** (_Термин на Английски език: Joins), за да се постигне предсказуем ред на изпълнение и резултат.
+Use **mutexes** and **joins** to achieve a predictable execution order and results.

@@ -1,4 +1,4 @@
-## Търсене в файлове и откъслечни файлове
+## Seeking in Files and Sparse Files
 
 ```c
 #include<stdio.h>
@@ -8,18 +8,18 @@ int fseek(FILE *stream. long offset, int whence);
 int fclose(FILE *stream);
 ```
 
-- Поведението на **fseek()** зависи от аргумента: **SEEK_CUR**, **SEEK_END** или **SEEK_SET**.
-- Методът връща новата позиция на файла при успех.
-- При грешка в резултат се връща -1, а информация за грешката се записва във **errno**.
-- Търсене след края на файла и след това писане в него причинява дупки (**holes**) запълнени с нули.
-- Файлове с дупки се наричат откъслечни файлове (**sparse files**).
-- Дупките не заемат физически дисково пространство.
-- **du** = оценка на използваното дисково пространство от файла.
+- The behavior of **fseek()** depends on the argument: **SEEK_CUR**, **SEEK_END**, or **SEEK_SET**.
+- The method returns the new file position on success.
+- On error, it returns -1, and error information is written to **errno**.
+- Seeking past the end of a file and then writing to it causes **holes** filled with zeros.
+- Files with holes are called **sparse files**.
+- Holes do not occupy physical disk space.
+- **du** = estimate of the disk space used by the file.
 
-| Аргумент | Пояснение                                                                                                                                                                                                            |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SEEK_CUR | Взима се стойността на текущата файлова позиция (**fd**) плюс стойността **POS**, която може да бъде отрицателна, нулева или положителна. **POS** от нула връща стойността на текущата файлова позиция.              |
-| SEEK_END | Стойността на текущата файлова позиция (**fd**) става равна на дължината на файла плюс стойността **POS**, която може да бъде отрицателна, нулева или положителна. **POS** от нула задава изместване в края на файла. |
-| SEEK_SET | Стойността на текущата файлова позиция (**fd**) става равна на стойността **POS**. **POS** от нула задава изместване в началото на файла.                                                                            |
+| Argument | Description                                                                                                                                                                                                                                            |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SEEK_CUR | Takes the value of the current file position (**fd**) plus the value **POS**, which can be negative, zero, or positive. **POS** of zero returns the value of the current file position.                                                               |
+| SEEK_END | The value of the current file position (**fd**) becomes equal to the file length plus the value **POS**, which can be negative, zero, or positive. **POS** of zero sets the offset to the end of the file.                                             |
+| SEEK_SET | The value of the current file position (**fd**) becomes equal to the value **POS**. **POS** of zero sets the offset to the beginning of the file.                                                                                                     |
 
-Повече информация: [Sparse Files](https://en.wikipedia.org/wiki/Sparse_file)
+More information: [Sparse Files](https://en.wikipedia.org/wiki/Sparse_file)

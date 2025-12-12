@@ -1,16 +1,16 @@
+## Daemon skeleton
 
-## Скелет на демон
-Необходими стъпки за демонизиране на процес:
+Steps typically required to daemonize a process:
 
-1. Разклонете родителския процес (_Използваме: ` fork `_) и го оставете да се прекрати, ако разклоняването е успешно и тъй като родителският процес е прекратен, дъщерният процес сега работи във фонов режим.
-2. Създайте нова сесия и получете идентификатор (_Използваме: ` setsid `_) Извикващият процес става лидер на новата сесия и лидер на групата процеси на новата група процеси. Процесът вече е отделен от управляващия го терминал (CTTY).
-3. Уловетеве сигналите, като ги игнорирате и/или обработвате.
-4. Разклонете отново (_Използваме: ` fork `_) и оставете родителския процес да се терминира, за да сте сигурни, че сте се отървали от водещия процес на сесията. (Само водещите сесии могат да получат отново TTY.)
-5. Променете работната директория на демона (_Използваме: ` chdir `_).
-6. Променете маската на файловия режим в съответствие с нуждите на демона (_Използваме: ` umask `_).
-7. Затвoрете всички отворени файлови дескриптори, които могат да бъдат наследени от родителския процес (_Използваме: ` close `_).
+1. Fork the parent process (`fork`) and let the parent exit; the child continues to run in the background.
+2. Create a new session and become session leader (`setsid`). The calling process becomes the leader of a new session and process group and is disassociated from the controlling terminal (CTTY).
+3. Catch and handle (or ignore) signals as needed.
+4. Fork again (`fork`) and let the parent exit to ensure the daemon cannot reacquire a controlling terminal (only session leaders can acquire a controlling TTY).
+5. Change the working directory (`chdir`) to a safe location (commonly `/`).
+6. Set an appropriate file mode creation mask (`umask`).
+7. Close all open file descriptors inherited from the parent (`close`).
 
-### daemonaze.c
+### daemonize.c
 ```c
 /*
  * daemonize.c
@@ -68,7 +68,7 @@ static void skeleton_daemon()
     umask(0);
 
     /* Change the working directory to the root directory */
-    /* or another appropriated directory */
+    /* or another appropriate directory */
     chdir("/");
 
     /* Close all open file descriptors */
@@ -101,6 +101,6 @@ int main()
 }
 ```
 
-### Източници
+### Sources
 1. [How to Create a Daemon in C?](https://nullraum.net/how-to-create-a-daemon-in-c/)
 2. [Basic skeleton of a linux daemon written in C](https://github.com/pasce/daemon-skeleton-linux-c)

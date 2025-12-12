@@ -1,10 +1,10 @@
-## Упражнение върху процеси
-Упражнете материалите от темата, като реализирате представеният по-долу проект.
+## Process Exercise
+Practice the materials from this topic by implementing the project presented below.
 
 ### Temp File Generator
 
-Напишете програма **temp-file-generator.c**, която изисква 1 аргумент: **files_count**. Програмата трябва да генерира **files_count** на брой файлове, наречени "**temp-file-NN.tmp**" (_където номерът NN е число от 1 до files_count_). Всеки файл е създаден от отделен процес и съдържа 1000 пъти идентификатора на съответния процес като текст (_pid = 1001 трябва да отнеме 4 байта на ID_). Родителският процес трябва да се уведомява след създаването на всеки файл.
+Write a program **temp-file-generator.c** that requires 1 argument: **files_count**. The program should generate **files_count** number of files named "**temp-file-NN.tmp**" (_where the number NN is a number from 1 to files_count_). Each file is created by a separate process and contains the identifier of the corresponding process as text 1000 times (_pid = 1001 should take 4 bytes per ID_). The parent process should be notified after each file is created.
 
 ### Temp File Generator Plus
 
-Напишете нова програма **temp-file-generator-plus.c**, като подобрите предишната програма, така че процесите да пишат само в един файл, където последователностите от идентификатори на процеси не се припокриват (_имаме 1000 пъти pid_file_1, след това 1000 пъти pid_file_2 ... след това 1000 пъти pid_files_count_).
+Write a new program **temp-file-generator-plus.c** by improving the previous program so that the processes write only to one file, where the sequences of process identifiers do not overlap (_we have 1000 times pid_file_1, then 1000 times pid_file_2 ... then 1000 times pid_files_count_).

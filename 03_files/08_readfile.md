@@ -1,12 +1,12 @@
-## Четене и отпечатване на файл
+## Reading and Printing a File
 
-Инициализирайте променливите.
-Отворете файла **readfile.c**, при проблем отпечатайте грешка.
-Докато четенето от файла връща дължина различна от 0.
-Ако дължината е -1 и грешката е **EINTR**, опитайте да прочетете отново.
-Ако дължината е -1 и грешката <> **EINTR**, изведете грешка и преустановете.
-В противен случай отпечатайте буфера.
-Затворете файла, отпечатайте грешка при проблем.
+Initialize the variables.
+Open the file **readfile.c**, print an error if there's a problem.
+While reading from the file returns a length different from 0.
+If the length is -1 and the error is **EINTR**, try to read again.
+If the length is -1 and the error is not **EINTR**, output an error and stop.
+Otherwise, print the buffer.
+Close the file, print an error if there's a problem.
 
 ### readfile.c
 ```c

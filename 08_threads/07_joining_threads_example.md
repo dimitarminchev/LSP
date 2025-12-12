@@ -1,19 +1,19 @@
-## Пример за съединяване на нишки
+## Thread Joining Example
 
-- Дефинираме функция за генериране на пермутации
+- Define a function for generating permutations
 
-- Дефинираме функция при работа на нишките:
-  - Разпределяме вектор с размер **arg**
-  - Инициализираме вектора с първата пермутация и го отпечатваме
-  - Докато има следваща пермутация: генерираме, отпечатваме и синхронизираме
-  - Почистваме, като освобождаваме заетата от вектора памет и приключваме нишката
+- Define a function for thread operation:
+  - Allocate a vector with size **arg**
+  - Initialize the vector with the first permutation and print it
+  - While there is a next permutation: generate, print and synchronize
+  - Clean up by freeing the vector memory and terminating the thread
 
-- В главната функция:
-  - Стартираме функцията за нишка с размер 4, изход при грешка
-  - Стартираме функцията за нишка с размер 3, изход при грешка
-  - Изчакваме първата нишка и отпечатваме известие, изход при грешка
-  - Изчакваме втората нишка и отпечатваме известие, изход при грешка
-  - Отпечатваме **Job Done!** и приключваме
+- In the main function:
+  - Start the thread function with size 4, exit on error
+  - Start the thread function with size 3, exit on error
+  - Wait for the first thread and print notification, exit on error
+  - Wait for the second thread and print notification, exit on error
+  - Print **Job Done!** and finish
 
 ### threads-join.c
 ```c

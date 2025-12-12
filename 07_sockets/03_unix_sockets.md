@@ -1,4 +1,4 @@
-## Използване на Unix сокети
+## Using Unix Sockets
 
 ```c
 #include<sys/types.h>
@@ -10,14 +10,14 @@ ssize_t sendto(int sockfd, const void *buf, size_t len, int flags, const struct 
 ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags, struct sockaddr *src_addr, socklen_t *addrlen);
 ```
 
-- **socket()** създава крайна точка за комуникация и връща дескриптор на файла, който се отнася до тази крайна точка.
-  - домейнът (_Термин на Английски език: domain_) определя семейството протоколи, което ще се използва: **AF_UNIX**, **AF_LOCAL**, **AF_INET**.
-  - Тип (_Термин на Английски език: type_) определя комуникационната семантика: **SOCK_STREAM** или **SOCK_DGRAM**.
-- Когато се създава сокет със **socket()**, то той съществува в именованото пространство (адресното пространство), но няма зададен адрес.
-- **bind()** присвоява адреса, посочен в **addr**, на сокета, посочен от файловият дескриптор **sockfd** върнат от метода socket().
+- **socket()** creates an endpoint for communication and returns a file descriptor that refers to that endpoint.
+  - domain determines the protocol family which will be used: **AF_UNIX**, **AF_LOCAL**, **AF_INET**.
+  - type determines the communication semantics: **SOCK_STREAM** or **SOCK_DGRAM**.
+- When a socket is created with **socket()**, it exists in a name space (address space) but has no address assigned to it.
+- **bind()** assigns the address specified in **addr** to the socket referred to by the file descriptor **sockfd** returned by the socket() method.
 
 
-- **sockaddr** има следната структура:
+- **sockaddr** has the following structure:
 ```c
 struct sockaddr {
    sa_family_t sa_family;

@@ -1,14 +1,14 @@
-## Файлове
+## Files
 
-Един от основните принципи в Unix и Linux гласи: **Всичко е файл!**.
-Файловете с данни, директориите, информация за хардуерните устройсва в системата, информация за процесите или важни конфигурационни параметри на системата са представени като файлове.
+One of the basic principles in Unix and Linux states: **Everything is a file!**.
+Data files, directories, information about hardware devices in the system, information about processes, or important system configuration parameters are all represented as files.
 
-Съществуват следните видове файлове:
-- **inode** - структура данни, която описва обект на файловата система.
-- Файловете винаги се отварят от потребителското пространство с име.
-- Двойката **filename** и **inode** се наричa връзка (link).
-- **Редовни файлове** = байтове данни.
-- **Директории** = картографиране между имена на файлове и inodes (връзки).
-- **Твърди връзки** = множество връзки свързват различни имена със същия inode.
-- **Символни връзки** = като обикновени файлове, които съдържат пълния път на свързаните файлове.
-- **Специални файлове** = файлове с блокирани устройства, файлове със символни устройства, наречени тръби, досиета за Unix домейни.
+The following types of files exist:
+- **inode** - a data structure that describes a file system object.
+- Files are always opened from user space with a name.
+- The pair **filename** and **inode** is called a link.
+- **Regular files** = bytes of data.
+- **Directories** = mapping between file names and inodes (links).
+- **Hard links** = multiple links connect different names to the same inode.
+- **Symbolic links** = like regular files that contain the full path of the linked files.
+- **Special files** = block device files, character device files, named pipes, Unix domain sockets.

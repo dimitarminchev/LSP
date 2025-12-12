@@ -1,14 +1,14 @@
-## Използване на именовани тръби
-Представената двойка програми реализира чат базирано клиент/сървър приложение, което демонстрира използването на именовани тръби.
+## Using Named Pipes
+The presented pair of programs implements a chat-based client/server application that demonstrates the use of named pipes.
 
 ### pipe-chat-server.c
 
-Създайте файл на име **./pipe-chat-fifo**. 
-Отворете за писане **./pipe-chat-fifo** в случай на грешка излезте. 
-Стартирайте цикъл, който работи докато получим **"q"** от клавиатурата. 
-Прочетете символ (**key**) и го запишете във файла. 
-Ако **key** е Enter използвайте **flush**. 
-Затворете и изтрийте файла. 
+Create a file named **./pipe-chat-fifo**. 
+Open **./pipe-chat-fifo** for writing, exit in case of error. 
+Start a loop that runs until we receive **"q"** from the keyboard. 
+Read a character (**key**) and write it to the file. 
+If **key** is Enter, use **flush**. 
+Close and delete the file. 
 
 ```c
 #include<stdio.h>
@@ -46,11 +46,11 @@ int main(int argc, char ** argv)
 
 ### pipe-chat-client.c
 
-Отворете за четене файл на име **./pipe-chat-fifo**. 
-Стартирайте цикъл, който работи докато получим **"q"** от клавиатурата. 
-Прочетете символ (**key**). 
-Изведете получения символ в конзолата. 
-Затворете и изтрийте файла. 
+Open a file named **./pipe-chat-fifo** for reading. 
+Start a loop that runs until we receive **"q"** from the keyboard. 
+Read a character (**key**). 
+Output the received character to the console. 
+Close and delete the file. 
 
 ```c
 #include<stdlib.h>

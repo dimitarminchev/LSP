@@ -1,14 +1,14 @@
-## Въведение в нишките
+## Introduction to Threads
 
-**Нишка** (_Термин на Английски език: thread_) в компютърните науки е съкращение от нишка за изпълнение. 
-Нишките са начин програмата да се раздели на две или повече едновременно или псевдоедновременно изпълнявани задачи.
+**Thread** in computer science is short for thread of execution. 
+Threads are a way for a program to split itself into two or more simultaneously or pseudo-simultaneously running tasks.
 
-Нишките и процесите се различават при различните операционни системи, 
-но като цяло нишка се съдържа вътре в процес и различните нишки в един и същи процес споделят едни и същи ресурси, 
-докато различните процеси в една и съща многозадачна операционна система не.
+Threads and processes differ on different operating systems, 
+but in general a thread is contained inside a process and different threads in the same process share the same resources, 
+while different processes in the same multitasking operating system do not.
 
-Нишките консумират по-малко системни ресурси в сравнение с процесите.
+Threads consume fewer system resources compared to processes.
 
 ![Multithreaded Process](01_threads_introduction.png) 
 
-_Източник на изображението: [Wikipedia](https://commons.wikimedia.org/wiki/File:Multithreaded_process.svg)_
+_Image source: [Wikipedia](https://commons.wikimedia.org/wiki/File:Multithreaded_process.svg)_

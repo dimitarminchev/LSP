@@ -1,7 +1,7 @@
-## Съединяване на нишки
+## Joining Threads
 
 ![Joining Threads](06_joining_threads.png) 
 
-**pthread_join()** блокира извикващата нишка, докато нишката с идентификатор **threadid** приключи.
+**pthread_join()** blocks the calling thread until the thread with identifier **threadid** terminates.
 
-Програмистът може да получи състоянието на прекратяване на нишката, ако указано извикване на **pthread_exit()**.
+The programmer can obtain the termination status of the thread if indicated by a call to **pthread_exit()**.

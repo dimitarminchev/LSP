@@ -14,6 +14,6 @@ The current project **Linux System Programming** is a joint initiative of Burgas
 
 | Contact |
 | :--- |
-| Work: тел. +359 56 900 477 и e-mail: [mitko@bfu.bg](http://www.minchev.eu/about/mitko@bfu.bg) |
+| Work: тел. +359 56 900 477 и e-mail: [mitko@bfu.bg](mailto:mitko@bfu.bg) |
 | Personal:  моб. +359 899 148 872 и e-mail: [dimitar.minchev@gmail.com](mailto:dimitar.minchev@gmail.com) |
 | Blog: [http://www.minchev.eu](http://www.minchev.eu "Dimitar Minchev") |

@@ -1,11 +1,11 @@
-## Показване на информация за сигналите
+## Displaying Signal Information
 
-- Дефинирайте функцията за обработка на сигнали **SIGTERM**
-- Иницирайте сигнално множество, като само **SIGTERM** е изключен
-- Задайте обработчик на събития за **SIGTERM**
-- Отпечатайте идентификатора на процеса (**pid**)
-- Изчакайте и изведете подходящи съобщения за входящите сигнали
-- Ако възникне грешка преустановете програмата
+- Define the signal handler function for **SIGTERM**
+- Initialize a signal set with only **SIGTERM** excluded
+- Set an event handler for **SIGTERM**
+- Print the process identifier (**pid**)
+- Wait for and output appropriate messages for incoming signals
+- If an error occurs, terminate the program
 
 ### signal-info.c
 ```c

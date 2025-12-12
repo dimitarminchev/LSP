@@ -1,10 +1,10 @@
-## Отваряне и затваряне на файл
-- Инициализирайте променливите
-- Отворете файла само за четене и получете файлов дескриптор
-- Ако файловият дескриптор е -1, отпечатайте съобщение за грешка
-- В противен случай, отпечатайте стойността на файловия дескриптор
-- Затворете файла
-- Ако затварянето е неуспешно, изведете съобщение за грешка
+## Opening and Closing a File
+- Initialize the variables
+- Open the file for read-only and get a file descriptor
+- If the file descriptor is -1, print an error message
+- Otherwise, print the value of the file descriptor
+- Close the file
+- If closing fails, output an error message
 
 ### openclose.c
 ```c

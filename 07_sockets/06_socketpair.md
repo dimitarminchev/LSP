@@ -1,12 +1,12 @@
-## Двойка сокети
+## Socket Pair
 
 ```c
 #include<sys/types.h>
 #include<sys/socket.h>
 int socketpair(int domain, int type, int protocol, int sv[2]);
 ```
-Извикването на метода **socketpair()** създава двойка свързани сокети в определения домейн (domain), от посочения тип (type) и използвайки по избор посочения протокол (protocol).
+The **socketpair()** call creates a pair of connected sockets in the specified domain, of the specified type, and using the optionally specified protocol.
 
-Файловите дскриптори, използвани при създаването на новите сокети, се връщат съответно в **sv[0]** и **sv[1]**. 
+The file descriptors used in referencing the new sockets are returned in **sv[0]** and **sv[1]** respectively. 
 
-При успех метода връща 0, при грешка -1, а информация за грешката се намира в **errno**.
+On success, the method returns 0, on error -1, and error information is found in **errno**.

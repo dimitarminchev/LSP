@@ -1,7 +1,7 @@
-## Мютекси
+## Mutexes
 
-**Мютексите** (_Термин на Английски език: Mutexes_) се използват за предотвратяване на несъответствия на данните, които могат да възникнат когато множество нишки работят с една и съща област на паметта, извършени по едно и също време, или за предотвратяване на **състояния на състезание**, когато се очаква определен ред при извършване на операците с паметта.
+**Mutexes** are used to prevent data inconsistencies that can occur when multiple threads operate on the same memory region at the same time, or to prevent **race conditions** when the order of memory operations matters.
 
-**Състояние на състезание** (_Термин на английски език: Race Condition_) често възниква, когато две или повече нишки трябва да извършат операции в една и съща област на паметта, но резултатите от изчисленията зависят от реда, в който се изпълняват тези операции.
+A **race condition** often occurs when two or more threads perform operations on the same memory area, and the result depends on the order in which those operations are executed.
 
-Мютексите се използват за сериализиране на споделени ресурси като памет. Всеки път, когато глобален ресурс е достъпен от повече от една нишка, ресурсът трябва да има мютекс, свързан с него.
+Mutexes are used to serialize access to shared resources such as memory. Whenever a global resource is accessed by more than one thread, the resource should have a mutex associated with it.

@@ -1,10 +1,10 @@
-## Изпълнение и отпечатване на състоянието
+## Execute and Print Status
 
-Проверете дали разполагаме с достатъчно на брой аргументи.
-Създайте дъщерен процес и запазете неговия идентификатор (pid).
-Родителският процес чака дъщерният процес и излиза при грешка.
-При успех се отпечатва състоянието на прекратяването.
-Дъщерният процес изпълнява командата в аргументите.
+Check if we have enough arguments.
+Create a child process and save its identifier (pid).
+The parent process waits for the child process and exits on error.
+On success, the termination status is printed.
+The child process executes the command in the arguments.
 
 ### exec-stat.c
 ```c

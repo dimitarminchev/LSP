@@ -1,7 +1,7 @@
-## Опашка за съобщения
+## Message Queue
 
-Опашките за съобщения могат да бъдат описани като вътрешен свързан списък в адресното пространство на ядрото. Съобщенията могат да бъдат изпратени в опашката и извлечени от опашката по няколко различни начина. Всяка опашка за съобщения е уникално идентифицирана от IPC идентификатор.
+Message queues can be described as an internal linked list in the kernel's address space. Messages can be sent to the queue and retrieved from the queue in several different ways. Each message queue is uniquely identified by an IPC identifier.
 
 ![01_message_queue.png](01_message_queue.png)
 
-Повече информация: [Message Queues](https://www.tldp.org/LDP/lpg/node27.html)
+More information: [Message Queues](https://www.tldp.org/LDP/lpg/node27.html)

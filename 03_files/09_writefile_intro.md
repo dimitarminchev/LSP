@@ -1,14 +1,14 @@
-## Четене и писане на файл
+## Reading and Writing to a File
 
 ```c
 #include<unistd.h>
 ssize_t write(int fd, const coid *buf, size_t count);
 ```
 
-Библиотеката **unistd.h** съдържа методи за работа с файлове:
-- Записва **count** на брой байтове, започващи от **buf** до текущата позиция във файла, посочен от файловия дескриптор **fd**.
-- При успех се връща броят на записани байтове и се актуализира текущата позиция във файла.
-- При грешка в резултат се връща -1, а информацията се записва във **errno**.
+The **unistd.h** library contains methods for working with files:
+- Writes **count** number of bytes, starting from **buf** to the current position in the file specified by the file descriptor **fd**.
+- On success, it returns the number of written bytes and updates the current position in the file.
+- On error, it returns -1, and the information is written to **errno**.
 
 ### Note:
 

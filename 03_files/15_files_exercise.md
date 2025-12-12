@@ -1,15 +1,15 @@
-## Упражнение върху работа с файлове
-Упражнете материалите от темата, като реализирате представените по-долу проекти.
+## File Handling Exercise
+Practice the materials from this topic by implementing the projects presented below.
 
 ### File Manipulator
-Напишете програма **file-manipulator.c**, която изисква 3 аргумента: **words_count**, **min_length**, **max_length**. Програмата трябва да генерира файл, наречен **file-manipulator.log**, който съдържа **words_count** на брой думи (_разделени с интервали_). За да генерирате думите създайте функция **random_word_generator**  (_функцията няма да генерира реални думи, а по-скоро произволни поредици от знаци_):
+Write a program **file-manipulator.c** that requires 3 arguments: **words_count**, **min_length**, **max_length**. The program should generate a file called **file-manipulator.log** that contains **words_count** number of words (_separated by spaces_). To generate the words, create a function **random_word_generator** (_the function will not generate real words, but rather random sequences of characters_):
 
 ```c
 char* random_word_generator(int min_length, int max_length);
 ```
 
-След това програмата трябва да отпечата генерирания файл на екрана.
+Then the program should print the generated file to the screen.
 
-След като програмата създаде файла **file-manipulator.log** и преди да го запише, тя трябва да заключи първите 100 байта на файла. Когато програмата отпечата генерираните думи, трябва да изчака натискане на клавиша **Enter**, след което да отключи файла. Съответно, ако файлът вече е заключен от друг процес, програмата трябва да уведоми за това и да изчака натискане на клавиша **Enter**, преди да опита отново (_за заключване, генериране и записване_).
+After the program creates the file **file-manipulator.log** and before writing to it, it should lock the first 100 bytes of the file. When the program prints the generated words, it should wait for the **Enter** key to be pressed, then unlock the file. Accordingly, if the file is already locked by another process, the program should notify about this and wait for the **Enter** key to be pressed before trying again (_to lock, generate, and write_).
 
-Компилирайте и изпълнете няколко пъти за тест.
+Compile and run several times for testing.

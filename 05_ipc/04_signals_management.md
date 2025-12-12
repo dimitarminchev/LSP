@@ -1,15 +1,15 @@
-## Управление на сигнали
+## Signal Management
 
-| метод         | описание                                                                                   |
+| method        | description                                                                                |
 |---------------|--------------------------------------------------------------------------------------------|
-| sigemptyset() | инициализира празно множество от сигнали, като всички сигнали са изключени от множеството. |
-| sigfillset()  | инициализира пълно множество от сигнали, включващо всичките сигнали.                       |
-| sigaddset()   | добавя сигнал към множество.                                                               |
-| sigdelset()   | премахва сигнал от множество.                                                              |
-| sigprocmask() | извлича и/или променя сигналната маска на извикващата нишка.                               |
-| sigaction()   | променя действието на сигнала.                                                             |
-| sigwait()     | чака сигнал.                                                                               |
-| strsignal()   | връща низ описващ сигнала.                                                                 |
+| sigemptyset() | initializes an empty signal set with all signals excluded from the set.                    |
+| sigfillset()  | initializes a full signal set including all signals.                                       |
+| sigaddset()   | adds a signal to a set.                                                                    |
+| sigdelset()   | removes a signal from a set.                                                               |
+| sigprocmask() | retrieves and/or changes the signal mask of the calling thread.                            |
+| sigaction()   | changes the action of a signal.                                                            |
+| sigwait()     | waits for a signal.                                                                        |
+| strsignal()   | returns a string describing the signal.                                                    |
 
 ```c
 #include <signal.h>
@@ -29,25 +29,25 @@ struct sigaction {
 };
 ```
 
-**sigemptyset()** инициализира наборът от сигнали, зададен от комплекта, като го маркира празен (всички сигнали са изключени от комплекта).
+**sigemptyset()** initializes the signal set specified by set by marking it empty (all signals are excluded from the set).
 
-**sigaddset()** добавя сигнал към комплекта от сигнали, зададен от комплекта, докато **sigdelset()** премахва знака от набора от сигнали, зададен от комплекта. И двете връщат 0 при успех, или -1 при грешка, в който случай грешката е настроена на код за грешка **EINVAL**, което означава, че знакът е невалиден идентификатор на сигнала.
+**sigaddset()** adds a signal to the signal set specified by set, while **sigdelset()** removes the signal from the signal set specified by set. Both return 0 on success, or -1 on error, in which case the error is set to error code **EINVAL**, which means the signal is an invalid signal identifier.
 
-Поведението на **sigprocmask()** зависи от стойността на едно от следните:
+The behavior of **sigprocmask()** depends on the value of one of the following:
 
-| Поле        | Описание                                                         |
+| Field       | Description                                                      |
 |-------------|------------------------------------------------------------------|
-| SIG_SETMASK | Задава се сигнална маска на извикващия процес.                   |
-| SIG_BLOCK   | Сигналите се добавят към сигналната маска на извикващият процес. |
-| SIG_UNBLOCK | Сигналите се премахват от сигналната маска на извикващия процес. |
+| SIG_SETMASK | Sets the signal mask of the calling process.                     |
+| SIG_BLOCK   | Signals are added to the signal mask of the calling process.     |
+| SIG_UNBLOCK | Signals are removed from the signal mask of the calling process. |
 
-Структура **sigaction**:
+The **sigaction** structure:
 
-| Поле         | Описание                                                                                                                        |
-|--------------|---------------------------------------------------------------------------------------------------------------------------------|
-| SA_HANDLER   | Адрес на манипулатора SIG_IGN или SIG_DFL                                                                                       |
-| SA_MASK      | Сигнали за блокиране                                                                                                            |
-| SA_FLAGS     | Допълнителни флагове, като SA_RESETHAND                                                                                         |
-| SA_RESETHAND | Позволява режим "еднократно". Поведението на дадения сигнал се връща към стандартното, след като обработващият сигнал се върне. |
+| Field        | Description                                                                                                                    |
+|--------------|--------------------------------------------------------------------------------------------------------------------------------|
+| SA_HANDLER   | Address of the handler SIG_IGN or SIG_DFL                                                                                      |
+| SA_MASK      | Signals to block                                                                                                               |
+| SA_FLAGS     | Additional flags, such as SA_RESETHAND                                                                                         |
+| SA_RESETHAND | Allows "one-shot" mode. The behavior of the given signal returns to default after the signal handler returns.                 |
 
-Извикването на **sigaction()** променя поведението на сигнала, идентифициран от **signo**, което може да бъде всяка стойност освен тези, свързани със **SIGKILL** и **SIGSTOP**. Ако **act** не е NULL, системното извикване променя текущото поведение на сигнала, както е посочено в **act**. Ако **oldact** не е NULL, системното извикване запазва предишното поведение на даден сигнал (или текущия, ако **act** е NULL).
+Calling **sigaction()** changes the behavior of the signal identified by **signo**, which can be any value except those associated with **SIGKILL** and **SIGSTOP**. If **act** is not NULL, the system call changes the current signal behavior as specified in **act**. If **oldact** is not NULL, the system call saves the previous behavior of the given signal (or the current one if **act** is NULL).

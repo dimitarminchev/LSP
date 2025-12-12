@@ -1,8 +1,8 @@
-## Показване на изходния код на файла
+## Display File Source Code
 
-- Инициализирайте променливите
-- Изпълнете **nano show-source.c**
-- Ако изпълнението не е успешно, изведете съобщение и излезте
+- Initialize the variables
+- Execute **nano show-source.c**
+- If execution is unsuccessful, output a message and exit
 
 ### show-source.c
 ```c

@@ -1,9 +1,9 @@
-## Определяне на общи данни
+## Defining Common Data
 
-- Определете **KEY** за уникалният идентификационен номер на опашката.
-- Определете **MAXLEN** за максимална дължина на съобщението.
-- Определете **msg_1_t** за клиентското съобщение.
-- Определете **msg_1_2** за отговора от страна на сървъра.
+- Define **KEY** for the unique identification number of the queue.
+- Define **MAXLEN** for the maximum message length.
+- Define **msg_1_t** for the client message.
+- Define **msg_2_t** for the response from the server.
 
 ### message-types.h
 ```c

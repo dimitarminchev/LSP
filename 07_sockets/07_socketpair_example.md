@@ -1,14 +1,14 @@
-## Пример за двойка сокети
+## Socket Pair Example
 
-Отворете двойка сокети, при грешка изведете съобщение и излезте от програмата. 
+Open a socket pair, on error print a message and exit the program. 
 
-Създайте дъщерен процес, при грешка изведете съобщение и излезте от програмата.
+Create a child process, on error print a message and exit the program.
 
-Родителския процес: чака получаване на съобщение като чете от първият сокет, след което изпраща отговор с подобаващо обратно съобщение, като пише в първият сокет.
+Parent process: waits to receive a message by reading from the first socket, then sends a response with an appropriate reply message by writing to the first socket.
 
-Дъщерния процес: изпраща съобщение като пише в втория сокет и чака получаване на обратно съобщение, като чете от втория сокет.
+Child process: sends a message by writing to the second socket and waits to receive a reply message by reading from the second socket.
 
-Накрая затворете двойката сокети.
+Finally, close the socket pair.
 
 ### socket-pair.c
 ```c

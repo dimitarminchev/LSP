@@ -1,11 +1,11 @@
-## Заключи и пиши там
+## Lock and Write There
 
-Отворете за писане или създайте **./testlocks.txt**. 
-Докато заключване на 64 байта от **offset** е неуспешно: получете и отпечатайте информация за процеса на заключване и преместете **offset** с още 64 байта. 
-Преместете **offset** байта от началото на файла и запишете информацията за текущия процес. 
-Изчакайте натискане на клавиш **Enter**. 
-Отключете 64 заключени байта, изведете грешка при неуспех. 
-Затворете файла. 
+Open for writing or create **./testlocks.txt**. 
+While locking 64 bytes from **offset** is unsuccessful: get and print information about the locking process and move **offset** by another 64 bytes. 
+Move **offset** bytes from the beginning of the file and write information about the current process. 
+Wait for the **Enter** key to be pressed. 
+Unlock the 64 locked bytes, output an error on failure. 
+Close the file. 
 
 ### lockfile.c
 ```c

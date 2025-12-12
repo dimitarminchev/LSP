@@ -1,5 +1,5 @@
-## Чат демон
-Настоящата програма има за цел да демонстрира чат клиент-вървър приложение, което използва сокети и работи на фонов режим. 
+## Chat daemon
+This example demonstrates a simple chat server that uses sockets and runs as a background daemon.
 
 ### chat-daemon.c
 
@@ -40,46 +40,45 @@ typedef struct {
   int sockfd;
   int uid;
   char name[NAME_LEN];
-}
-Client_t;
+} Client_t;
 
 // Array of Clients
 Client_t * clients[MAX_CLIENTS];
 
 // Add Client
 void add_client(Client_t * cl) {
-  pthread_mutex_lock( & clients_mutex);
+  pthread_mutex_lock(&clients_mutex);
   for (int i = 0; i < MAX_CLIENTS; i++) {
     if (clients[i] == NULL) {
       clients[i] = cl;
       break;
     }
   }
-  pthread_mutex_unlock( & clients_mutex);
+  pthread_mutex_unlock(&clients_mutex);
 }
 
 // Remove Client
 void remove_client(int uid) {
-  pthread_mutex_lock( & clients_mutex);
+  pthread_mutex_lock(&clients_mutex);
   for (int i = 0; i < MAX_CLIENTS; i++) {
-    if (clients[i] != NULL && clients[i] -> uid == uid) {
+    if (clients[i] != NULL && clients[i]->uid == uid) {
       clients[i] = NULL;
       break;
     }
   }
-  pthread_mutex_unlock( & clients_mutex);
+  pthread_mutex_unlock(&clients_mutex);
 }
 
 // Send Message
 void send_message(char * msg, int uid) {
-  pthread_mutex_lock( & clients_mutex);
+  pthread_mutex_lock(&clients_mutex);
   for (int i = 0; i < MAX_CLIENTS; i++) {
-    if (clients[i] != NULL && clients[i] -> uid != uid) {
-      int wrt_status = write(clients[i] -> sockfd, msg, strlen(msg));
+    if (clients[i] != NULL && clients[i]->uid != uid) {
+      int wrt_status = write(clients[i]->sockfd, msg, strlen(msg));
       if (wrt_status < 0) break;
     }
   }
-  pthread_mutex_unlock( & clients_mutex);
+  pthread_mutex_unlock(&clients_mutex);
 }
 
 // Handle Client
@@ -89,25 +88,25 @@ void * handle_client(void * arg) {
   int leave_flag = 0;
   client_count++;
 
-  Client_t * cli = (Client_t * ) arg;
+  Client_t * cli = (Client_t *) arg;
 
   // Joined
-  sprintf(name, "%s:%i", inet_ntoa(cli -> address.sin_addr), ntohs(cli -> address.sin_port));
-  strcpy(cli -> name, name);
-  sprintf(buffer, "%s joined!\n", cli -> name); // Write to buffer
-  send_message(buffer, cli -> uid); // Print to all other clients
+  sprintf(name, "%s:%i", inet_ntoa(cli->address.sin_addr), ntohs(cli->address.sin_port));
+  strcpy(cli->name, name);
+  sprintf(buffer, "%s joined!\n", cli->name); // Write to buffer
+  send_message(buffer, cli->uid); // Print to all other clients
   bzero(buffer, BUFFER_SZ); // Clear buffer
 
   while (1) {
     if (leave_flag) break;
 
-    int receive = recv(cli -> sockfd, buffer, BUFFER_SZ, 0);
+    int receive = recv(cli->sockfd, buffer, BUFFER_SZ, 0);
     if (receive > 0) {
       // Message
       char buff[BUFFER_SZ];
 
       // Attempts to overcome limitations: https://developers.redhat.com/blog/2019/08/12/efficient-string-copying-and-concatenation-in-c#update_after_wg14_april_2019_meeting
-      strncpy(buff, cli -> name, BUFFER_SZ - 1);
+      strncpy(buff, cli->name, BUFFER_SZ - 1);
       buff[BUFFER_SZ - 1] = '\0';
       size_t n = strlen(buff);
       strncat(buff, "> ", BUFFER_SZ - n - 1);
@@ -115,19 +114,19 @@ void * handle_client(void * arg) {
       strncat(buff, buffer, BUFFER_SZ - n - 1);
 
       // Print & Send
-      send_message(buff, cli -> uid);
+      send_message(buff, cli->uid);
     } else if (receive == 0 || strcmp(buffer, "exit") == 0) {
       // Left
-      sprintf(buffer, "%s left!\n", cli -> name);
-      send_message(buffer, cli -> uid);
+      sprintf(buffer, "%s left!\n", cli->name);
+      send_message(buffer, cli->uid);
       leave_flag = 1;
     } else {
       leave_flag = 1;
     }
     bzero(buffer, BUFFER_SZ);
   }
-  close(cli -> sockfd);
-  remove_client(cli -> uid);
+  close(cli->sockfd);
+  remove_client(cli->uid);
   free(cli);
   client_count--;
   pthread_detach(pthread_self());
@@ -187,7 +186,7 @@ int main(int argc, char * argv[]) {
   serv.sin_port = htons(atoi(argv[1]));
 
   // Bind
-  if (bind(listenfd, (struct sockaddr * ) & serv, sizeof(serv)) < 0) {
+  if (bind(listenfd, (struct sockaddr *)&serv, sizeof(serv)) < 0) {
     printf("ERROR: bind()");
     return EXIT_FAILURE;
   }
@@ -204,7 +203,7 @@ int main(int argc, char * argv[]) {
   // Working
   while (1) {
     socklen_t client_len = sizeof(client);
-    connfd = accept(listenfd, (struct sockaddr * ) & client, & client_len);
+    connfd = accept(listenfd, (struct sockaddr *)&client, &client_len);
 
     // Check for max clients
     if (client_count + 1 == MAX_CLIENTS) {
@@ -214,14 +213,14 @@ int main(int argc, char * argv[]) {
     }
 
     // Client settings
-    Client_t * cli = (Client_t * ) malloc(sizeof(Client_t));
-    cli -> address = client;
-    cli -> sockfd = connfd;
-    cli -> uid = uid++;
+    Client_t * cli = (Client_t *) malloc(sizeof(Client_t));
+    cli->address = client;
+    cli->sockfd = connfd;
+    cli->uid = uid++;
 
     // Add client to queue
     add_client(cli);
-    pthread_create( & tid, NULL, & handle_client, (void * ) cli);
+    pthread_create(&tid, NULL, &handle_client, (void *) cli);
 
     // Reduce CPU usage
     sleep(1);
@@ -232,7 +231,7 @@ int main(int argc, char * argv[]) {
 }
 ```
 
-### Стартиране на чат демона
+### Running the chat daemon
 
 Server:
 ```

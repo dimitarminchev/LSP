@@ -1,11 +1,11 @@
-## Клиент за съобщения
+## Message Client
 
-- Отварете опашка за съобщения с даден ключ **KEY**. 
-- Изведете съобщение и излезте от програмата, в случай на неуспех. 
-- Прочетете тялото на съобщението от клавиатурата и задайте другите параметри на **msg_1_t**. 
-- Изпратете съобщение **msg_1_t** в опашката. 
-- Изчакайте **msg_2_t** и го отпечатайте. 
-- Изпратете потвърждение **msg_1_t**.
+- Open a message queue with the given **KEY**. 
+- Output a message and exit the program in case of failure. 
+- Read the message body from the keyboard and set the other parameters of **msg_1_t**. 
+- Send **msg_1_t** message to the queue. 
+- Wait for **msg_2_t** and print it. 
+- Send **msg_1_t** confirmation.
 
 ### message-client.c
 ```c

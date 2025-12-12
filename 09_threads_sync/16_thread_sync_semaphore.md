@@ -1,12 +1,12 @@
-## Пример за синхронизиране посредством използване на семафор 
+## Example: synchronization using a semaphore
 
-- Декларираме семафор (_Променлива: sem_)
-- Декларираме баланс (_Променлива: balance_) и го инициираме с 1000
-- Дефинираме процедура при работа на нишката, която oбработва аргумента и освобождава семафора
-- Инициираме семафора със стойност нула (_Означава: Зает_)
-- Стартираме първата нишка и предаваме параметър за сума на депозита (_Променлива: deposit_amount_)
-- Стартираме втората нишка и предаваме параметър за сума на депозита (_Променлива: deposit_amount_)
-- Изчакваме двете нишки да приключат своята работа и унищожаваме семафора
+- Declare a semaphore (`sem`)
+- Declare the balance variable and initialize it to 1000
+- Define the thread function that handles the argument and releases the semaphore
+- Initialize the semaphore with value zero (meaning: busy)
+- Start the first thread, passing the deposit amount (`deposit_amount`)
+- Start the second thread, passing the deposit amount (`deposit_amount`)
+- Wait for both threads to finish and destroy the semaphore
 
 ### thread-sync-semaphore.c
 ```c
@@ -21,7 +21,7 @@ sem_t sem;
 // Global Variable Balance
 int balance = 1000;
 
-// Thread Handler Function to Deposit Money into the Ballance
+// Thread Handler Function to Deposit Money into the Balance
 void *deposit(void *arg)
 {
   // Critical Section
@@ -35,7 +35,7 @@ void *deposit(void *arg)
   // End of Critical Section
 }
 
-// Main Functoin
+// Main Function
 int main(int argc, char *argv[])
 {
   int result;
@@ -70,7 +70,8 @@ int main(int argc, char *argv[])
 }
 ```
 
-Компилиране на програмата с изрична инструкция към компилатора да поддръжка нишки:
+Compile the program and link with pthreads:
+
 ```
 gcc thread-sync-semaphore.c -o thread-sync-semaphore -lpthread
 ```
